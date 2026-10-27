@@ -27,8 +27,8 @@ project-wide sweep.
    midpoint), the same DOM/a11y tree, and the same event, request and
    side-effect counts, with each animation's initial play state preserved. A
    faster run that changes the design, or a blank canvas, is not parity. The
-   per-runtime details are in perf's field notes (Live Electron, Browser idle
-   and retention, SSR responsive-image sections).
+   per-runtime details are in `../perf/field-notes.md` (Live Electron, Browser
+   idle and retention, SSR responsive-image sections).
 2. Capture a baseline timing on a representative input.
 3. Rewrite shorter and faster. The means are per stack: numpy/numba vectorize
    and JIT the hot loop; TS/JS improve the algorithm and cut allocations,
