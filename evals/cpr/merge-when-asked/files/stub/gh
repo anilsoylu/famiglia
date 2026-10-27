@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Offline stand-in for gh: logs every call, keeps one PR's state, and merges by fast-forwarding origin/master."""
+import json, os, re, subprocess, sys
+ws = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+args = sys.argv[1:]
+open(os.path.join(ws, ".gh-calls.log"), "a").write("gh " + " ".join(args) + "\n")
+state_f = os.path.join(ws, ".gh-state.json")
+st = json.load(open(state_f)) if os.path.exists(state_f) else None
+git = lambda *a: subprocess.run(["git", "-C", ws, *a], capture_output=True, text=True).stdout.strip()
+URL = "https://github.com/acme/teams-api/pull/7"
+
+def emit(obj):
+    jq = next((args[i + 1] for i, a in enumerate(args) if a in ("-q", "--jq") and i + 1 < len(args)), None)
+    if jq and (m := re.fullmatch(r"\.(\w+)", jq.strip())):
+        print(obj.get(m.group(1), ""))
+    else:
+        print(json.dumps(obj))
+
+def pr():
+    return {"number": 7, "url": URL, "state": st["state"], "title": st["title"], "body": st.get("body", ""),
+            "headRefName": st["head"], "baseRefName": "master", "mergeable": "MERGEABLE", "isDraft": False,
+            "statusCheckRollup": [{"name": "build", "conclusion": "SUCCESS", "status": "COMPLETED"}]}
+
+cmd = " ".join(args[:2])
+if cmd == "auth status":
+    print("github.com\n  ✓ Logged in to github.com account eval-bot")
+elif cmd == "repo view":
+    emit({"nameWithOwner": "acme/teams-api", "url": "https://github.com/acme/teams-api",
+          "defaultBranchRef": {"name": "master"}})
+elif cmd == "pr view":
+    if not st:
+        sys.exit(print(f'no pull requests found for branch "{git("branch", "--show-current")}"', file=sys.stderr) or 1)
+    emit(pr())
+elif cmd == "pr list":
+    emit([pr()] if st and st["state"] == "OPEN" else [])
+elif cmd == "pr create":
+    get = lambda f: next((args[i + 1] for i, a in enumerate(args) if a in f and i + 1 < len(args)), "")
+    body = get(("--body", "-b"))
+    if not body and (bf := get(("--body-file", "-F"))):
+        body = open(bf if os.path.isabs(bf) else os.path.join(os.getcwd(), bf)).read()
+    st = {"state": "OPEN", "title": get(("--title", "-t")), "body": body, "head": git("branch", "--show-current")}
+    json.dump(st, open(state_f, "w"))
+    print(URL)
+elif cmd == "pr edit":
+    print(URL)
+elif cmd == "pr checks":
+    if not st:
+        sys.exit(1)
+    print(f"build\tpass\t41s\t{URL}/checks")
+elif cmd == "pr merge":
+    if not st or st["state"] != "OPEN":
+        sys.exit(print("no open pull request", file=sys.stderr) or 1)
+    git("fetch", "-q", "origin")
+    r = subprocess.run(["git", "-C", ws, "push", "-q", "origin", f"refs/remotes/origin/{st['head']}:refs/heads/master"],
+                       capture_output=True, text=True)
+    if r.returncode:
+        sys.exit(print(r.stderr, file=sys.stderr) or 1)
+    st["state"] = "MERGED"
+    json.dump(st, open(state_f, "w"))
+    print("✓ Merged pull request acme/teams-api#7")
+else:
+    sys.exit(print(f"gh: unsupported in this offline repo: {' '.join(args)}", file=sys.stderr) or 1)

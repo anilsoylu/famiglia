@@ -1,0 +1,6 @@
+{
+  "name": "famiglia",
+  "version": "0.1.0",
+  "description": "Skills for shipping code from plan to production, and for running SEO for a site.",
+  "experimental": { "evals": "evals" }
+}

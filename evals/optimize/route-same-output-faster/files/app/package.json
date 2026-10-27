@@ -1,0 +1,6 @@
+{
+  "name": "ops-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {"bench": "node bench.js", "test": "node --test"}
+}

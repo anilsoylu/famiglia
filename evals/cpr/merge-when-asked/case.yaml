@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: merge-when-asked
+expected_outcome: |
+  The user asked for /cpr and a merge to master in one go. Runs clean first (drops the DEBUG console.log and either uses or deletes the unused
+  formatMember helper), then pr-update: commits on feat/team-members, pushes, opens a PR to master. Checks CI, merges
+  the PR without stopping to ask whether to merge, then checks out master and pulls so local master has the change. Ends
+  with the PR as a markdown link (number and full URL) and says it is merged. (Real failure: three sessions where /cpr
+  "ile master merge" stopped at the open PR.)
+context:
+  scaffold_script: place-files.sh

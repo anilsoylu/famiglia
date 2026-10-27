@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-what-do-i-have-open
+expected_outcome: |
+  Routing only: the list-open-work skill is the one invoked for this request.
+context:
+  scaffold_script: place-files.sh

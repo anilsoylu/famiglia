@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-slow-unknown-cause
+expected_outcome: |
+  Routing only: the perf skill is the one invoked for this request, not optimize.
+context:
+  scaffold_script: place-files.sh

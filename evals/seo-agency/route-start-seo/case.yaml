@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-start-seo
+expected_outcome: |
+  Routing only: the seo-agency skill is the one invoked for this request, not seo-audit.
+context:
+  scaffold_script: place-files.sh

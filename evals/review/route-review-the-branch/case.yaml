@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-review-the-branch
+expected_outcome: |
+  Routing only: the review skill is the one invoked for this request, not commit-gate.
+context:
+  scaffold_script: place-files.sh

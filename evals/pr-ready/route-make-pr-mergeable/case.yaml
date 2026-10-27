@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-make-pr-mergeable
+expected_outcome: |
+  Routing only: the pr-ready skill is the one invoked for this request, not pr-triage.
+context:
+  scaffold_script: place-files.sh

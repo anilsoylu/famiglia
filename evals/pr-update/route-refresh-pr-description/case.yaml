@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-refresh-pr-description
+expected_outcome: |
+  Routing only: the pr-update skill is the one invoked for this request, not cpr.
+context:
+  scaffold_script: place-files.sh

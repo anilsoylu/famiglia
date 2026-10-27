@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: plan-gives-plan-path
+expected_outcome: |
+  Routes to dev-flow's plan stage. Runs the guardian risk review and the short "server dies / scales" check for team
+  invites, writes the plan to a markdown file, and ends by giving that file's full absolute path and asking for approval.
+  No code under src/ is written. (Real failure: "hala bana planın dosya yolunu vermedin".)
+context:
+  scaffold_script: place-files.sh

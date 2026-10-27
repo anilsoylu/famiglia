@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-tidy-no-pr
+expected_outcome: |
+  Routing only: the clean skill is the one invoked for this request, not cpr.
+context:
+  scaffold_script: place-files.sh

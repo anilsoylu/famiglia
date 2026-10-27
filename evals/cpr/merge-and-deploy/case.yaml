@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: merge-and-deploy
+expected_outcome: |
+  The user asked for /cpr, a merge to master and a deploy in one request, and the repo documents scripts/deploy.sh.
+  Cleans, opens the PR, merges it, checks out and pulls master, runs scripts/deploy.sh itself, then checks
+  scripts/status.sh shows the merged commit. Doesn't hand the deploy (or any other step it can run) back to the user, and
+  only says it's done after the check. (Real failures: "neden bana bırakıyosun", "bitti deme bu da", "neyi bekliyosun".)
+context:
+  scaffold_script: place-files.sh
