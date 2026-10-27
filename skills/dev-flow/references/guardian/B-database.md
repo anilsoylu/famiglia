@@ -38,3 +38,8 @@
 - [ ] **74. Outbox Pattern** — Atomically persist domain changes and publishable events; process delivery idempotently.
 - [ ] **75. ORM Lazy Loading** — Understand when queries are triggered and avoid hidden latency or N+1 behavior.
 
+
+<!-- Additions (not in prompt-2). -->
+#### Additions
+
+- [ ] **213. Composite Indexes** — Order columns to match the queries: equality filters first, then range or sort columns; a query can only use a leftmost prefix. Consider covering indexes for hot reads and drop single-column indexes a composite one already serves.

@@ -12,6 +12,9 @@ Goal: decide how to build it before writing it, with the failure modes on the ta
    auth/users/input → `references/guardian/A-appsec-identity.md` · schema/queries → `references/guardian/B-database.md` · multiple services/retries → `references/guardian/C-distributed.md` ·
    cache/queue/async → `references/guardian/D-cache-queues.md` · new endpoints/webhooks → `references/guardian/E-http-api.md` · infra/deploy → `references/guardian/F-cloud-infra.md`, `references/guardian/H-delivery-release.md` ·
    load/latency/logging → `references/guardian/G-capacity-observability.md` · uploads/buckets/spend → `references/guardian/I-storage-cost.md` · client data fetching/real-time UI → `references/frontend-data.md`.
+   Check the repo's manifests first (package.json, go.mod, compose/infra files) so you know which technologies exist.
+   Skip items whose `Only if` condition doesn't hold and items for tech the repo doesn't use; don't evaluate them one by
+   one. List them in a single report line, e.g. `N/A: GraphQL, gRPC, mTLS (not used)`.
 3. If the feature matches a row in `references/backend-patterns.md`, use that row as the design checklist.
 4. Run the **short** resilience check: two lines each from `references/review-questions.md` → "If the server dies"
    and "When it scales". It's for decisions that are expensive to change later (where state lives, idempotency,

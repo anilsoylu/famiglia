@@ -26,3 +26,9 @@
 - [ ] **97. Thundering Herd** — Prevent synchronized cache misses, refreshes, and reconnects from overwhelming dependencies.
 - [ ] **98. Cache Invalidation** — Define invalidation/update semantics and consistency expectations; test stale-data cases.
 
+
+<!-- Additions (not in prompt-2). -->
+#### Additions
+
+- [ ] **214. Circuit Breakers** — Stop calling a failing dependency after a threshold, probe recovery with half-open trials, and serve a defined fallback; tune together with timeouts and retry budgets (95, 96).
+- [ ] **215. Livelock** — Make sure competing retries or conflict resolution can't keep undoing each other forever; use jitter, retry caps, and a deterministic tie-break or ordering (see 51 for deadlocks).

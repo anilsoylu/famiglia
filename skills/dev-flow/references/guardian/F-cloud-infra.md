@@ -31,3 +31,8 @@
 - [ ] **160. Graceful Degradation** — Preserve core functions when optional dependencies or noncritical features fail.
 - [ ] **161. Autoscaling** — Set appropriate signals, bounds, cooldowns, and capacity limits; account for startup delay and cost.
 
+
+<!-- Additions (not in prompt-2). -->
+#### Additions
+
+- [ ] **220. mTLS / Service-to-Service Identity** — Only if there is more than one internal service. Authenticate service calls instead of trusting the internal network; rotate and monitor certificates (35); use the service mesh's mTLS where one exists (139).

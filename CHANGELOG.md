@@ -10,3 +10,4 @@
 - review ships its own tier script (review-tier.mjs) and reviewer prompt (reviewer.md). perf points known routines to /optimize again and runs clean before pr-update. optimize defines parity for UI/render code.
 - README rewritten as a short how-to.
 - dev-flow: `references/frontend-data.md` (client cache, cancellation, single-flight token refresh, typed API layer, real-time choice), wired into plan and build; "Database ladder" (cheapest-first DB scaling order) added to review-questions.md.
+- dev-flow guardian: items 213–220 (composite indexes, circuit breakers, livelock, proxies/load balancers, API gateways, rate limiting & throttling, GraphQL, mTLS) appended to sections B, C, E, F; false sharing in perf-checklist.md; plan stage skips items for tech the repo doesn't use and reports them in one N/A line.

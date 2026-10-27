@@ -21,3 +21,11 @@
 - [ ] **132. Latency vs Throughput** — Measure both and make the service objective explicit; do not optimize one blindly.
 - [ ] **133. Egress Fees** — Account for outbound data-transfer costs in architecture, logs, backups, and cross-region traffic.
 
+
+<!-- Additions (not in prompt-2). -->
+#### Additions
+
+- [ ] **216. Reverse Proxies & Load Balancers** — Trust `X-Forwarded-For` and similar headers only from known proxies when deriving client IP for rate limits and logs; align timeouts and body limits along the chain; prefer stateless instances over sticky sessions; make health checks reflect real readiness.
+- [ ] **217. API Gateways** — Only if one exists or is proposed. Gateway authentication does not replace authorization inside each service; set per-route limits and timeouts; avoid making the gateway a single point of failure; don't add one in front of a single service without a reason.
+- [ ] **218. Rate Limiting & Throttling** — Keep counters in a shared store keyed by identity (user, API key, IP); return 429 with `Retry-After` and have clients honor it; decide deliberately whether excess traffic is rejected or delayed.
+- [ ] **219. GraphQL** — Only if the repo uses GraphQL. Limit query depth, complexity, aliases, and batching; authorize at the field/resolver level; batch resolvers (DataLoader) to avoid N+1; decide on introspection and persisted queries for public APIs.

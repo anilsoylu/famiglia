@@ -28,6 +28,11 @@ and fingerprint, and `next/image` already serves WebP/AVIF. The job is to confir
 on a second pipeline. A CSS bundle or an icon sprite only helps on HTTP/1.1 or with many tiny requests. On HTTP/2+,
 measure before you merge files. CDN config changes infrastructure, so ask before making it.
 
+## Concurrency hot loops
+
+Only for multithreaded native, JVM, Go or Rust code: false sharing. Per-thread counters or slots that sit on the same
+cache line slow each other down. Pad or separate them, and confirm with a profiler (cache-miss counters) before and after.
+
 ## Parity
 
 Every speed change keeps the same outputs, errors, ordering and precision (see `/optimize`). If parity can't be shown,
