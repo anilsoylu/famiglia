@@ -1,9 +1,8 @@
 ---
 name: cpr
 description: >-
-  Clean the diff, then open or refresh the PR/MR — one pass, ending in the
-  linked URL. Use for /cpr, "clean and PR", "tidy it up and push the PR", or
-  any handoff where polish and the PR should happen together.
+  Clean the diff, then open or refresh the PR/MR, and merge it when asked. Ends with the PR link. For "clean and
+  PR", "tidy it up and push the PR".
 ---
 
 # CPR (clean → PR)
@@ -22,7 +21,15 @@ their contents.
 2. **Shape + publish** (`pr-update`). Topical commits, title and body that
    describe the change as a whole, media in an existing body preserved
    verbatim.
-3. End with the PR/MR as a markdown link — number **and** full forge URL.
+3. **Merge, when the user asked for it** in this request ("merge to main/master",
+   "master'a merge et"). Wait for checks (`gh pr checks --watch`), merge with
+   the repo's usual method, then check out the default branch and pull so the
+   local copy has the merge. A red check stops here, with the failing check
+   named.
+4. Run any later step the user asked for that the repo documents (a deploy
+   script, a release command) yourself, and verify its result before saying
+   it's done. Hand back only what needs the user's device, account or decision.
+5. End with the PR/MR as a markdown link — number **and** full forge URL.
 
 ## Order matters
 
@@ -39,6 +46,6 @@ exists.
 
 ## Scope
 
-- **In:** polish the diff, shape commits, create or update the PR/MR, print the
-  link.
-- **Out:** CI and review threads (`pr-ready`), merging.
+- **In:** polish the diff, shape commits, create or update the PR/MR, merge it
+  and pull the default branch when asked, print the link.
+- **Out:** fixing CI and review threads (`pr-ready`), merging nobody asked for.

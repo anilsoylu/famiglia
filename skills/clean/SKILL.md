@@ -1,9 +1,8 @@
 ---
 name: clean
 description: >-
-  Polish your own diff by hand with KISS/DRY and local style — the pre-handoff
-  pass, not a test run and not a subagent sweep. Use for /clean, "clean it up",
-  "tidy this", and as the step right before pr-update in a PR handoff.
+  Polish your own diff by hand: KISS/DRY, local style, dead code out. Not a test run, not a subagent sweep. For
+  "clean it up", "tidy this", and right before pr-update.
 ---
 
 # Clean

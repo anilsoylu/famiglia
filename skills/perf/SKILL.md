@@ -1,10 +1,8 @@
 ---
 name: perf
 description: >-
-  The general profile-driven perf loop for any language or runtime: baseline,
-  profile, fix the real hot path, re-measure. Use for /perf, "this is slow",
-  or optimization work. A known routine that needs an exact-parity speed
-  rewrite goes to /optimize instead.
+  Profile-driven perf loop for any stack: baseline, profile, fix the real hot path, re-measure. For "this is slow"
+  with no known cause. A known routine that needs an exact-parity rewrite goes to /optimize.
 ---
 
 # Perf

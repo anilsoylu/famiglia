@@ -1,13 +1,10 @@
 ---
 name: seo-agency
 description: >-
-  Run SEO for a site as a one-agent agency with five departments (Strategist, Writer, Linker, Technician, Analyst),
-  stage by stage: onboarding, keyword patterns and page-one reads, briefs and pages, internal and outside links,
-  money-page technical checks, review and ship lists, AI visibility/GEO, and the weekly Search Console loop. Asks
-  which stage and data sources the project has, keeps state in the project's agency/ folder, and chains /seo-audit
-  and /ai-seo where they fit. Use when the user wants to plan, write, link, check, report on or grow organic traffic
-  for a site: "do SEO for my site", "what should we rank for", "write a page for <keyword>", "weekly SEO pass",
-  "internal links", "why isn't this page ranking", "get cited by ChatGPT/Claude", or pastes a Search Console export.
+  Run SEO for a site as a staged one-agent agency (strategy, pages, links, technical checks, reports, AI visibility,
+  the weekly Search Console loop), keeping state in the project's agency/ folder and chaining /seo-audit and
+  /ai-seo. For "do SEO for my site", "what should we rank for", "write a page for <keyword>", "weekly SEO pass", or
+  a pasted Search Console export.
 metadata:
   version: 0.1.0
 ---

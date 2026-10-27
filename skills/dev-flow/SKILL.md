@@ -1,13 +1,10 @@
 ---
 name: dev-flow
 description: >-
-  Stage-aware software delivery flow: figures out where a piece of work is (planning/architecture, building,
-  post-implementation review, about to commit, merging to master, project end / pre-release) and runs that stage's
-  prompts and skills in the right order: guardian risk review, inefficiency review, /review, /commit-gate
-  (perf → optimize → security-audit), /cpr, and the full production-readiness audit. Use when the user starts or
-  continues a feature or project and wants "the usual flow", asks "what's next", says the feature is done, wants to
-  commit or merge to master, asks if the project is production ready, or asks what happens if the server dies or how
-  it scales. For a single narrow ask ("profile this", "just open the PR") use that skill directly instead.
+  Stage-aware delivery flow for a feature or project: plan with the guardian risk review, build, review, commit
+  gate, merge through /cpr, and the production-readiness audit at the end. For "the usual flow", "what's next", "the
+  feature is done", "is it production ready", "what if the server dies / how does it scale". A single narrow ask
+  goes to its own skill.
 metadata:
   version: 0.1.0
 ---
@@ -16,7 +13,7 @@ metadata:
 
 The user's engineering workflow, one stage at a time. Each stage has its own prompts (in `references/`) and its own
 skills. The point is that the right check runs at the right moment: risk thinking before code is written, an
-inefficiency review right after, the commit gate before every commit, `/cpr` for master, and the full audit at the end.
+inefficiency review right after, the commit gate before every commit, `/cpr` into the default branch, and the full audit at the end.
 Running the full audit on every commit wastes hours. Skipping the gate lets problems pile up.
 
 ## 1. Find the stage
@@ -29,7 +26,7 @@ Read the situation before asking: the user's words, `git status`, `git diff --st
 | writing code, "implement", "add" | **build** |
 | "done", "finished the feature", working tree has a fresh feature diff | **review** |
 | "commit", "ready to commit", staged changes | **commit** |
-| "merge", "master", "PR", branch is ahead and gate already passed | **merge** |
+| "merge", "master"/"main", "PR", branch is ahead and gate already passed | **merge** |
 | "project is finished", "production ready?", "before launch", "server dies / scale" | **end** |
 
 If two stages fit, or there's no signal, ask once with AskUserQuestion (options = the stages, the most likely
@@ -64,7 +61,7 @@ Every hand-off has a fallback, so the flow still works when someone installs onl
 | `/commit-gate` | run its three steps yourself: `perf-checklist.md`, then an exact-parity rewrite of any measured hot spot, then guardian A + E on the diff |
 | `/review` | read the diff for bugs, against repo conventions (CLAUDE.md, lint config) and against the task/issue. Blocking findings first |
 | `/simplify` | look at the diff again for reuse, dead code and needless abstraction |
-| `/cpr` | clean the diff by hand, topical commits, `gh pr create`/`gh pr edit` with a body describing the whole change, print the PR link |
+| `/cpr` | clean the diff by hand, topical commits, `gh pr create`/`gh pr edit` with a body describing the whole change, print the PR link; if the user asked to merge: `gh pr checks --watch`, merge, pull the default branch |
 | `/security-audit` | `references/guardian/A-appsec-identity.md` + `references/guardian/E-http-api.md` + audit checklist sections B, C, D, F |
 | `/frontend-design`, `/ui-ux-pro-max`, vercel skills | follow the repo's existing UI patterns |
 

@@ -1,10 +1,8 @@
 ---
 name: pr-update
 description: >-
-  Open a PR/MR if missing, or refresh an existing one's title and description
-  so they match the current diff. Preserves any media already in the body.
-  Use when the user says /pr-update, open a PR, update the PR, refresh the PR
-  title/description, or wants the PR opener/manager flow.
+  Open a PR/MR, or refresh an existing one's title and body to match the current diff, keeping its media. For "open
+  a PR", "update the PR description".
 ---
 
 # PR Update (open or refresh)

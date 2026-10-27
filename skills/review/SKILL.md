@@ -1,9 +1,8 @@
 ---
 name: review
 description: >-
-  The single review path for a finished diff — runs the tier check, spawns one
-  reviewer, routes its findings. Use for "review this", "review the branch",
-  "review before the PR", or as the review step of the handoff chain.
+  Review a finished diff: tier check, one reviewer, findings routed. For "review this", "review the branch", "review
+  before the PR".
 ---
 
 # Review

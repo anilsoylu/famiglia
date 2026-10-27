@@ -1,10 +1,8 @@
 ---
 name: pr-ready
 description: >-
-  Clear everything blocking an existing PR/MR from merging — rebase onto the
-  default branch, get CI green, and resolve review threads (Copilot and human).
-  Use for "rebase on main", "make CI green", "fix CI/CD", "address the reviews",
-  "address Copilot", "review-loop", or "get this mergeable".
+  Get an existing PR/MR mergeable: rebase on the default branch, make CI green, resolve review threads (Copilot and
+  human). For "fix CI", "address the reviews", "rebase on main".
 ---
 
 # PR Ready

@@ -22,7 +22,7 @@ Just talk. The right skill picks itself up. You can also call one directly with 
 | "let's build team invites" | `dev-flow` → plan: risk review, "what if the server dies / scales" check, plan for approval |
 | "feature's done, what's next?" | `dev-flow` → review: inefficiency review, `/review`, `/simplify` |
 | "ready to commit" / `/commit-gate` | `/perf` → `/optimize` → `/security-audit` on the diff, one go/no-go report. Never commits |
-| "merge to master" / `/cpr` | clean the diff, then open or update the PR |
+| "merge to master" / `/cpr` | clean the diff, open or update the PR, and merge it when you ask |
 | "is it production ready?" | `dev-flow` → end: full production audit with scorecard, "server dies / scale" answers, offers the full security audit |
 
 **SEO**
@@ -46,4 +46,12 @@ Just talk. The right skill picks itself up. You can also call one directly with 
 - Except `ai-seo`, `seo-audit` and `security-audit`, which are copies pinned in `vendor.json` (licenses in `LICENSES/`).
   Don't edit those. Bump `ref` in `vendor.json` and run `python3 scripts/sync-vendor.py`.
 - After any change: `python3 scripts/check-refs.py` checks that every file a skill points to exists.
+- Evals live in `evals/<skill>/<case>/`: real failures from past sessions plus routing checks. Run them before and after
+  editing a skill, and keep the change only if nothing drops:
+  ```bash
+  claude plugin eval . --model claude-opus-5-5 --scaffold --trust-plugin --allow-tools Bash Write Edit -j 4 --no-publish
+  ```
+  Add `--case <name>` for one case, `--runs 1` for a quick pass. macOS needs a real git on PATH (`brew install git`),
+  because the eval sandbox blocks the Xcode git shim.
+- `python3 scripts/skill-size.py` shows each skill's description size (in context every session) and body size.
 - Raw prompts the skills were built from live in `sources/` (git-ignored, local only).

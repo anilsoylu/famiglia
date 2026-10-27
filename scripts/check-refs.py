@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REF = re.compile(r"`([\w./-]+\.(?:md|py|sh|json|mjs|cjs)|[\w./-]+/)`")
 IGNORE = {"AGENCY.md", "CLIENT.md", "HANDOFF.md", "LEDGER.md", "LINKS.md", "TECH.md", "REPORT.md", "STRATEGY.md",
-          "SITE.md", "RULES.md", "CLAUDE.md", "geo.md", "keywords.md", "agency/", "briefs/", "pages/", "data/", "scratch/",
+          "SITE.md", "RULES.md", "CLAUDE.md", "geo.md", "keywords.md", "agency/", "plans/", "briefs/", "pages/", "data/", "scratch/",
           "artifacts/", "README.md", "SKILL.md", "CONTRIBUTING.md", "AGENTS.md", "CODING_STANDARDS.md", "package.json", "app.json"}
 
 

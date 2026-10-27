@@ -1,10 +1,8 @@
 ---
 name: commit-gate
 description: >-
-  Pre-commit gate that runs /perf, then /optimize, then /security-audit back to back on the current diff and returns
-  one combined go/no-go report. Use whenever the user is about to commit or asks for the commit check: "ready to
-  commit", "run the gate", "check before I commit", "pre-commit checks", /commit-gate. It does not commit by itself.
-  For a standalone profiling, speed-rewrite or security question, use /perf, /optimize or /security-audit directly.
+  Pre-commit gate: /perf, /optimize, then /security-audit on the current diff, one go/no-go report. Never commits.
+  For "ready to commit", "check before I commit". A standalone perf or security question goes to that skill.
 metadata:
   version: 0.1.0
 ---

@@ -1,11 +1,8 @@
 ---
 name: optimize
 description: >-
-  Exact-parity speed rewrite of a named routine or the current diff: shorter,
-  measurably faster, behavior identical. Use for /optimize, "make it faster",
-  "vectorize this". Also fires unprompted in a PR handoff when clean's diff
-  read surfaces a compute-heavy routine. For "why is this slow" with no known
-  target, use perf.
+  Exact-parity speed rewrite of a named routine or the diff's hot spot: shorter, measurably faster, same behavior.
+  For "make it faster", "vectorize this". With no known target ("why is this slow"), use /perf.
 ---
 
 # Optimize

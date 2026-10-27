@@ -1,10 +1,8 @@
 ---
 name: pr-triage
 description: >-
-  Maintainer triage on OTHER people's PRs/MRs — verdict of approve, supersede,
-  or close, salvage with credit, close the cluster. Use for a review batch, a
-  pasted Discord thread with a PR, or salvage/supersede/close asks. Not for your
-  own PR (that's pr-ready).
+  Maintainer triage on other people's PRs/MRs: approve, supersede or close, salvage with credit. For review batches
+  or a pasted thread with a PR. Your own PR goes to pr-ready.
 ---
 
 # PR Triage

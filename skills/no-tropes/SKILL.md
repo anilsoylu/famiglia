@@ -1,10 +1,8 @@
 ---
 name: no-tropes
 description: >-
-  Detect and eliminate common AI writing tropes from generated text. Use when
-  writing or revising prose, documentation, READMEs, commit messages, PR
-  descriptions, blog posts, comments, or any non-code text output. Automatically
-  applied as a self-revision pass (tropes.fyi).
+  Strip AI-writing tropes from prose: docs, READMEs, commit messages, PR descriptions, posts, comments. Also a
+  self-revision pass on any non-code text you write.
 ---
 
 # No Tropes (AI writing tells)

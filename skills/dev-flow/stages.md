@@ -19,7 +19,9 @@ Goal: decide how to build it before writing it, with the failure modes on the ta
 4. Run the **short** resilience check: two lines each from `references/review-questions.md` → "If the server dies"
    and "When it scales". It's for decisions that are expensive to change later (where state lives, idempotency,
    what's synchronous). Leave the rest to the end stage.
-5. For non-trivial work, present it as a plan (Plan mode when available) and get approval before coding.
+5. For non-trivial work, write the plan to a file: Plan mode's plan file when available, else the repo's `plans/` folder
+   in its naming style (e.g. 004-team-invites.md), else a new `plans/<feature>.md`. End with that file's full
+   absolute path and get approval before coding.
 
 ## build
 
@@ -37,10 +39,13 @@ Goal: write the change the way this repo already writes code.
 
 Goal: catch what's wrong with the code just written while it's fresh, before it's committed.
 
-1. Answer `references/review-questions.md` → "After implementing" against the diff.
+1. Answer `references/review-questions.md` → "After implementing" against the diff, in its own section of the reply:
+   each inefficiency with `file:line`, or "none found".
 2. Run `/review` on the diff. It picks a tier first; `none` or `medium` means no reviewer runs, and that's a normal result.
 3. Run `/simplify` for reuse and dead code.
 4. Fix what the user agrees to. Suspected performance issues go to the commit stage's perf step to be measured. Don't fix them by guess here.
+5. End by naming the next stages: `/commit-gate` (perf → optimize → security-audit) on the final diff, then `/cpr`
+   (clean → PR) into the default branch (main/master).
 
 ## commit
 
@@ -52,11 +57,12 @@ Goal: nothing gets committed without going through perf, optimize and security.
 
 ## merge
 
-Goal: get the branch to master through a clean PR.
+Goal: get the branch into the default branch (main/master) through a clean PR.
 
 1. Make sure the commit gate passed on the final diff. If commits landed after the last gate run, run it again.
 2. Run `/cpr`. It runs clean → pr-update and ends with the PR link.
-3. Don't merge by yourself unless the user asked. CI and review threads are separate from `/cpr`.
+3. If the user asked to merge, `/cpr` merges once checks are green and pulls the default branch. Otherwise stop at the PR. Failing
+   CI and review threads go to `pr-ready`.
 
 ## end
 
