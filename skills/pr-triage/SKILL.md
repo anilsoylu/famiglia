@@ -50,10 +50,10 @@ shape. One cluster → one consolidated supersede.
 
 A pasted thread _is_ the intake. Don't make them restate a bare URL.
 
-A support handoff with an owner/maintainer column is a shared board, not her queue. Take only rows
-whose owner names her (alone or shared); list the rest as "not yours" with no forge writes, even when
+A support handoff with an owner/maintainer column is a shared board, not the user's queue. Take only rows
+whose owner names the user (alone or shared); list the rest as "not yours" with no forge writes, even when
 the ask is a broad "help these out". Approving, merging, salvaging or closing another maintainer's
-cluster is overreach she has to walk back.
+cluster is overreach the user has to walk back.
 
 1. Pull out symptom, platform, linked PR/issue, what staff already said.
 2. Open those PRs; look for siblings on the same fix.
@@ -62,28 +62,53 @@ cluster is overreach she has to walk back.
 5. No PR? Search open ones; if they want a new fix, follow that repository's
    worktree workflow.
 
-## Issue-only closure audits
+## Issue audits (including merged references)
 
-- Follow the user's issue verdict taxonomy rather than applying PR supersede outcomes. A reachable fix commit is a lead, not proof that the entire issue is solved; read later comments and test the present implementation.
-- Honor explicitly assigned issue numbers even when their PR references appear only in comments; timeline-based batches do not implicitly own them. Only exclude merged-reference issues when the assignment expressly says to. Inspect references in the body and comments as well as timeline cross-references, resolve object and merge state live, and record actual exclusions as skipped rather than solved. A historical, partial, or unrelated merged reference is not resolution evidence.
-- Preserve the reviewed base SHA in machine-readable results. Separate closure candidates, substantively unresolved issues, and skipped ownership cases in totals; inherit labels on skips only with an explicit unassessed qualifier.
-- Distinguish external-repository merges from upstream implementation. Check the referenced repository and `git merge-base --is-ancestor <merge> <reviewed-base>`; exit 128 for an unavailable commit is missing ancestry evidence, never proof of inclusion or exclusion. For oversized PR diffs, recover the issue-relevant patches with paginated `gh api repos/<owner>/<repo>/pulls/<number>/files --paginate --slurp` rather than trusting a truncated file list.
-- Re-enumerate a range-limited catalog independently before writing verdicts, using the exact source/subject merge predicate requested. Assert selected IDs equal reviewed IDs, not just equal counts, and retain later human reports and unresolved acceptance requirements even when a sibling fix merged.
-- For merged-reference issue batches, derive and count the exact selection from both timeline `source` and `subject` objects. Preserve external-repository references: a merged fork/plugin PR is not upstream coverage, and `merge-base` exit 128 means an unavailable object, not a proven non-ancestor.
-- Read reopen events and post-fix reports before proposing closure. GitHub can auto-close from a negated phrase such as “does not fix #N”; a test-only or sibling PR linked that way is not a production fix.
-- For merged-reference issue audits, check the PR's base branch and `git merge-base --is-ancestor <merge-sha> <reviewed-main-sha>` before treating it as landed. Stacked fixes can be marked MERGED into an unlanded feature branch; absent feature code on main is not proof that a pre-merge bug report is resolved. Conversely, inspect current code and its history for later fixes outside the issue timeline so an unrelated reference does not hide an actual resolution.
-- When the desktop Vitest workspace cannot load a missing build plugin, do not install dependencies during a read-only audit. A scratch standalone config can run source-level suites with the app's aliases, React/ReactDOM package resolution and existing setup file, without extending its Vite build config. Label this as alternate-config testing, not packaged Electron verification. Scratch hook probes must execute actual imports, never regex-match source.
+A recommendation-only audit stays that way: no forge writes, even when a related PR is merged. Use the user's verdict
+set (for example close vs keep-open), not the PR supersede/salvage taxonomy.
 
-## Issue audits with merged cross-references
+**Selection**
+- Honor explicitly assigned issue numbers even when their PR references appear only in comments; timeline-based batches
+  don't implicitly own them. Exclude merged-reference issues only when the assignment says so, and record exclusions as
+  skipped, not solved.
+- Enumerate the exact set programmatically with the requested predicate, from timeline `source` and `subject` objects
+  plus references in the body and comments. Save the input IDs, then assert the sorted reviewed IDs equal a fresh
+  selection: equal IDs, not just equal counts.
+- Deduplicate references by full repository-qualified URL, not PR number.
 
-For recommendation-only audits, preserve that boundary: no forge writes, even when a related PR is merged.
+**Evidence**
+- A merged reference is a lead, not proof. Read the full issue, all comments, reopen events and the merged PR bodies.
+  Split compound requests into acceptance requirements and compare each with the merged diff and the current
+  default-branch code. Later human reports, post-merge reproductions and unresolved variants keep an issue open.
+- Check that the fix landed: the PR's base branch, the repository identity, and
+  `git merge-base --is-ancestor <merge-sha> <reviewed-main-sha>`. Stacked fixes can be MERGED into an unlanded feature
+  branch. A fork, plugin or sibling-product merge is not upstream coverage. Exit 128 means the object is unavailable,
+  which is no evidence either way.
+- Read the full PR diff with `gh pr diff`, not only `git show <mergeCommit>`: after a rebase merge, mergeCommit may be
+  just the last commit. For oversized diffs, page through
+  `gh api repos/<owner>/<repo>/pulls/<number>/files --paginate --slurp` and state the limitation.
+- GitHub can auto-close from a negated phrase such as "does not fix #N". A test-only or sibling PR linked that way is
+  not a production fix.
+- Trace current source history for fixes outside the issue timeline. Credit the actual fixing commit or PR, with its
+  ancestry, rather than an irrelevant reference.
 
-- Enumerate the full requested issue set programmatically from structured source/subject references; save the input IDs and assert the final reviewed IDs match exactly.
-- Read issue bodies, all comments, and timeline events before treating a merged PR as resolution. Flag reopens and distinguish post-merge reproductions from comments predating the fix.
-- Verify each merge commit is an ancestor of the exact reviewed main SHA, then inspect the current code. A related PR, stale closure trailer, or mitigation is not full acceptance evidence.
-- Separate every reported requirement and later variant. Recommend closure only when all are addressed with high confidence; otherwise name the concrete residual or unverified acceptance case without claiming it still reproduces.
-- Record test commands and actual results, including startup blockers and alternate test configuration. Unit recovery tests do not prove native-app geometry, update-time permissions, or cross-profile end-to-end isolation.
-- Draft closures with complete PR/source URLs and say fixed on main, not released, unless the release artifact was separately verified.
+**Testing**
+- Exercise focused behavioral tests against the current implementation. When the normal runner is blocked, use
+  dependency-light probes or a scratch standalone config, without installing or changing shared dependencies (for
+  example a desktop Vitest workspace missing a build plugin: reuse the app's aliases, React resolution and setup file,
+  and label it alternate-config testing, not packaged-app verification). Probes execute real imports, never regex-match
+  source.
+- Record commands and actual results. Report runner blockers separately from passing checks and never call a blocked
+  suite passed. Unit tests don't prove native geometry, update-time permissions or cross-profile isolation.
+
+**Report**
+- Keep the reviewed base SHA in machine-readable results and persist per-item reviews in batches. Totals separate
+  closure candidates, substantively unresolved issues and skipped ownership cases; inherit labels on skips only with an
+  explicit unassessed qualifier.
+- Recommend closure only when every requirement is addressed with high confidence. Otherwise name the concrete residual
+  or unverified case, without claiming it still reproduces.
+- Closure drafts cite full fix/source URLs and say "fixed on main", not "released", unless the release artifact was
+  verified.
 
 ## Forge cheatsheet
 
@@ -222,7 +247,7 @@ After supersede or a merge that kills siblings:
 
 - Short approve (or merge if asked). Credit stays with the author.
 - Fork PR with CI `action_required`: approve each run (`gh api -X POST repos/<o>/<r>/actions/runs/<id>/approve`, ids from `actions/runs?head_sha=<head>`) so CI actually runs, then merge with `--auto`.
-- Before `--rebase --auto`, check `gh api repos/<o>/<r>/pulls/<N> --jq .rebaseable`. A branch that merged main over a conflict is `false`, and the rebase merge will fail. Never switch to squash or merge commits: she wants rebase only. Rebase the branch onto main yourself (maintainer push to the fork, or ssh if it touches workflows), push with lease, then arm `--rebase --match-head-commit <new-sha>`. If you can't push to the branch, report it.
+- Before `--rebase --auto`, check `gh api repos/<o>/<r>/pulls/<N> --jq .rebaseable`. A branch that merged main over a conflict is `false`, and the rebase merge will fail. Never switch to squash or merge commits: the user wants rebase only. Rebase the branch onto main yourself (maintainer push to the fork, or ssh if it touches workflows), push with lease, then arm `--rebase --match-head-commit <new-sha>`. If you can't push to the branch, report it.
 - An author push after approval dismisses the review AND disables auto-merge. Re-check the new head's scope (`git show --remerge-diff` for merge commits), re-approve, re-approve its runs, and re-arm auto-merge.
 - Internal + **one tiny nit** → request-changes / ask them to fix first.
 - Anything bigger than a tiny nit → supersede, don't ball-bounce.
@@ -243,32 +268,6 @@ Run this checklist at the end of each PR/item — don't wait to be reminded:
 - [ ] Any user-facing reply is short and actionable — an optional note, not an essay.
 - [ ] Shipping work is split into topical commits (`pr-update`) and CI is green.
 - [ ] You scoped the whole fix, not a timid subset.
-
-## Merged-reference issue closure audits
-
-When the user requests recommendations only, preserve that boundary: do not perform forge writes.
-
-- Enumerate the exact eligible issue set programmatically and save it before reviewing; validate the final unique reviewed IDs against that selection so large batches cannot silently lose entries.
-- Read the complete issue, comments, reopen events, and merged PR bodies before deciding. Split compound requests into acceptance requirements; a related or explicitly partial PR is not a closure proof.
-- Verify every cited merge is an ancestor of the reviewed main SHA. A merged cross-reference from another repository is not evidence of an upstream landing.
-- Trace the current implementation and exercise focused behavioral tests. Distinguish a causal fix from a merely adjacent merged reference, and cite the actual fixing commit when needed.
-- Keep a report open when post-merge reproductions or unverified required variants remain. Flag reopens explicitly; closure drafts must state the resolved behavior and say main, not released, unless release availability was separately verified.
-
-## Reviewing issues with merged references
-
-- Treat a merged reference as a discovery lead, not completion evidence. Read the full issue and later comments, compare every acceptance requirement with the merged diff and current default-branch code, and preserve explicitly reopened or partially fixed reports.
-- Verify repository identity and merge ancestry before claiming implementation on main. A fork or sibling-product merge does not establish upstream coverage; an unavailable commit object is not proof that a commit is or is not an ancestor.
-- Persist the selected issue IDs before a batch review, then compare the sorted reviewed IDs against a fresh selection in code. Report exact count equality and retain blocked tests separately from passing checks.
-
-## Auditing issues with merged references
-
-- Honor an issue audit's explicit verdict set (for example, close versus keep-open) instead of applying the external-PR salvage taxonomy. Do not perform forge writes in a read-only audit.
-- Select and deduplicate references by full repository-qualified URL, not PR number: a merged fork-only synchronization PR is not an upstream fix. Check each merge SHA against the exact reviewed main SHA.
-- Read the full PR diff with `gh pr diff`, not only `git show <mergeCommit>`: after a rebase merge, GitHub's mergeCommit may identify only the last attribution or cleanup commit. For oversized diffs, inspect issue-relevant files/commits and state the limitation.
-- Compare every original requirement and later reporter contradiction against current code. Partial fixes, reverted changes, broad trackers, and a successful candidate test are not whole-issue closure proof.
-- Trace additional fixes from current source history when a timeline reference is irrelevant; record the newly discovered PR, its ancestry, and behavioral evidence rather than crediting the wrong reference.
-- Execute dependency-light behavior probes when the ordinary runner is blocked, without changing shared dependencies. Report runner blockers separately from actual passing probes; never label a blocked suite as passed.
-- Persist per-item reviews in batches and verify selected IDs equal reviewed IDs before reporting totals. Closure drafts must cite full fix/source URLs and distinguish main coverage from release availability.
 
 ## Hard rules
 
