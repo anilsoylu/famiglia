@@ -12,7 +12,11 @@ One pass. One reviewer. No step runs twice.
 
 ## Steps
 
-1. **Tier.** `git merge-base origin/<default-branch> HEAD`, then paste the sha (the gate denies `$(…)`):
+Terms: **root** is the session running this skill. **The verifier** is the repo's own checks for the change (tests,
+typecheck, lint, whatever its CI runs). Some permission setups block `$(…)` and `>` in root's shell, which is why the
+steps below paste the sha and use `Write`.
+
+1. **Tier.** `git merge-base origin/<default-branch> HEAD`, then paste the sha:
 
        node ~/.claude/skills/review/review-tier.mjs . <sha>
 
@@ -34,7 +38,7 @@ One pass. One reviewer. No step runs twice.
    it a correct diff that does the wrong thing ships.
 
 4. **Lint the review.** `Write` the diff and the findings — `[{label, file, line, text}]` — to
-   `/tmp/review/` (the gate denies root a `>`; `Write` is open), then:
+   `/tmp/review/`, then:
 
        node ~/.claude/skills/review/review-lint.mjs /tmp/review/diff.patch /tmp/review/findings.json
 
@@ -44,8 +48,9 @@ One pass. One reviewer. No step runs twice.
 
 5. **Route.** A `fork` fixes every `[ADOPT]`. Root re-runs the verifier, and a green run
    closes the finding — nothing re-reviews the fix. **Write** `[NOTE]` findings, including
-   the reviewer's Inefficiency items, under `## Found while working`; a follow-up nobody
-   wrote down is a finding nobody made.
+   the reviewer's Inefficiency items, under `## Found while working` in the PR body
+   (`pr-update`), or in the final reply when there's no PR; a follow-up nobody wrote down is
+   a finding nobody made.
 
 6. **Stop.** Once the verifier is green, nothing short of a new `[ADOPT]` reopens the tree.
 

@@ -38,7 +38,7 @@ Goal: write the change the way this repo already writes code.
 Goal: catch what's wrong with the code just written while it's fresh, before it's committed.
 
 1. Answer `references/review-questions.md` → "After implementing" against the diff.
-2. Run `/review` (standards + spec, two axes) on the diff.
+2. Run `/review` on the diff. It picks a tier first; `none` or `medium` means no reviewer runs, and that's a normal result.
 3. Run `/simplify` for reuse and dead code.
 4. Fix what the user agrees to. Suspected performance issues go to the commit stage's perf step to be measured. Don't fix them by guess here.
 

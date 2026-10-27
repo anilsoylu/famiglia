@@ -1,4 +1,4 @@
-<!-- Source: sources/code-prompt/prompt-2.md (verbatim slice, lines 1-68). -->
+<!-- Source: sources/code-prompt/prompt-2.md (verbatim slice, lines 1-68). The catalog now has 220 items: 213–220 are additions at the end of sections B, C, E and F. -->
 
 # Claude Engineering Guardian — Security, Reliability & Production Readiness Prompt
 

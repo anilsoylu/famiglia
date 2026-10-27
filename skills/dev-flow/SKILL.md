@@ -62,7 +62,7 @@ Every hand-off has a fallback, so the flow still works when someone installs onl
 | Skill | Fallback |
 |---|---|
 | `/commit-gate` | run its three steps yourself: `perf-checklist.md`, then an exact-parity rewrite of any measured hot spot, then guardian A + E on the diff |
-| `/review` | read the diff against repo conventions (CLAUDE.md, lint config) and against the task/issue. Report both separately |
+| `/review` | read the diff for bugs, against repo conventions (CLAUDE.md, lint config) and against the task/issue. Blocking findings first |
 | `/simplify` | look at the diff again for reuse, dead code and needless abstraction |
 | `/cpr` | clean the diff by hand, topical commits, `gh pr create`/`gh pr edit` with a body describing the whole change, print the PR link |
 | `/security-audit` | `references/guardian/A-appsec-identity.md` + `references/guardian/E-http-api.md` + audit checklist sections B, C, D, F |

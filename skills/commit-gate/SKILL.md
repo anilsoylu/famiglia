@@ -15,7 +15,9 @@ Three checks, always in this order, on the code that's about to be committed. Pe
 only what perf measured, security reviews the final diff (including the optimize rewrite). Don't ask between steps.
 Stop only on a blocker or when a fix needs the user's decision.
 
-Run each skill for real. This file is the sequence, not a replacement for their contents.
+Run each skill for real. This file is the sequence, not a replacement for their contents. Inside the gate, `/perf` and
+`/optimize` stop once they have their after numbers: their own closing steps (clean, review, pr-update, commits) don't
+run here, because the gate never commits.
 
 ## 0. Scope the diff
 
