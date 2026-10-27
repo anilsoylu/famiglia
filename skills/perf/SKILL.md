@@ -3,7 +3,8 @@ name: perf
 description: >-
   The general profile-driven perf loop for any language or runtime: baseline,
   profile, fix the real hot path, re-measure. Use for /perf, "this is slow",
-  or optimization work.
+  or optimization work. A known routine that needs an exact-parity speed
+  rewrite goes to /optimize instead.
 ---
 
 # Perf
@@ -21,7 +22,7 @@ one fits.
    harness.
 3. Read the profile, not your intuition — fix the actual hot path.
 4. Re-measure. Record before/after in the PR title/description.
-5. Ship in topical commits (`pr-update`), `clean`, keep CI green.
+5. `clean` first, then ship in topical commits (`pr-update`); keep CI green.
 
 ## Live Electron / hgui
 

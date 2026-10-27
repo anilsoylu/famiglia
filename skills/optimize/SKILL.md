@@ -22,6 +22,13 @@ project-wide sweep.
    tolerance is allowed only with the user's sign-off. Unattended runs are
    bitwise-only: if bitwise parity cannot hold, revert the rewrite, keep the
    cleaned code, and state why in the report.
+   UI/render code has no golden value to compare, so parity there means: the
+   same rendered pixels at a fixed clock (screenshot diff at endpoints and
+   midpoint), the same DOM/a11y tree, and the same event, request and
+   side-effect counts, with each animation's initial play state preserved. A
+   faster run that changes the design, or a blank canvas, is not parity. The
+   per-runtime details are in perf's field notes (Live Electron, Browser idle
+   and retention, SSR responsive-image sections).
 2. Capture a baseline timing on a representative input.
 3. Rewrite shorter and faster. The means are per stack: numpy/numba vectorize
    and JIT the hot loop; TS/JS improve the algorithm and cut allocations,
