@@ -43,7 +43,7 @@ Short version:
 | Stage | Runs |
 |---|---|
 | plan | `references/guardian/core.md` working procedure · the guardian sections for the touched areas · `backend-patterns.md` if it matches · the short "server dies / scale" check from `review-questions.md` · Plan mode for non-trivial work |
-| build | repo conventions · UI work → `/frontend-design` or `/ui-ux-pro-max` · React/Next → `vercel-react-best-practices` · client data fetching → `frontend-data.md` · proportionate guardian review of what's touched |
+| build | repo conventions · UI work → `/frontend-design` or `/ui-ux-pro-max` · React/Next → `vercel-react-best-practices` · client data fetching → `frontend-data.md` · tests and bug fixes → `testing.md` · proportionate guardian review of what's touched |
 | review | `review-questions.md` → "After implementing" · `/review` · `/simplify` |
 | commit | `/commit-gate` (perf → optimize → security-audit on the diff) |
 | merge | `/cpr` (clean → PR) |

@@ -22,3 +22,8 @@
   main or master, never assumed.
 - Skill descriptions trimmed 737 → 429 words (−42%) with no eval regressions; what they carried for one stage moved
   into that stage's text. `scripts/skill-size.py` reports the sizes.
+- dev-flow: `references/testing.md` (reproduce a bug in a failing test first, see every new test fail once, fix the code
+  instead of a red test, test public behavior, mock only boundaries the repo doesn't own, no logic in tests, headless e2e
+  files), wired into build and review. Two eval cases: bug fix starts with a failing test, red test gets a code fix. Opus
+  passes both with or without famiglia loaded, and dev-flow doesn't fire on a plain bug-fix ask, so the rules apply
+  inside dev-flow only. One miss left: a plain bug fix sometimes reports the result without the test command.

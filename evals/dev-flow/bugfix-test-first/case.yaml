@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: bugfix-test-first
+expected_outcome: |
+  A bug report: page 1 starts at the 11th item. Before touching src/paginate.js, adds a test that page 1 returns the
+  first items, runs it and sees it fail. Then fixes the start index to (page - 1) * size, reruns the tests and sees them
+  pass. The reply names the test that failed before and passes after, with the command. (references/testing.md)
+context:
+  scaffold_script: place-files.sh

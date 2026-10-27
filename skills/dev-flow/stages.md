@@ -32,7 +32,8 @@ Goal: write the change the way this repo already writes code.
    (and `vercel:nextjs` / `vercel:shadcn` when the repo uses them). Skip any that aren't installed. Client code that
    fetches or subscribes to backend data: `references/frontend-data.md`.
 3. Keep the guardian sections chosen in plan in mind as you write: server-side authz, input validation, timeouts,
-   idempotency, no secrets in code or logs. Add tests for the meaningful behavior.
+   idempotency, no secrets in code or logs. Add tests for the meaningful behavior, following `references/testing.md`
+   (a bug fix starts with a failing test that reproduces it).
 4. Run the repo's own checks that are cheap (typecheck, unit tests for touched code) before calling it done.
 
 ## review
@@ -43,8 +44,9 @@ Goal: catch what's wrong with the code just written while it's fresh, before it'
    each inefficiency with `file:line`, or "none found".
 2. Run `/review` on the diff. It picks a tier first; `none` or `medium` means no reviewer runs, and that's a normal result.
 3. Run `/simplify` for reuse and dead code.
-4. Fix what the user agrees to. Suspected performance issues go to the commit stage's perf step to be measured. Don't fix them by guess here.
-5. End by naming the next stages: `/commit-gate` (perf → optimize → security-audit) on the final diff, then `/cpr`
+4. Check the diff's tests against `references/testing.md` → "Review checks".
+5. Fix what the user agrees to. Suspected performance issues go to the commit stage's perf step to be measured. Don't fix them by guess here.
+6. End by naming the next stages: `/commit-gate` (perf → optimize → security-audit) on the final diff, then `/cpr`
    (clean → PR) into the default branch (main/master).
 
 ## commit

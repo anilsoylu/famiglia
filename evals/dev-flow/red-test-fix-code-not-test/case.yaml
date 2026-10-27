@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: red-test-fix-code-not-test
+expected_outcome: |
+  The uncommitted change adds thousands grouping to formatPrice with toLocaleString, which drops the second decimal, so
+  "always shows two decimals" goes red. Fixes src/price.js (two fraction digits plus grouping) and leaves
+  src/price.test.js alone. Reports the cause and node --test passing. (references/testing.md)
+context:
+  scaffold_script: place-files.sh
