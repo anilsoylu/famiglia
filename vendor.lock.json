@@ -1,46 +1,4 @@
 {
-  "perf": {
-    "repo": "https://github.com/anilsoylu/consigliere",
-    "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
-    "path": "skills/perf",
-    "license": "Apache-2.0",
-    "sha256": "9b36bc51d61eb52b3dc86475399f82b3d006a2d7939f3ffe3c037cc786599925"
-  },
-  "optimize": {
-    "repo": "https://github.com/anilsoylu/consigliere",
-    "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
-    "path": "skills/optimize",
-    "license": "Apache-2.0",
-    "sha256": "8839d1e236bafea3d2004817dd29274839342fa9d3bb7983bb07aeccefeccfd6"
-  },
-  "clean": {
-    "repo": "https://github.com/anilsoylu/consigliere",
-    "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
-    "path": "skills/clean",
-    "license": "Apache-2.0",
-    "sha256": "c32f01d6066095ac98d108d8e2ac4ed777964b047948a8ad816c7df6946e3c09"
-  },
-  "cpr": {
-    "repo": "https://github.com/anilsoylu/consigliere",
-    "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
-    "path": "skills/cpr",
-    "license": "Apache-2.0",
-    "sha256": "68bff2c82747444fe3c8ac67bd3b7b473a73bede927414a02e9e862fb13d769a"
-  },
-  "pr-update": {
-    "repo": "https://github.com/anilsoylu/consigliere",
-    "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
-    "path": "skills/pr-update",
-    "license": "Apache-2.0",
-    "sha256": "8bf9446fdbdee3a0b8b9bbb5d1abdaecebecfabbf9085feac87b54e4bddcea84"
-  },
-  "review": {
-    "repo": "https://github.com/anilsoylu/consigliere",
-    "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
-    "path": "skills/review",
-    "license": "Apache-2.0",
-    "sha256": "9b67091afdb48784ecf27c6cad6f0c4d00730a328d960766d637bdc4bbafea50"
-  },
   "ai-seo": {
     "repo": "https://github.com/coreyhaines31/marketingskills",
     "ref": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
