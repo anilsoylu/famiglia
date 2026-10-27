@@ -11,6 +11,8 @@ Answer it about the code just written, not the whole repo:
 - wrong data structure: list scans where a map/set lookup fits
 - needless abstraction or code that duplicates an existing helper (point at the helper)
 - blocking work on a hot or user-facing path that could be deferred or queued
+- client data fetching: the same data fetched by several components, no cancellation on route change, one refresh
+  call per 401 instead of a shared one (see `frontend-data.md`)
 
 Every finding gets: `file:line`, why it costs (time, memory, money, round trips), and the smallest fix. Mark it
 "measured" or "suspected". Suspected items go to `/perf` to measure before anything changes.
@@ -36,5 +38,17 @@ Answer as three short sections with concrete answers for *this* system. Generic 
 - where the state has to move (Redis, DB, object storage) so instances are stateless
 - what needs a limit: rate limits, queue depth, payload size, pagination
 - rough capacity math: requests/s × cost per request vs current limits
+
+**Database ladder**: when the database is what breaks, go cheapest first and stop at the first step that fixes the
+measured bottleneck (ByteByteGo's database scaling cheatsheet, reordered). Each step's trade-offs are in the guardian
+item named.
+1. Query and index fixes: `EXPLAIN ANALYZE`, N+1, missing indexes (B-41–44).
+2. Cache hot reads (D-99–103, with C-97/98 for stampedes and invalidation).
+3. Read replicas, if the load is reads. Decide which reads must hit the primary (B-63/64).
+4. Materialized views or denormalization for expensive joins and aggregates. Someone now owns freshness (B-55, B-69).
+5. A bigger server. Fast, but it has a ceiling and a cost (G-162).
+6. Partitioning, then sharding last (B-65–67).
+
+Write-heavy bottlenecks skip step 3.
 
 Patterns for the usual answers are in `backend-patterns.md`.

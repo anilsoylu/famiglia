@@ -11,7 +11,7 @@ Goal: decide how to build it before writing it, with the failure modes on the ta
 2. Map the feature's data flows and trust boundaries. Pick the guardian sections that apply and read only those:
    auth/users/input → `references/guardian/A-appsec-identity.md` · schema/queries → `references/guardian/B-database.md` · multiple services/retries → `references/guardian/C-distributed.md` ·
    cache/queue/async → `references/guardian/D-cache-queues.md` · new endpoints/webhooks → `references/guardian/E-http-api.md` · infra/deploy → `references/guardian/F-cloud-infra.md`, `references/guardian/H-delivery-release.md` ·
-   load/latency/logging → `references/guardian/G-capacity-observability.md` · uploads/buckets/spend → `references/guardian/I-storage-cost.md`.
+   load/latency/logging → `references/guardian/G-capacity-observability.md` · uploads/buckets/spend → `references/guardian/I-storage-cost.md` · client data fetching/real-time UI → `references/frontend-data.md`.
 3. If the feature matches a row in `references/backend-patterns.md`, use that row as the design checklist.
 4. Run the **short** resilience check: two lines each from `references/review-questions.md` → "If the server dies"
    and "When it scales". It's for decisions that are expensive to change later (where state lives, idempotency,
@@ -24,7 +24,8 @@ Goal: write the change the way this repo already writes code.
 
 1. Follow existing conventions (CLAUDE.md, neighbors of the file being changed). Extend existing helpers instead of adding parallel ones.
 2. UI work: use `/frontend-design` or `/ui-ux-pro-max` if installed. React/Next.js: `vercel-react-best-practices`
-   (and `vercel:nextjs` / `vercel:shadcn` when the repo uses them). Skip any that aren't installed.
+   (and `vercel:nextjs` / `vercel:shadcn` when the repo uses them). Skip any that aren't installed. Client code that
+   fetches or subscribes to backend data: `references/frontend-data.md`.
 3. Keep the guardian sections chosen in plan in mind as you write: server-side authz, input validation, timeouts,
    idempotency, no secrets in code or logs. Add tests for the meaningful behavior.
 4. Run the repo's own checks that are cheap (typecheck, unit tests for touched code) before calling it done.

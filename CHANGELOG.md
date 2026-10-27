@@ -9,3 +9,4 @@
 - Repo named famiglia. perf, optimize, clean, cpr, pr-update and review are maintained here. Added pr-ready, pr-triage, list-open-work, no-tropes; updated perf and pr-update.
 - review ships its own tier script (review-tier.mjs) and reviewer prompt (reviewer.md). perf points known routines to /optimize again and runs clean before pr-update. optimize defines parity for UI/render code.
 - README rewritten as a short how-to.
+- dev-flow: `references/frontend-data.md` (client cache, cancellation, single-flight token refresh, typed API layer, real-time choice), wired into plan and build; "Database ladder" (cheapest-first DB scaling order) added to review-questions.md.
