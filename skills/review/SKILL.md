@@ -12,9 +12,9 @@ One pass. One reviewer. No step runs twice.
 
 ## Steps
 
-1. **Tier.** `git merge-base origin/main HEAD`, then paste the sha (the gate denies `$(…)`):
+1. **Tier.** `git merge-base origin/<default-branch> HEAD`, then paste the sha (the gate denies `$(…)`):
 
-       node ~/.claude/hooks/review-tier.mjs . <sha>
+       node ~/.claude/skills/review/review-tier.mjs . <sha>
 
    `none` or `medium` → **stop, no review.** The verifier and root's own diff read cover
    those. Escalate the tier with a stated reason; never downgrade it.
@@ -23,7 +23,8 @@ One pass. One reviewer. No step runs twice.
    review. Nothing else is in scope — not the working tree, not adjacent files, not the plan
    behind the change.
 
-3. **Review.** Spawn `reviewer` fresh, once. **Paste the diff text into the prompt** —
+3. **Review.** Spawn `reviewer` fresh, once. No `reviewer` agent installed? Spawn a general-purpose
+   subagent whose prompt opens with the body of `reviewer.md` (this folder) and tell it to stay read-only. **Paste the diff text into the prompt** —
    `reviewer` has `Read, Grep, Glob` and no Bash, so it cannot fetch the diff itself, and a
    reviewer handed only a command reconstructs the wrong change from the working tree. Name
    the repo root so it can open the files around the hunks. Give it the user's request in
