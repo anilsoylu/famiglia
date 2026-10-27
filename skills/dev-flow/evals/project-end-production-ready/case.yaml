@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: project-end-production-ready
+expected_outcome: |
+  Treats this as the project-end stage and stays read-only (no file edits). Produces a production-readiness report with
+  an overall verdict and checklist items rated PASS/PARTIAL/FAIL/N/A with file:line evidence. Has explicit server-dies
+  and scale sections specific to this code: in-memory sentPerIp rate limiter lost on restart and not shared across
+  instances, invites inserted and emailed one by one with no transaction/idempotency (partial sends on crash), no health
+  check or graceful shutdown, pg pool limits. Names the hardcoded mailer key and missing authz as blockers.
+context:
+  scaffold_script: place-files.sh

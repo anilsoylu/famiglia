@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: new-site-asks-stage-and-sources
+expected_outcome: |
+  Recognizes there is no agency/ folder, so this is stage 0 (onboarding), and asks for the missing project facts,
+  including which data sources exist (Search Console export/MCP, keyword tools) instead of assuming them. Pushes back on
+  30 blog posts (one page a day max, patterns with buying intent first). Sets up or proposes the agency/ files (AGENCY.md,
+  CLIENT.md with open questions). Invents no search volumes or rankings.
+context:
+  scaffold_script: place-files.sh

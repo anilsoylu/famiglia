@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: weekly-pass-respects-90-days
+expected_outcome: |
+  Reads agency/CLIENT.md, AGENCY.md, HANDOFF.md and LEDGER.md first. Marks /invoice-template as "not due" (changed
+  2026-10-01, inside its 90 days) and proposes no change for any of its queries, even though they sit in positions 5-20.
+  Builds quick wins from the GSC export: positions 5-20 sorted by impressions, excluding /invoice-template (e.g.
+  /invoice-generator "invoice generator for freelancers" 1,720 impr pos 9.6, /quickbooks-alternative 1,460 impr pos 7.9,
+  /blog/invoice-number 3,100 impr pos 18.4 flagged as informational/low business value). Proposes at most one change per
+  candidate with the evidence rows, ranked by business value, writes them under "proposed" in HANDOFF.md, and stops for the
+  user's pick without drafting or publishing anything.
+context:
+  scaffold_script: place-files.sh

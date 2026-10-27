@@ -1,0 +1,26 @@
+{
+  "_comment": "Third-party skills bundled in skills/. Run scripts/sync-vendor.py to re-copy them, or with --check to see drift. Bump 'ref' to update.",
+  "sources": [
+    {
+      "repo": "https://github.com/anilsoylu/consigliere",
+      "ref": "826c052be0dfef97ccae3ce7ff35999637735a59",
+      "license": "Apache-2.0",
+      "license_files": ["LICENSE", "NOTICE"],
+      "skills": {"perf": "skills/perf", "optimize": "skills/optimize", "clean": "skills/clean", "cpr": "skills/cpr", "pr-update": "skills/pr-update", "review": "skills/review"}
+    },
+    {
+      "repo": "https://github.com/coreyhaines31/marketingskills",
+      "ref": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "license": "MIT",
+      "license_files": ["LICENSE"],
+      "skills": {"ai-seo": "skills/ai-seo", "seo-audit": "skills/seo-audit"}
+    },
+    {
+      "repo": "https://github.com/cloudflare/security-audit-skill",
+      "ref": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "license": "MIT",
+      "license_files": ["LICENSE"],
+      "skills": {"security-audit": "skills/security-audit"}
+    }
+  ]
+}

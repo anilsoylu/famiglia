@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: gate-runs-in-order-no-commit
+expected_outcome: |
+  Runs perf, then optimize, then security-audit on the uncommitted diff, in that order, without stopping to ask between steps.
+  Perf points at the per-email loop (sequential query + insert + mailer fetch per email) as the hot path. Security flags the
+  hardcoded MAILER_KEY, the SQL built by string concatenation, the missing team-role check on POST /teams/:id/invites,
+  and the Math.random invite token. The report's verdict is BLOCKED, and no git commit is created.
+context:
+  scaffold_script: place-files.sh

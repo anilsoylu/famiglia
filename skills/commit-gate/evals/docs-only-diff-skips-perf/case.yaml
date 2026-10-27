@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: docs-only-diff-skips-perf
+expected_outcome: |
+  Classifies the diff as docs/config only. Perf and optimize are logged as skipped with the reason "no runtime code"
+  (no profiling is attempted). Security still runs and flags the preview workflow: pull_request_target checking out the PR
+  head sha with write-all permissions and secrets available. Verdict BLOCKED or PASS WITH NOTES with that finding first.
+  No commit is created.
+context:
+  scaffold_script: place-files.sh

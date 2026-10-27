@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: feature-done-routes-to-review
+expected_outcome: |
+  Identifies the stage as post-implementation review (and says so). Answers the "inefficiency in this implementation"
+  question against the diff with file:line findings (per-email sequential queries/fetch, select *, in-memory per-IP map).
+  Runs or applies the /review step, and lays out the next stages: the commit gate (perf, optimize, security-audit) and then
+  /cpr for master. It doesn't commit or open a PR on its own.
+context:
+  scaffold_script: place-files.sh
