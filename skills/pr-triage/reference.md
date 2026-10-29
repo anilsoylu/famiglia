@@ -12,19 +12,16 @@ Supersedes #<old> (and consolidates #<sibling> / #<sibling> if applicable).
 <1–3 paragraphs: problem, why the old one wasn't mergeable as-is, what this does>
 
 ### What this PR does
-
 - …
 
 ### What was dropped from #<old>
-
 - …
 
 ## Test plan
-
 - [x] <repo's test command> → …
 - [ ] manual check if needed
 
-Closes #<issue> <!-- only if this actually fixes that issue -->
+Closes #<issue>   <!-- only if this actually fixes that issue -->
 
 Credit: @author (primary). Related: #…
 ```

@@ -1,8 +1,9 @@
 ---
 name: list-open-work
 description: >-
-  List my open PRs/MRs in this repo with their tracker tickets. For "what do I have open", "what's in review",
-  standup lists.
+  List my open MRs/PRs in the current repo/worktree, each with its tracker
+  ticket. Use when I invoke /list-open-work, or ask what I have open, what's
+  in review, or for a standup list of my open MRs or PRs.
 ---
 
 # /list-open-work

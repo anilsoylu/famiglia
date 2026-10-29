@@ -63,7 +63,7 @@ Every hand-off has a fallback, so the flow still works when someone installs onl
 | `/simplify` | look at the diff again for reuse, dead code and needless abstraction |
 | `/cpr` | clean the diff by hand, topical commits, `gh pr create`/`gh pr edit` with a body describing the whole change, print the PR link; if the user asked to merge: `gh pr checks --watch`, merge, pull the default branch |
 | `/security-audit` | `references/guardian/A-appsec-identity.md` + `references/guardian/E-http-api.md` + audit checklist sections B, C, D, F |
-| `/frontend-design`, `/ui-ux-pro-max`, vercel skills | follow the repo's existing UI patterns |
+| `/frontend-design`, `/ui-ux-pro-max`, `vercel-react-best-practices`, `vercel:*` | follow the repo's existing UI patterns |
 
 ## Rules that hold in every stage
 

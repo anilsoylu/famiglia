@@ -1,16 +1,26 @@
 {
-  "_comment": "Third-party skills bundled in skills/. Run scripts/sync-vendor.py to re-copy them, or with --check to see drift. Bump 'ref' to update.",
+  "_comment": "Third-party skills bundled in skills/, kept byte-for-byte upstream. Run scripts/sync-vendor.py to re-copy them, --check to see drift, --latest to bump every ref to upstream HEAD. A skill is a path, or {path, files} to copy only some files.",
   "sources": [
     {
       "repo": "https://github.com/coreyhaines31/marketingskills",
-      "ref": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
       "license": "MIT",
       "license_files": [
         "LICENSE"
       ],
       "skills": {
         "ai-seo": "skills/ai-seo",
-        "seo-audit": "skills/seo-audit"
+        "analytics": "skills/analytics",
+        "competitors": "skills/competitors",
+        "content-strategy": "skills/content-strategy",
+        "copywriting": "skills/copywriting",
+        "cro": "skills/cro",
+        "lead-magnets": "skills/lead-magnets",
+        "link-building": "skills/link-building",
+        "programmatic-seo": "skills/programmatic-seo",
+        "schema": "skills/schema",
+        "seo-audit": "skills/seo-audit",
+        "site-architecture": "skills/site-architecture"
       }
     },
     {
@@ -22,6 +32,77 @@
       ],
       "skills": {
         "security-audit": "skills/security-audit"
+      }
+    },
+    {
+      "repo": "https://github.com/OutThisLife/brooklyn-skills",
+      "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "skills": {
+        "clean": "skills/clean",
+        "cpr": "skills/cpr",
+        "list-open-work": "skills/list-open-work",
+        "no-tropes": "skills/no-tropes",
+        "perf": "skills/perf",
+        "pr-ready": "skills/pr-ready",
+        "pr-triage": "skills/pr-triage",
+        "pr-update": "skills/pr-update",
+        "stacked-pr": "skills/stacked-pr",
+        "ui-only": "skills/ui-only",
+        "ui-system": "skills/ui-system",
+        "visual-verify": "skills/visual-verify"
+      }
+    },
+    {
+      "repo": "https://github.com/anthropics/skills",
+      "ref": "ca45fc496a3436251f191354091d557da31c15b5",
+      "license": "Apache-2.0",
+      "license_files": [
+        "skills/frontend-design/LICENSE.txt"
+      ],
+      "skills": {
+        "frontend-design": "skills/frontend-design"
+      }
+    },
+    {
+      "repo": "https://github.com/vercel-labs/agent-skills",
+      "ref": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "license": "MIT",
+      "license_files": [],
+      "skills": {
+        "vercel-react-best-practices": "skills/react-best-practices"
+      }
+    },
+    {
+      "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "ref": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "skills": {
+        "ui-ux-pro-max": ".claude/skills/ui-ux-pro-max"
+      }
+    },
+    {
+      "repo": "https://github.com/blader/humanizer",
+      "ref": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "skills": {
+        "humanizer": {
+          "path": ".",
+          "files": [
+            "SKILL.md",
+            "README.md",
+            "CHANGELOG.md"
+          ]
+        }
       }
     }
   ]

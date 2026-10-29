@@ -1,6 +1,6 @@
 # Perf field notes
 
-Stack-specific lessons from past perf work. Read only the section that matches the stack you are profiling.
+Stack-specific lessons from past perf and optimize work. Read only the section that matches the stack you are working on.
 
 ## Live Electron / hgui
 

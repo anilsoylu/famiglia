@@ -28,8 +28,8 @@ Goal: decide how to build it before writing it, with the failure modes on the ta
 Goal: write the change the way this repo already writes code.
 
 1. Follow existing conventions (CLAUDE.md, neighbors of the file being changed). Extend existing helpers instead of adding parallel ones.
-2. UI work: use `/frontend-design` or `/ui-ux-pro-max` if installed. React/Next.js: `vercel-react-best-practices`
-   (and `vercel:nextjs` / `vercel:shadcn` when the repo uses them). Skip any that aren't installed. Client code that
+2. UI work: use `/frontend-design` or `/ui-ux-pro-max`. React/Next.js: `vercel-react-best-practices` (all three ship
+   with famiglia), plus `vercel:nextjs` / `vercel:shadcn` when the repo uses them and the Vercel plugin is installed. Client code that
    fetches or subscribes to backend data: `references/frontend-data.md`.
 3. Keep the guardian sections chosen in plan in mind as you write: server-side authz, input validation, timeouts,
    idempotency, no secrets in code or logs. Add tests for the meaningful behavior, following `references/testing.md`

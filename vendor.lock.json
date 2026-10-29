@@ -1,17 +1,87 @@
 {
   "ai-seo": {
     "repo": "https://github.com/coreyhaines31/marketingskills",
-    "ref": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
     "path": "skills/ai-seo",
     "license": "MIT",
     "sha256": "58bd6c7a85703c8f897ad52271791713ba9928f7cc06a2a737963f45cb8e91a6"
   },
+  "analytics": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/analytics",
+    "license": "MIT",
+    "sha256": "4b01f3815918fa160e44afd05bc1c5e259114f27e143fcc74eaa2177da41f967"
+  },
+  "competitors": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/competitors",
+    "license": "MIT",
+    "sha256": "3bea457555c438e71680a8eaf2feedc19d81cffaa99dbf63d912627008cdcb06"
+  },
+  "content-strategy": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/content-strategy",
+    "license": "MIT",
+    "sha256": "d0ead437dce01958e9a963c0474e6b6082d1b7b92dfe2adb68e39be375d480dc"
+  },
+  "copywriting": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/copywriting",
+    "license": "MIT",
+    "sha256": "a5ba58e8db591838edefe07084a5b3f5ec260ac8a38ee3701a6f7c4f27fa9aba"
+  },
+  "cro": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/cro",
+    "license": "MIT",
+    "sha256": "a7bfbec3b5ecf6ada80728e9989b36747cde3a9472580578a3d2d66d7e517b00"
+  },
+  "lead-magnets": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/lead-magnets",
+    "license": "MIT",
+    "sha256": "4a5842354a1b1615c0cee085deded249bfdc8d8c83cf8e960365d51a0c5166c9"
+  },
+  "link-building": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/link-building",
+    "license": "MIT",
+    "sha256": "daf560f8b32c955a992e6ef1e7e668e73ed1edff22be5dbf22aa5bcb69518b2a"
+  },
+  "programmatic-seo": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/programmatic-seo",
+    "license": "MIT",
+    "sha256": "0f24ae992b856417d7ab5434ca0edd2b8191704dcd8731e67749208f4ff70139"
+  },
+  "schema": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/schema",
+    "license": "MIT",
+    "sha256": "e50bc4bb09efbfab52b6fe5ba34f8980032a2046be9760e4ac87bdaa4085dfbc"
+  },
   "seo-audit": {
     "repo": "https://github.com/coreyhaines31/marketingskills",
-    "ref": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
     "path": "skills/seo-audit",
     "license": "MIT",
     "sha256": "dc5d5f6cee68675b5e56b581a48c4a9554bd8a420916e5d57843e650d18308a7"
+  },
+  "site-architecture": {
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "ref": "0cd9b3a0ef4c411a1d690419ce843f2a1da32cce",
+    "path": "skills/site-architecture",
+    "license": "MIT",
+    "sha256": "ffedde0f08e8661ea7ca38842373c6d57b4c871b7c2cb1af0df319dd296a1748"
   },
   "security-audit": {
     "repo": "https://github.com/cloudflare/security-audit-skill",
@@ -19,5 +89,122 @@
     "path": "skills/security-audit",
     "license": "MIT",
     "sha256": "c7970d862af9b8bfd7601f31db6d3ea638c6e833f2f8bcf81293bcdb36f3f6f4"
+  },
+  "clean": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/clean",
+    "license": "MIT",
+    "sha256": "ba2fcdb585d07a67d7d5f852d9a1ff65c020f381453c3f2b556718b666889dfb"
+  },
+  "cpr": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/cpr",
+    "license": "MIT",
+    "sha256": "521d7623086813ad8c641fbd29f912b0f9ef4b6f28fbb64487d4f6ca16fe4fc6"
+  },
+  "list-open-work": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/list-open-work",
+    "license": "MIT",
+    "sha256": "6b190670a7264aa621a88c1ce949ea2a461f0df73e0d6bf662c48c3574b2647d"
+  },
+  "no-tropes": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/no-tropes",
+    "license": "MIT",
+    "sha256": "c60ed8ae1decf5dc4e0101180c82fca1fb9fbfe361565dd622eac2b83b7fbb04"
+  },
+  "perf": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/perf",
+    "license": "MIT",
+    "sha256": "54f7622b90510dbc7107b9b1926bbcd65730ebd79f2138addb0907397d00735f"
+  },
+  "pr-ready": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/pr-ready",
+    "license": "MIT",
+    "sha256": "eaf2b1efdcfee8d2c5ade4100e0d1de134adfa4bfeea89cb0dc67dc06ee1ce8a"
+  },
+  "pr-triage": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/pr-triage",
+    "license": "MIT",
+    "sha256": "a3e4a79d6c3a8da9e7ce1f1a1fbe2e6199dcc2f2b3f2a9b986a5c38fae72986a"
+  },
+  "pr-update": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/pr-update",
+    "license": "MIT",
+    "sha256": "ee83afda8207bc28d8ba6a894c4d74d0d934f49de50a1a6f7d0021a1d95fcf84"
+  },
+  "stacked-pr": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/stacked-pr",
+    "license": "MIT",
+    "sha256": "23e21edc6a7936c4e5d923b1cd2690d31a9f5614466bce4491f0b7758d40f212"
+  },
+  "ui-only": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/ui-only",
+    "license": "MIT",
+    "sha256": "3124f7a5a37db09b55ad13a0c60780494a7922e79591b8f4ac34ddfe073098ac"
+  },
+  "ui-system": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/ui-system",
+    "license": "MIT",
+    "sha256": "40a797b2b7757985f9659402aaf1986f3e74b36ab2c44b75b0ea6e0bd44d9475"
+  },
+  "visual-verify": {
+    "repo": "https://github.com/OutThisLife/brooklyn-skills",
+    "ref": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+    "path": "skills/visual-verify",
+    "license": "MIT",
+    "sha256": "7c872804507c73d75e8cc33218e4a1c7f391885c63ac4e337006cc59012b7f53"
+  },
+  "frontend-design": {
+    "repo": "https://github.com/anthropics/skills",
+    "ref": "ca45fc496a3436251f191354091d557da31c15b5",
+    "path": "skills/frontend-design",
+    "license": "Apache-2.0",
+    "sha256": "7e9c2af00fd5b3144f49ce6fb1b16037b392ab9c2f049423b0b6114d99381ba2"
+  },
+  "vercel-react-best-practices": {
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "ref": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "path": "skills/react-best-practices",
+    "license": "MIT",
+    "sha256": "e3f2294574b469c7c198373a443a86571012769d0bbeed68854bd55642ec0d7b"
+  },
+  "ui-ux-pro-max": {
+    "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "ref": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+    "path": ".claude/skills/ui-ux-pro-max",
+    "license": "MIT",
+    "sha256": "0e54f87ea382d98cc580b2a72c79a9864c5486943aee9168df131491a6f8f7f1"
+  },
+  "humanizer": {
+    "repo": "https://github.com/blader/humanizer",
+    "ref": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+    "path": ".",
+    "license": "MIT",
+    "sha256": "ffcb738689fb26e001b1f63f730f9c7c00147107f2893ff9324a5505c4f482d3",
+    "files": [
+      "SKILL.md",
+      "README.md",
+      "CHANGELOG.md"
+    ]
   }
 }

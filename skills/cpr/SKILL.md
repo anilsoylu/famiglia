@@ -1,8 +1,9 @@
 ---
 name: cpr
 description: >-
-  Clean the diff, then open or refresh the PR/MR, and merge it when asked. Ends with the PR link. For "clean and
-  PR", "tidy it up and push the PR".
+  Clean the diff, then open or refresh the PR/MR — one pass, ending in the
+  linked URL. Use for /cpr, "clean and PR", "tidy it up and push the PR", or
+  any handoff where polish and the PR should happen together.
 ---
 
 # CPR (clean → PR)
@@ -20,16 +21,8 @@ their contents.
    style. Polish only — this is not a test/tsc/lint run.
 2. **Shape + publish** (`pr-update`). Topical commits, title and body that
    describe the change as a whole, media in an existing body preserved
-   verbatim.
-3. **Merge, when the user asked for it** in this request ("merge to main/master",
-   "master'a merge et"). Wait for checks (`gh pr checks --watch`), merge with
-   the repo's usual method, then check out the default branch and pull so the
-   local copy has the merge. A red check stops here, with the failing check
-   named.
-4. Run any later step the user asked for that the repo documents (a deploy
-   script, a release command) yourself, and verify its result before saying
-   it's done. Hand back only what needs the user's device, account or decision.
-5. End with the PR/MR as a markdown link — number **and** full forge URL.
+   verbatim, prose through `no-tropes`.
+3. End with the PR/MR as a markdown link — number **and** full forge URL.
 
 ## Order matters
 
@@ -39,13 +32,14 @@ exists.
 
 ## Stop conditions
 
-- UI work: don't start until the user likes the UI.
+- UI work: don't start until the user likes the UI (`ui-only`).
 - Nothing to clean is a valid outcome — say so in one line and go to step 2.
 - Don't stall on a clean pass. If polish keeps expanding, that's scope creep;
   ship the narrow version.
 
 ## Scope
 
-- **In:** polish the diff, shape commits, create or update the PR/MR, merge it
-  and pull the default branch when asked, print the link.
-- **Out:** fixing CI and review threads (`pr-ready`), merging nobody asked for.
+- **In:** polish the diff, shape commits, create or update the PR/MR, print the
+  link.
+- **Out:** CI and review threads (`pr-ready`), triage/salvage (`pr-triage`),
+  stacked bases (`stacked-pr`), merging.

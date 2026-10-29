@@ -1,8 +1,10 @@
 ---
 name: clean
 description: >-
-  Polish your own diff by hand: KISS/DRY, local style, dead code out. Not a test run, not a subagent sweep. For
-  "clean it up", "tidy this", and right before pr-update.
+  Polish your own diff by hand with KISS/DRY and local style — the pre-handoff
+  pass, not a test run and not a subagent sweep. Use for /clean, "clean it up",
+  "tidy this", and automatically before creating, updating, or automerging a PR
+  or moving to the next one.
 ---
 
 # Clean
@@ -15,8 +17,9 @@ tsc, or lint as the task.** Run a check only if it's genuinely needed to confirm
 the polish is safe.
 
 Clean is a standalone pass, not just a pre-PR step — run it whenever things get
-messy, including mid-work. On a handoff it runs once, after the review and its
-fixes are closed, right before `pr-update`. Nothing re-reviews a cleaned diff.
+messy, including mid-work. Also run it automatically before any PR handoff
+(creating, updating, automerging, or moving to the next PR) without being told
+each time.
 
 ## Do
 
@@ -24,9 +27,11 @@ fixes are closed, right before `pr-update`. Nothing re-reviews a cleaned diff.
 2. Extend existing helpers — don't parallel-implement.
 3. Match neighboring style (names, imports, file layout, comment density).
 4. Prefer the small sharp version over ceremony.
-5. UI work: polish it only once the user is happy with the UI itself.
-6. Stop at the code. The commit split, the title/body and the PR itself are
-   `pr-update`'s job, and it runs right after this.
+5. UI work: only after they like the UI (`ui-only`). Use `ui-system` for
+   primitives.
+6. On the PR: title/body describe the change as a whole (a short intro), not a
+   changelog of steps. Split into topical commits (`pr-update`), run
+   `no-tropes` on the text, and link the PR.
 
 ## Don't
 

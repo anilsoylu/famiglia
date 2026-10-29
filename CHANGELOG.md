@@ -27,3 +27,11 @@
   files), wired into build and review. Two eval cases: bug fix starts with a failing test, red test gets a code fix. Opus
   passes both with or without famiglia loaded, and dev-flow doesn't fire on a plain bug-fix ask, so the rules apply
   inside dev-flow only. One miss left: a plain bug fix sometimes reports the result without the test command.
+- Vendored every skill famiglia points to, byte-for-byte from upstream so `npx skills update` can replace them cleanly:
+  frontend-design (anthropics/skills), vercel-react-best-practices (vercel-labs/agent-skills), ui-ux-pro-max
+  (nextlevelbuilder), humanizer (blader), the ten marketingskills that ai-seo and seo-audit list as related, and the
+  brooklyn-skills originals of clean, cpr, list-open-work, no-tropes, perf, pr-ready, pr-triage and pr-update (plus
+  stacked-pr, ui-only, ui-system, visual-verify, which they call). Our edits to the brooklyn eight are gone, and
+  perf's field notes moved to `optimize/field-notes.md`. `sync-vendor.py` gains `--latest`, root-level skills
+  (`{path, files}`), nested license paths and NOTICE copying. no-tropes and humanizer both ship, and the de-AI routing
+  eval accepts either.
