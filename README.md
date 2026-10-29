@@ -97,19 +97,24 @@ Two skills remove AI tells. Install both and pick per job, or keep the one you l
 ## How the skills fit together
 
 ```text
- dev-flow ── plan ── build ─────────── review ──────── commit ─────────── merge ──── end
-                      │                  │               │                  │         │
-          frontend-design / ui-ux-  /review        commit-gate:         /cpr:      audit +
-          pro-max / ui-only /       /simplify      perf → optimize →    clean →    security-audit
-          vercel-react-best-                       security-audit       pr-update  (guidance mode)
-          practices                                                         │
-                                                                         pr-ready (CI, threads)
+dev-flow: one stage at a time
 
- seo-agency ── strategy ── pages ── links ── technical ── AI visibility ── weekly loop
-                             │                  │              │
-                     copywriting, schema,   seo-audit       ai-seo
-                     programmatic-seo,
-                     site-architecture
+  plan     risk review, "what if the server dies or scales?",
+           a plan file you approve before any code
+  build    frontend-design, ui-ux-pro-max, ui-only,
+           vercel-react-best-practices, tests first for bug fixes
+  review   inefficiency pass, /review, /simplify
+  commit   commit-gate: perf → optimize → security-audit,
+           one go/no-go report, never commits
+  merge    /cpr (clean → pr-update), then green checks → merge
+           pr-ready handles red CI and review threads
+  end      production audit + security-audit
+
+seo-agency: strategy → pages → links → technical → AI visibility → weekly loop
+
+  pages          copywriting, schema, programmatic-seo, site-architecture
+  technical      seo-audit
+  AI visibility  ai-seo
 ```
 
 Every hand-off has a fallback, so a skill still works when you install it alone.
