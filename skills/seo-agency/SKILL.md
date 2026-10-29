@@ -21,7 +21,7 @@ anything that publishes, deletes, redirects or costs money.
    several clients and the user didn't say which, ask. Read `AGENCY.md`, then that client's `CLIENT.md`,
    `HANDOFF.md` and `LEDGER.md`. Nothing else yet.
 2. **Ask only what's missing.** Every project is different. If CLIENT.md doesn't record a **stage** or **data sources**, or
-   the user's request doesn't make the stage obvious, ask with one AskUserQuestion call:
+   the user's request doesn't make the stage obvious, ask in one question (AskUserQuestion in Claude Code):
    - which stage (options from the menu below, the most likely first)
    - which data sources this project has (GSC CSV / GSC MCP / ChatSEO MCP / DataForSEO or Ahrefs / none yet), multi-select
    Write the answers into CLIENT.md so the next run doesn't ask again. No `agency/` folder yet means stage 0.

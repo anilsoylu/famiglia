@@ -62,9 +62,13 @@ Goal: nothing gets committed without going through perf, optimize and security.
 Goal: get the branch into the default branch (main/master) through a clean PR.
 
 1. Make sure the commit gate passed on the final diff. If commits landed after the last gate run, run it again.
-2. Run `/cpr`. It runs clean → pr-update and ends with the PR link.
-3. If the user asked to merge, `/cpr` merges once checks are green and pulls the default branch. Otherwise stop at the PR. Failing
-   CI and review threads go to `pr-ready`.
+2. Run `/cpr`. It runs clean → pr-update and ends with the PR link. `/cpr` never merges; the next two steps are this stage's.
+3. If the user asked to merge in this request ("merge to main/master", "master'a merge et"): wait for checks
+   (`gh pr checks --watch`), merge with the repo's usual method, then check out the default branch and pull. A red check
+   stops here with the failing check named; failing CI and review threads go to `pr-ready`. No merge asked → stop at the PR.
+4. Run any later step the user asked for that the repo documents (a deploy script, a release command) yourself, and
+   verify its result before saying it's done. Hand back only what needs the user's device, account or decision.
+5. End with the PR as a markdown link: number and full URL.
 
 ## end
 

@@ -1,6 +1,12 @@
 {
   "name": "famiglia",
-  "version": "0.1.0",
-  "description": "Skills for shipping code from plan to production, and for running SEO for a site.",
+  "description": "Skills for shipping code from plan to production, running SEO for a site, and writing that does not read as AI.",
+  "version": "0.2.0",
+  "author": { "name": "anilsoylu", "url": "https://github.com/anilsoylu" },
+  "homepage": "https://github.com/anilsoylu/famiglia",
+  "repository": "https://github.com/anilsoylu/famiglia",
+  "license": "Apache-2.0",
+  "keywords": ["dev-flow", "code-review", "pull-requests", "performance", "security", "seo", "writing"],
+  "skills": "./skills",
   "experimental": { "evals": "evals" }
 }

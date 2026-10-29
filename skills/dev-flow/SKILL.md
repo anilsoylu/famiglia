@@ -29,8 +29,8 @@ Read the situation before asking: the user's words, `git status`, `git diff --st
 | "merge", "master"/"main", "PR", branch is ahead and gate already passed | **merge** |
 | "project is finished", "production ready?", "before launch", "server dies / scale" | **end** |
 
-If two stages fit, or there's no signal, ask once with AskUserQuestion (options = the stages, the most likely
-one first). Say which stage you're running in your first line, e.g. `dev-flow → commit stage`.
+If two stages fit, or there's no signal, ask once (AskUserQuestion in Claude Code; options = the stages, the most
+likely one first). Say which stage you're running in your first line, e.g. `dev-flow → commit stage`.
 
 ## 2. Run the stage
 
@@ -46,7 +46,7 @@ Short version:
 | build | repo conventions · UI work → `/frontend-design` or `/ui-ux-pro-max` · React/Next → `vercel-react-best-practices` · client data fetching → `frontend-data.md` · tests and bug fixes → `testing.md` · proportionate guardian review of what's touched |
 | review | `review-questions.md` → "After implementing" · `/review` · `/simplify` |
 | commit | `/commit-gate` (perf → optimize → security-audit on the diff) |
-| merge | `/cpr` (clean → PR) |
+| merge | `/cpr` (clean → PR), then merge and pull when asked |
 | end | `references/audit/` full production-readiness audit · full "server dies / scale" from `review-questions.md` · `/security-audit` guidance mode (full mode only on the user's yes) |
 
 Stages chain forward when the user wants that ("finish it up" after review → commit → merge). Stop between stages
@@ -61,7 +61,7 @@ Every hand-off has a fallback, so the flow still works when someone installs onl
 | `/commit-gate` | run its three steps yourself: `perf-checklist.md`, then an exact-parity rewrite of any measured hot spot, then guardian A + E on the diff |
 | `/review` | read the diff for bugs, against repo conventions (CLAUDE.md, lint config) and against the task/issue. Blocking findings first |
 | `/simplify` | look at the diff again for reuse, dead code and needless abstraction |
-| `/cpr` | clean the diff by hand, topical commits, `gh pr create`/`gh pr edit` with a body describing the whole change, print the PR link; if the user asked to merge: `gh pr checks --watch`, merge, pull the default branch |
+| `/cpr` | clean the diff by hand, topical commits, `gh pr create`/`gh pr edit` with a body describing the whole change, print the PR link (the merge steps stay this stage's either way) |
 | `/security-audit` | `references/guardian/A-appsec-identity.md` + `references/guardian/E-http-api.md` + audit checklist sections B, C, D, F |
 | `/frontend-design`, `/ui-ux-pro-max`, `vercel-react-best-practices`, `vercel:*` | follow the repo's existing UI patterns |
 

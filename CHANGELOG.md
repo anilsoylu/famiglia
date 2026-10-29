@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.2.0 — 2026-10-29
+- Vendored every skill famiglia points to, byte-for-byte from upstream so `npx skills update` can replace them cleanly:
+  frontend-design (anthropics/skills), vercel-react-best-practices (vercel-labs/agent-skills), ui-ux-pro-max
+  (nextlevelbuilder), humanizer (blader), the ten marketingskills that ai-seo and seo-audit list as related, and the
+  brooklyn-skills originals of clean, cpr, list-open-work, no-tropes, perf, pr-ready, pr-triage and pr-update (plus
+  stacked-pr, ui-only, ui-system, visual-verify, which they call). Our edits to the brooklyn eight are gone, and
+  perf's field notes moved to `optimize/field-notes.md`. `sync-vendor.py` gains `--latest`, root-level skills
+  (`{path, files}`), nested license paths and NOTICE copying. no-tropes and humanizer both ship, and the de-AI routing
+  eval accepts either.
+- dev-flow's merge stage does the merge itself (green checks, merge, pull, documented follow-ups), since upstream `/cpr`
+  stops at the PR. The three UI/React skills are no longer "if installed".
+- Works outside Claude Code: `npx skills add anilsoylu/famiglia` for any agent, plus Claude Code, Codex and Cursor plugin
+  manifests. review resolves its scripts from its own folder, and Claude-only tools are named as examples with a fallback.
+- `almost-paid` (nestyme/awesome-prompts) bundled with credit; that repo has no license file (see LICENSES/awesome-prompts).
+- Apache-2.0 `LICENSE`. `AGENTS.md` for agents editing the repo. `check-refs.py` checks the Agent Skills spec (name
+  format, description ≤ 1024 chars; a warning for bundled skills). `sync-readme.py` generates the README skill and credits
+  tables. README rewritten for public readers.
+
 ## 0.1.0 — 2026-10-27
 - `seo-agency`: stage-aware SEO agency (5 departments, 8 stages) built from sources/seo-prompt/ playbooks; chains /seo-audit and /ai-seo.
 - `dev-flow`: plan → build → review → commit → merge → end, built from sources/code-prompt/1–6; chains /review, /simplify, /commit-gate, /cpr, /security-audit.
@@ -27,11 +45,3 @@
   files), wired into build and review. Two eval cases: bug fix starts with a failing test, red test gets a code fix. Opus
   passes both with or without famiglia loaded, and dev-flow doesn't fire on a plain bug-fix ask, so the rules apply
   inside dev-flow only. One miss left: a plain bug fix sometimes reports the result without the test command.
-- Vendored every skill famiglia points to, byte-for-byte from upstream so `npx skills update` can replace them cleanly:
-  frontend-design (anthropics/skills), vercel-react-best-practices (vercel-labs/agent-skills), ui-ux-pro-max
-  (nextlevelbuilder), humanizer (blader), the ten marketingskills that ai-seo and seo-audit list as related, and the
-  brooklyn-skills originals of clean, cpr, list-open-work, no-tropes, perf, pr-ready, pr-triage and pr-update (plus
-  stacked-pr, ui-only, ui-system, visual-verify, which they call). Our edits to the brooklyn eight are gone, and
-  perf's field notes moved to `optimize/field-notes.md`. `sync-vendor.py` gains `--latest`, root-level skills
-  (`{path, files}`), nested license paths and NOTICE copying. no-tropes and humanizer both ship, and the de-AI routing
-  eval accepts either.

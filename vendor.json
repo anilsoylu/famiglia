@@ -104,6 +104,15 @@
           ]
         }
       }
+    },
+    {
+      "repo": "https://github.com/nestyme/awesome-prompts",
+      "ref": "d200ba507703e4922ad8a1b3acc53f22061c3785",
+      "license": "none (shared publicly by the author)",
+      "license_files": [],
+      "skills": {
+        "almost-paid": "skills/almost-paid"
+      }
     }
   ]
 }

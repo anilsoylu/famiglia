@@ -44,7 +44,7 @@ the stage menu in SKILL.md if it adds a stage.
 
 ## 5 · Review + close
 
-1. Review in a **fresh context**: a subagent given only AGENCY.md, the brief, the serp read and the page. Use `departments.md` §10.
+1. Review in a **fresh context**: a subagent (or a new session) given only AGENCY.md, the brief, the serp read and the page. Use `departments.md` §10.
 2. Writer fixes the FAILs only. A FAIL that repeats on a pattern goes into TEMPLATE or AGENCY.md.
 3. Close (`departments.md` §11): ship list with proof, links applied, the diff gate if it replaces an existing page,
    LEDGER line with next check = today + 90, the quotable passage.

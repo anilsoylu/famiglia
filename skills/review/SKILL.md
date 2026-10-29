@@ -13,11 +13,12 @@ One pass. One reviewer. No step runs twice.
 
 Terms: **root** is the session running this skill. **The verifier** is the repo's own checks for the change (tests,
 typecheck, lint, whatever its CI runs). Some permission setups block `$(…)` and `>` in root's shell, which is why the
-steps below paste the sha and use `Write`.
+steps below paste the sha and use `Write`. **`<skill-dir>`** is the folder holding this SKILL.md
+(`~/.claude/skills/review` for a Claude Code user install, `.agents/skills/review` for most other agents).
 
 1. **Tier.** `git merge-base origin/<default-branch> HEAD`, then paste the sha:
 
-       node ~/.claude/skills/review/review-tier.mjs . <sha>
+       node <skill-dir>/review-tier.mjs . <sha>
 
    `none` or `medium` → **stop, no review.** The verifier and root's own diff read cover
    those. Escalate the tier with a stated reason; never downgrade it.
@@ -27,7 +28,8 @@ steps below paste the sha and use `Write`.
    behind the change.
 
 3. **Review.** Spawn `reviewer` fresh, once. No `reviewer` agent installed? Spawn a general-purpose
-   subagent whose prompt opens with the body of `reviewer.md` (this folder) and tell it to stay read-only. **Paste the diff text into the prompt** —
+   subagent whose prompt opens with the body of `reviewer.md` (this folder) and tell it to stay read-only. An agent with no subagents
+   reviews in a fresh pass of its own, with `reviewer.md` as its rules and only the inputs below. **Paste the diff text into the prompt** —
    `reviewer` has `Read, Grep, Glob` and no Bash, so it cannot fetch the diff itself, and a
    reviewer handed only a command reconstructs the wrong change from the working tree. Name
    the repo root so it can open the files around the hunks. Give it the user's request in
@@ -39,7 +41,7 @@ steps below paste the sha and use `Write`.
 4. **Lint the review.** `Write` the diff and the findings — `[{label, file, line, text}]` — to
    `/tmp/review/`, then:
 
-       node ~/.claude/skills/review/review-lint.mjs /tmp/review/diff.patch /tmp/review/findings.json
+       node <skill-dir>/review-lint.mjs /tmp/review/diff.patch /tmp/review/findings.json
 
    It reads the shape of the review and never the code: labels, caps, and whether every cited
    path is in the diff that was handed over. It reports and exits 0. A mismatch is yours to
