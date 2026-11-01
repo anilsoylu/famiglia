@@ -213,5 +213,12 @@
     "path": "skills/almost-paid",
     "license": "none (shared publicly by the author)",
     "sha256": "a9483d48846aca7242d4ecf1ddb8c802dc3607db5ba7860cf2cea8a1ccaace47"
+  },
+  "stop-slop": {
+    "repo": "https://github.com/nestyme/awesome-prompts",
+    "ref": "d200ba507703e4922ad8a1b3acc53f22061c3785",
+    "path": "skills/stop-slop",
+    "license": "none (shared publicly by the author)",
+    "sha256": "8ea4aa4a51340f65c99bf3cb920feb1dd934321d1cef5ebff24212d66296736f"
   }
 }

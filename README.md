@@ -172,6 +172,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [no-tropes](skills/no-tropes/) | Detect and eliminate common AI writing tropes from generated text. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
 | [humanizer](skills/humanizer/) | Rewrite AI-sounding text so it reads like the writer without changing what it says. | [blader/humanizer](https://github.com/blader/humanizer) |
 | [copywriting](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages,… | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |
+| [stop-slop](skills/stop-slop/) | Rewrite any English text so it stops sounding machine-written. | [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) |
 
 ### Growth and analytics
 
@@ -209,7 +210,7 @@ The bundled skills are byte-for-byte copies from their authors, pinned in `vendo
 | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | `vercel-react-best-practices` | MIT | `1a2c79d` |
 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `ui-ux-pro-max` | MIT | `28b3b8d` |
 | [blader/humanizer](https://github.com/blader/humanizer) | `humanizer` | MIT | `0ef9fe5` |
-| [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) | `almost-paid` | none (shared publicly by the author) | `d200ba5` |
+| [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) | `almost-paid`, `stop-slop` | none (shared publicly by the author) | `d200ba5` |
 <!-- CREDITS:END -->
 
 `review` started from Matt Pocock's [`code-review`](https://github.com/mattpocock/skills) skill (MIT) and has since

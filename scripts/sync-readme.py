@@ -17,7 +17,7 @@ GROUPS = {
                         "vercel-react-best-practices"],
     "SEO and AI search": ["seo-agency", "seo-audit", "ai-seo", "schema", "programmatic-seo", "site-architecture",
                           "link-building", "competitors", "content-strategy"],
-    "Writing": ["no-tropes", "humanizer", "copywriting"],
+    "Writing": ["no-tropes", "humanizer", "copywriting", "stop-slop"],
     "Growth and analytics": ["cro", "analytics", "lead-magnets", "almost-paid"],
 }
 MAX = 150

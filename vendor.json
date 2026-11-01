@@ -111,7 +111,8 @@
       "license": "none (shared publicly by the author)",
       "license_files": [],
       "skills": {
-        "almost-paid": "skills/almost-paid"
+        "almost-paid": "skills/almost-paid",
+        "stop-slop": "skills/stop-slop"
       }
     }
   ]

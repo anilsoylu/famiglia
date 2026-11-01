@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.0 — 2026-11-01
+- Added `stop-slop` from nestyme/awesome-prompts to the bundled writing skills.
+
 ## 0.2.0 — 2026-10-29
 - Vendored every skill famiglia points to, byte-for-byte from upstream so `npx skills update` can replace them cleanly:
   frontend-design (anthropics/skills), vercel-react-best-practices (vercel-labs/agent-skills), ui-ux-pro-max
