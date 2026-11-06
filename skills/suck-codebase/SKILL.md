@@ -9,6 +9,8 @@ Start a thorough refactor of this codebase and complete it to the end.
 
 Treat this as a goal.
 
+If the user passed an area or concern, start there. List and fix that area first, and write down links that leave it, following them only as far as a fix needs. If they passed nothing, cover the whole codebase.
+
 **Why do this at all?**
 
 - **Better output:** agents write better code in a well-structured codebase.
@@ -26,6 +28,14 @@ Besides untangling the codebase, there are two other things you may do:
 | **Tests**    | Remove tests that wouldn't catch a real bug, and fix the ones that fail without one. |
 
 List these (with their exact descriptions) for the user and ask which ones to do. Then do only those.
+
+**1.5 Set a baseline**
+
+Before you list anything, make sure you can tell whether behavior changed.
+
+- Work on a separate branch.
+- Run the build, typecheck, lint and tests, and record the results. Anything already failing is not yours to fix: write it down so you can tell it from what you break.
+- Where the code you'll touch has no tests that would catch a regression, write characterization tests (or output snapshots) that pin its current behavior before you change it.
 
 **2. List every problem**
 
@@ -61,17 +71,41 @@ Also write down every **special case**: code that exists for one situation inste
 - A retry or sleep
 - A disabled test
 
+**Fixed contracts**
+
+Some things are requirements from outside the code, not problems in it. Don't list them as problems, and design around them:
+
+- Public APIs and anything else other code depends on
+- Database schemas and migrations
+- Wire formats and file formats
+- Env vars and config keys that deployments set
+- Generated code, vendored dependencies and lockfiles
+
+If a fix can't work without changing one of these, stop and ask the user first.
+
 **3. Redesign from first principles**
 
 Work out the fixes as if the system had known today's requirements from the start. Look for the one fix behind several problems, which often looks nothing like them. Don't fix special cases one by one.
 
 Ask the same thing of every fix, even one that looks better in the code: pieces that change together end up together, pieces that don't aren't tied, and everything depends on what changes less.
 
+A fix must not add the surplus you're removing:
+
+- An interface needs two real implementations today, like `PaymentProvider` in the [decision log example](#decision-log-example). One implementation doesn't need one.
+- A helper with one caller stays inline, unless it hides real complexity behind a simple interface.
+- No config or parameter for something that doesn't vary today.
+- Don't rename, reformat or move code for taste. A move or rename has to fix a link on the list.
+
 Write each fix above the problems it solves, as in the [decision log example](#decision-log-example).
 
 **4. Fix everything on the list**
 
 Remove the special cases the redesign makes unnecessary, and keep the ones the system still needs. Don't go looking for bugs separately. A structural fix may fix some along the way, which is fine.
+
+Work in small steps:
+
+- One fix from the list per commit, with build, typecheck and tests passing after each.
+- Never mix a refactor with a behavior change. A bug the structural fix removes on its own is fine, so say so in the commit message. A bug that needs its own change gets reported to the user, not fixed in the refactor.
 
 If the user chose Comments:
 
@@ -88,6 +122,14 @@ If the user chose Tests, do this last, because tests are your regression safety 
 **5. Check, and repeat until done**
 
 Have subagents search for special cases, hidden links, needless links and surplus. **Do not stop until there is nothing worth fixing left.**
+
+Run subagents like this:
+
+- One subagent per kind: special cases, hidden links, needless links and surplus. Each starts with fresh context, so it isn't anchored on your decisions.
+- They report findings only, each with `file:line` evidence and its kind. They don't propose or make fixes.
+- Verify every finding yourself before acting on it. Drop the ones that don't hold up, and log why.
+
+A problem is worth fixing when the fix removes a special case or makes a typical change land in fewer places, and the risk of the fix is smaller than that gain. Use git history to judge: code that rarely changes and isn't touched by anything that does can stay. Log what you left and why, so the next pass doesn't reopen it.
 
 You're done when:
 
@@ -111,32 +153,32 @@ You're done when:
 The list of problems:
 
 ```md
-- `ui/LogoutDialog.tsx:30` waits 100ms after closing and hopes the message input can take focus by then.
-- `ui/Toolbar.tsx:40` and `ui/Menu.tsx:22` call the same actions, each with its own check for when they're disabled.
+- `ui/logout-dialog.tsx:30` waits 100ms after closing and hopes the message input can take focus by then.
+- `ui/toolbar.tsx:40` and `ui/menu.tsx:22` call the same actions, each with its own check for when they're disabled.
 - `checkout/submit.ts:9` depends directly on `payments/stripe.ts`.
 - `shortcuts/keymap.ts:18` has a switch with one case per action, separate from the menu's list.
-- `ui/CommandPalette.tsx:55` keeps its own list of actions, and it's missing the newer ones.
-- `ui/SettingsDialog.tsx:61` sets a global `skipRefocus` flag to stop the logout dialog it opens from sending focus to the message input.
+- `ui/command-palette.tsx:55` keeps its own list of actions, and it's missing the newer ones.
+- `ui/settings-dialog.tsx:61` sets a global `skipRefocus` flag to stop the logout dialog it opens from sending focus to the message input.
 - `history/undo.ts:30` has a special case for every action that can be undone.
 - `refunds/refund.ts:22` wraps every Stripe call in `if (order.provider === "paypal")`.
 - Every action handler has to call `track()` by hand, and some don't.
-- `ui/Toolbar.test.tsx` and `ui/Menu.test.tsx` test the same actions separately.
+- `ui/toolbar.test.tsx` and `ui/menu.test.tsx` test the same actions separately.
 ```
 
 Then with the fixes:
 
 ```md
 - Make the general `Dialog` give focus back to whatever had it before it opened, so the wait and the flag can both go.
-  - `ui/LogoutDialog.tsx:30` waits 100ms after closing and hopes the message input can take focus by then.
-  - `ui/SettingsDialog.tsx:61` sets a global `skipRefocus` flag to stop the logout dialog it opens from sending focus to the message input.
+  - `ui/logout-dialog.tsx:30` waits 100ms after closing and hopes the message input can take focus by then.
+  - `ui/settings-dialog.tsx:61` sets a global `skipRefocus` flag to stop the logout dialog it opens from sending focus to the message input.
 - Define a `PaymentProvider` interface that Stripe and PayPal both implement, so checkout and refunds no longer know which one they're using.
   - `checkout/submit.ts:9` depends directly on `payments/stripe.ts`.
   - `refunds/refund.ts:22` wraps every Stripe call in `if (order.provider === "paypal")`.
 - Make every user action a command with a name, a handler and an undo, so the toolbar, menu, shortcuts, palette and undo history all run from one list.
-  - `ui/Toolbar.tsx:40` and `ui/Menu.tsx:22` call the same actions, each with its own check for when they're disabled.
+  - `ui/toolbar.tsx:40` and `ui/menu.tsx:22` call the same actions, each with its own check for when they're disabled.
   - `shortcuts/keymap.ts:18` has a switch with one case per action, separate from the menu's list.
-  - `ui/CommandPalette.tsx:55` keeps its own list of actions, and it's missing the newer ones.
+  - `ui/command-palette.tsx:55` keeps its own list of actions, and it's missing the newer ones.
   - `history/undo.ts:30` has a special case for every action that can be undone.
   - Every action handler has to call `track()` by hand, and some don't.
-  - `ui/Toolbar.test.tsx` and `ui/Menu.test.tsx` test the same actions separately.
+  - `ui/toolbar.test.tsx` and `ui/menu.test.tsx` test the same actions separately.
 ```
