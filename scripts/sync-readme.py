@@ -12,7 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 GROUPS = {
     "Code: plan to production": ["dev-flow", "review", "commit-gate", "perf", "optimize", "security-audit", "clean",
-                                 "cpr", "pr-update", "pr-ready", "pr-triage", "stacked-pr", "list-open-work"],
+                                 "cpr", "pr-update", "pr-ready", "pr-triage", "stacked-pr", "list-open-work",
+                                 "suck-codebase", "find-state-machines"],
     "UI and frontend": ["frontend-design", "ui-ux-pro-max", "ui-only", "ui-system", "visual-verify",
                         "vercel-react-best-practices"],
     "SEO and AI search": ["seo-agency", "seo-audit", "ai-seo", "schema", "programmatic-seo", "site-architecture",

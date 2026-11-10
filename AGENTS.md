@@ -13,8 +13,8 @@ Keep every skill portable. Write instructions any agent can follow. Name a tool 
 
 ## Two kinds of skill
 
-- **Ours**: `commit-gate`, `dev-flow`, `optimize`, `review`, `seo-agency`. Edit them directly. Keep their descriptions
-  short, because every description is read in every session (`python3 scripts/skill-size.py` shows the sizes).
+- **Ours**: `commit-gate`, `dev-flow`, `find-state-machines`, `optimize`, `review`, `seo-agency`, `suck-codebase`. Edit
+  them directly. Keep their descriptions short, because every description is read in every session (`python3 scripts/skill-size.py` shows the sizes).
 - **Vendored**: everything listed in `vendor.json`. These are byte-for-byte copies of upstream, so `npx skills update`
   can replace them without conflict. **Never edit them.** To update one, bump its `ref` (or run `--latest`) and sync.
   If a vendored skill does something we don't want, change our own skill that calls it.

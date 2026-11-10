@@ -4,7 +4,8 @@ Agent skills for three jobs: shipping code from plan to production, running SEO 
 read as AI. Works with Claude Code, Codex, Cursor and any agent that supports the
 [Agent Skills spec](https://agentskills.io).
 
-famiglia is five skills of its own (`dev-flow`, `review`, `commit-gate`, `optimize`, `seo-agency`) plus the best
+famiglia is seven skills of its own (`dev-flow`, `review`, `commit-gate`, `optimize`, `suck-codebase`,
+`find-state-machines`, `seo-agency`) plus the best
 skills they hand work to, bundled unchanged from their authors. See [Credits](#credits) for those.
 
 ## Install
@@ -139,6 +140,8 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [pr-triage](skills/pr-triage/) | Maintainer triage on OTHER people's PRs/MRs — verdict of approve, supersede, or close, salvage with credit, close the cluster. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
 | [stacked-pr](skills/stacked-pr/) | Handle dependent/stacked PRs and same-code-on-multiple-bases correctly. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
 | [list-open-work](skills/list-open-work/) | List my open MRs/PRs in the current repo/worktree, each with its tracker ticket. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
+| [suck-codebase](skills/suck-codebase/) | Untangle a whole codebase in one pass, so agents working in it read less per change, break less without noticing, and debug faster. | famiglia |
+| [find-state-machines](skills/find-state-machines/) | Find implicit state machines, where one lifecycle's state, transitions, and ownership are scattered across flags, effects, callbacks, and async… | famiglia |
 
 ### UI and frontend
 
@@ -193,7 +196,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 ## Contributing
 
 Issues and PRs are welcome. [AGENTS.md](AGENTS.md) explains the layout, the scripts and the evals. In short: edit our
-five skills directly; never edit a bundled one, bump its pin in `vendor.json` instead.
+seven skills directly; never edit a bundled one, bump its pin in `vendor.json` instead.
 
 ## Credits
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 — 2026-11-10
+- Added `suck-codebase`: a user-invoked, whole-codebase refactor that lists hidden links, needless links, surplus and
+  special cases, redesigns from first principles, and fixes them one commit at a time behind a test baseline.
+- Added `find-state-machines`: finds implicit state machines, documents their states and transitions, and fixes
+  reachable invalid states with regression tests.
+
 ## 0.3.0 — 2026-11-01
 - Added `stop-slop` from nestyme/awesome-prompts to the bundled writing skills.
 

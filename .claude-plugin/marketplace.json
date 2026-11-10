@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Skills for shipping code from plan to production, running SEO for a site, and writing that does not read as AI.",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "plugins": [
     {
