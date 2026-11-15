@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: route-ci-is-slow
+expected_outcome: |
+  Routing only: the ci-speed skill is the one invoked for a slow-CI request, not perf.
+context:
+  scaffold_script: place-files.sh

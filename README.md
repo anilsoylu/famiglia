@@ -132,6 +132,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [commit-gate](skills/commit-gate/) | Pre-commit gate: /perf, /optimize, then /security-audit on the current diff, one go/no-go report. | famiglia |
 | [perf](skills/perf/) | The general profile-driven perf loop for any language or runtime: baseline, profile, fix the real hot path, re-measure. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
 | [optimize](skills/optimize/) | Exact-parity speed rewrite of a named routine or the diff's hot spot: shorter, measurably faster, same behavior. | famiglia |
+| [ci-speed](skills/ci-speed/) | Make a repo's CI fast without letting it lie: audit real runs, hit per-stage budgets (PR result under 2 min p50), one PR per change. | famiglia |
 | [security-audit](skills/security-audit/) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) |
 | [clean](skills/clean/) | Polish your own diff by hand with KISS/DRY and local style — the pre-handoff pass, not a test run and not a subagent sweep. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
 | [cpr](skills/cpr/) | Clean the diff, then open or refresh the PR/MR — one pass, ending in the linked URL. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |

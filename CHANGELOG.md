@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 — 2026-11-15
+- Added `ci-speed`: makes a repo's CI fast without letting it lie. It audits real runs into waiting, setup and running
+  (`scripts/ci-audit.py`), works to per-stage budgets (PR result under 2 min at p50), keeps the full suite in a merge
+  queue, never adds retries or skips, checks every tool switch side by side, and ships one PR per change with before
+  and after numbers.
+
 ## 0.4.0 — 2026-11-10
 - Added `suck-codebase`: a user-invoked, whole-codebase refactor that lists hidden links, needless links, surplus and
   special cases, redesigns from first principles, and fixes them one commit at a time behind a test baseline.
