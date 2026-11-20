@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0 — 2026-11-20
+- `start-anil-session` now installs six Claude Code subagents into `~/.claude/agents/`: `worker`, `tester`,
+  `explorer`, `reader` and `researcher` from its own folder, plus `reviewer` from the `review` skill. It copies a file
+  only when it is missing and never touches an existing one. `rules.md` routes each task to one of them and falls back
+  to `general-purpose` when an agent is missing.
+- The `review` skill's `reviewer` agent now runs at effort `high` instead of `xhigh`.
+
 ## 0.7.0 — 2026-11-20
 - Vendored `triage` from mattpocock/skills. It moves issues through a state machine of triage labels. With it
   installed, `setup-matt-pocock-skills` also sets up the five triage labels, and creates any that are missing on GitHub
