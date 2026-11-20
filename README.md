@@ -135,6 +135,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [to-spec](skills/to-spec/) | Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed. | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | [to-tickets](skills/to-tickets/) | Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured… | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/) | Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [triage](skills/triage/) | Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs. | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | [review](skills/review/) | Review a finished diff: tier check, one reviewer, findings routed. | famiglia |
 | [commit-gate](skills/commit-gate/) | Pre-commit gate: /perf, /optimize, then /security-audit on the current diff, one go/no-go report. | famiglia |
 | [perf](skills/perf/) | The general profile-driven perf loop for any language or runtime: baseline, profile, fix the real hot path, re-measure. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
@@ -224,7 +225,7 @@ The bundled skills are byte-for-byte copies from their authors, pinned in `vendo
 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `ui-ux-pro-max` | MIT | `28b3b8d` |
 | [blader/humanizer](https://github.com/blader/humanizer) | `humanizer` | MIT | `0ef9fe5` |
 | [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) | `almost-paid`, `stop-slop` | none (shared publicly by the author) | `d200ba5` |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | `domain-modeling`, `grill-with-docs`, `grilling`, `retro`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `writing-for-agents` | MIT | `abeeaf9` |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | `domain-modeling`, `grill-with-docs`, `grilling`, `retro`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `triage`, `writing-for-agents` | MIT | `abeeaf9` |
 <!-- CREDITS:END -->
 
 `review` started from Matt Pocock's [`code-review`](https://github.com/mattpocock/skills) skill (MIT) and has since
