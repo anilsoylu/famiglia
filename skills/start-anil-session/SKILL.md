@@ -1,9 +1,9 @@
 ---
 name: start-anil-session
-description: Start a work session in a project with Anil's rules (Turkish chat, English repo, anilsoylu commits, subagents write code, local Docker tests, gate → cpr → merge), wired into CLAUDE.md so they survive /clear.
+description: Start a work session in a project with Anil's rules (Turkish chat, English repo, anilsoylu commits, subagents write code, local Docker tests, gate → cpr → merge), wired into CLAUDE.md so they survive /clear, and install his subagent roster.
 disable-model-invocation: true
 metadata:
-  version: 0.2.0
+  version: 0.3.0
 ---
 
 # Start Anil session
@@ -17,7 +17,7 @@ rules file from the project's `CLAUDE.md` instead of relying on this message.
 
 ## 1. Find the project
 
-- Project root: `git rev-parse --show-toplevel`. Not a git repo: use the current directory, still do steps 2 and 3,
+- Project root: `git rev-parse --show-toplevel`. Not a git repo: use the current directory, still do steps 2 to 4,
   skip the git rows, and say in the report that commits and PRs need `git init` and a remote.
 - Default branch, first that works: `gh repo view --json defaultBranchRef -q .defaultBranchRef.name`,
   `git symbolic-ref --short refs/remotes/origin/HEAD`, `git config init.defaultBranch`, else `main`.
@@ -42,7 +42,26 @@ The project-root `CLAUDE.md` must end up with exactly one copy of this block:
 This is a small config edit, so do it directly rather than through a subagent. It goes into the next commit; the
 import resolves only on Anil's machine and is ignored for other contributors.
 
-## 3. Check the environment
+## 3. Install the agents
+
+Claude Code only; other agents skip this step. The roster has six agents. The `references/agents/` folder next to this
+skill holds five of them (`worker`, `tester`, `explorer`, `reader`, `researcher`). The sixth, `reviewer`, comes from
+the sibling `review` skill: `<skills-dir>/review/reviewer.md` (for a Claude Code user install,
+`~/.claude/skills/review/reviewer.md`). `/review` spawns an agent named `reviewer` with that contract, so the installed
+one must be the same file. `rules.md` routes work to them.
+
+- Run `mkdir -p ~/.claude/agents`.
+- For each file in `references/agents/`, copy it to `~/.claude/agents/<same file name>` only if that path does not
+  exist. Use a no-clobber copy such as `cp -n`.
+- Copy the `review` skill's reviewer file to `~/.claude/agents/reviewer.md` the same way. If the `review` skill is not
+  installed, skip it and say so in the report.
+- Never overwrite or merge an existing file, even if it differs. The user's copy wins.
+- Note which files you installed and which were already present, for the report.
+
+Do this directly rather than through a subagent, like the `CLAUDE.md` edit. Newly installed agents may only appear
+after `/agents` or in a new session.
+
+## 4. Check the environment
 
 Run the checks in parallel where possible. Fix only what the "If wrong" column says to fix; everything else is
 reported.
@@ -57,7 +76,7 @@ reported.
 | Tracked secrets | `git ls-files` for `.env*` (except `.env.example`-style templates), `.gitignore` coverage | Note it as a security risk; don't untrack or rewrite history without the user's yes |
 | Stack | lockfile versions first, manifest ranges if there's no lockfile; DB/service images from compose | Report main frameworks and services with versions, used later for docs research |
 
-## 4. Report in Turkish
+## 5. Report in Turkish
 
 Use ✓ for OK, ✗ for missing or failed, ⚠ for works but risky. Then a notes list for anything that needs attention
 (only include notes that apply), then ask what to work on.
@@ -70,6 +89,7 @@ Oturum hazır: <repo> (<current branch>, default: <default branch>)
 <✓|⚠> Test DB: <host>
 Stack: <framework@version, ...>; servisler: <postgres:17, ...>
 CLAUDE.md: kurallar bağlandı | zaten bağlı | güncellendi
+Ajanlar: kuruldu <list> | mevcut, dokunulmadı <list>
 
 Notlar:
 - <default branch note, remote missing, non-local DB, tracked secrets, CLAUDE.md change goes into next commit>
@@ -77,4 +97,4 @@ Notlar:
 Ne üzerinde çalışalım?
 ```
 
-From here on, plan in the main thread and hand code to subagents as `rules.md` describes.
+From here on, plan in the main thread and hand work to the agents as `rules.md` routes them.

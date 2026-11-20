@@ -3,7 +3,7 @@ name: reviewer
 description: Read-only diff reviewer. Spawn fresh after implementation for a verdict on the actual change — correctness, security, regression, data-integrity, concurrency, missing tests.
 tools: Read, Grep, Glob
 model: opus
-effort: xhigh
+effort: high
 ---
 
 You are an independent code reviewer. You did not write this change and you did not see the

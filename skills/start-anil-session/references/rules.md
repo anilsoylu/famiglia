@@ -31,11 +31,27 @@ project's `CLAUDE.md`, which `/start-anil-session` wires up.
 The main conversation plans, splits the work into tasks, briefs subagents, and verifies their results. It does not edit
 code itself. This keeps the main context small and focused on decisions.
 
+Route each task to its agent:
+
+| Task | Agent |
+|---|---|
+| Write or fix code | `worker` |
+| `/commit-gate` | `worker` |
+| Write and run tests | `tester` |
+| Search the codebase | `explorer` |
+| Read known files | `reader` |
+| Docs and version research | `researcher` |
+| `/review` | `general-purpose` (it spawns `reviewer` itself) |
+| Independent review of a diff | `reviewer` |
+
+`/start-anil-session` installs these agents in `~/.claude/agents/`. If one is missing, fall back to `general-purpose`.
+
 - Every code change, including one-line fixes, goes to a subagent (Agent tool). The brief names the goal, the files,
   the relevant rules from this file, and what "done" looks like, since the subagent sees nothing else.
 - Independent tasks run in parallel in one message. Two subagents never edit the same files at once; when parallel
   writers might overlap, give them `isolation: "worktree"`.
-- Checks run in subagents too: `/commit-gate` (perf, optimize, security-audit), test runs, docs research.
+- Checks run in subagents too: `/commit-gate` (perf, optimize, security-audit) in `worker`, test runs in `tester`,
+  docs research in `researcher`.
 - After a subagent finishes, the main thread reads the diff (`git diff`) and checks it against the brief before moving
   on. A subagent's summary is a claim, not proof.
 - The main thread may still read files, run git/gh, and run read-only commands to plan and verify.
@@ -62,7 +78,7 @@ defaults are rarely the recommended integration.
 
 1. Find the installed (or to-be-installed) version from the lockfile or manifest.
 2. Read that project's `llms.txt` / `llms-full.txt` if it publishes one, otherwise the official docs for that version
-   (guides, migration notes, best practices). Run this research in a subagent.
+   (guides, migration notes, best practices). Run this research in the `researcher` agent.
 3. Integrate the way the docs recommend for this project's setup (config, file layout, idioms), not the bare default.
 4. Mention the docs used in the PR description.
 
@@ -70,13 +86,13 @@ defaults are rarely the recommended integration.
 
 For each finished unit of work, in this order and without asking between steps (stop only on a blocker):
 
-1. **Gate**: run `/commit-gate` in a subagent. It runs `/perf`, then `/optimize`, then `/security-audit` on the diff.
-   A `BLOCKED` result is fixed (by a subagent) before anything is committed.
+1. **Gate**: run `/commit-gate` in the `worker` agent. It runs `/perf`, then `/optimize`, then `/security-audit` on the
+   diff. A `BLOCKED` result is fixed (by a subagent) before anything is committed.
 2. **Commit** as `anilsoylu` with an English Conventional Commit message.
 3. **PR**: run `/cpr` (clean, then open or refresh the PR). Make sure the PR title and body pass `/no-tropes`.
-4. **Lead review**: run `/review` on the PR branch inside one subagent, so the diff and the reviewer's reasoning stay
-   out of the main context. The subagent returns only the tier and the findings (`[ADOPT]` / `[NOTE]`, with
-   `file:line`).
+4. **Lead review**: run `/review` on the PR branch inside one `general-purpose` subagent, so the diff and the
+   reviewer's reasoning stay out of the main context; `/review` spawns the `reviewer` agent itself. The subagent
+   returns only the tier and the findings (`[ADOPT]` / `[NOTE]`, with `file:line`).
    - Tier `none` or `medium`: `/review` skips by design; go to merge.
    - No `[ADOPT]` findings: write any `[NOTE]`s under `## Found while working` in the PR body, then merge.
    - `[ADOPT]` findings: post them as one PR comment (`gh pr comment`), fix them in a subagent, push, and re-review
