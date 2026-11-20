@@ -270,6 +270,13 @@
     "license": "MIT",
     "sha256": "6eccfac132d92b949821d154679adc7f597bfc3e8c929f3c03786b92f91b961f"
   },
+  "triage": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/triage",
+    "license": "MIT",
+    "sha256": "9c6b69d13831d354c1a62eaa047e3160617f9b035d411555268a343b51e96a0c"
+  },
   "writing-for-agents": {
     "repo": "https://github.com/mattpocock/skills",
     "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",

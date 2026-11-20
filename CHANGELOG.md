@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0 — 2026-11-20
+- Vendored `triage` from mattpocock/skills. It moves issues through a state machine of triage labels. With it
+  installed, `setup-matt-pocock-skills` also sets up the five triage labels, and creates any that are missing on GitHub
+  or GitLab. One of them is `ready-for-agent`, the label `to-spec` and `to-tickets` apply.
+
 ## 0.6.0 — 2026-11-20
 - Added `start-anil-session`: a user-invoked skill that wires Anil's working rules (Turkish chat, English repo,
   `anilsoylu` commits, subagents write code, local Docker tests, gate → cpr → merge) into the project's `CLAUDE.md` so

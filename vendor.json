@@ -130,6 +130,7 @@
         "setup-matt-pocock-skills": "skills/engineering/setup-matt-pocock-skills",
         "to-spec": "skills/engineering/to-spec",
         "to-tickets": "skills/engineering/to-tickets",
+        "triage": "skills/engineering/triage",
         "writing-for-agents": "skills/productivity/writing-for-agents"
       }
     }
