@@ -59,7 +59,9 @@ def main() -> int:
             except subprocess.CalledProcessError as e:
                 print(f"FAIL fetch {src['repo']}@{src['ref'][:7]}: {e.stderr.decode().strip()}", file=sys.stderr)
                 return 2
-            name = src["repo"].rstrip("/").split("/")[-1]
+            owner, name = src["repo"].rstrip("/").split("/")[-2:]
+            if any(s["repo"].rstrip("/").endswith("/" + name) for s in cfg["sources"][:i]):
+                name = f"{owner}-{name}"  # an earlier source has the same repo name; keep their licenses apart
             for name_, spec in src["skills"].items():
                 rel, files = (spec, None) if isinstance(spec, str) else (spec["path"], spec.get("files"))
                 upstream, local = repo_dir / rel, ROOT / "skills" / name_

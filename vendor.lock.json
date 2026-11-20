@@ -220,5 +220,61 @@
     "path": "skills/stop-slop",
     "license": "none (shared publicly by the author)",
     "sha256": "8ea4aa4a51340f65c99bf3cb920feb1dd934321d1cef5ebff24212d66296736f"
+  },
+  "domain-modeling": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/domain-modeling",
+    "license": "MIT",
+    "sha256": "18a9314d338b8135e4108d1d31d2fd57ad289cf8bf31d2acd6a6f3053ac22a38"
+  },
+  "grill-with-docs": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/grill-with-docs",
+    "license": "MIT",
+    "sha256": "2dff19547f0f72000f8b88868e21b7d76c27cf5c7ececc6edf4042bbe06157ac"
+  },
+  "grilling": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/productivity/grilling",
+    "license": "MIT",
+    "sha256": "27f71f106a7062691b2982d4f847304a62930ebed8b50734f4d4fd498d60afa8"
+  },
+  "retro": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/retro",
+    "license": "MIT",
+    "sha256": "09c4f9fe72fc5bc8e486a2bbb32dd785ca6264c56a53dd1bf9a334af72586efd"
+  },
+  "setup-matt-pocock-skills": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/setup-matt-pocock-skills",
+    "license": "MIT",
+    "sha256": "d1d1b40f71fcb294d27a1b00297d1d25bcff3bc1e8759794a4af906b243d8e31"
+  },
+  "to-spec": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/to-spec",
+    "license": "MIT",
+    "sha256": "f525dab8b9bd3961aa4813d8568ef6184f6e24aad5a020e129165ca6c220f836"
+  },
+  "to-tickets": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/engineering/to-tickets",
+    "license": "MIT",
+    "sha256": "6eccfac132d92b949821d154679adc7f597bfc3e8c929f3c03786b92f91b961f"
+  },
+  "writing-for-agents": {
+    "repo": "https://github.com/mattpocock/skills",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "path": "skills/productivity/writing-for-agents",
+    "license": "MIT",
+    "sha256": "dc53f07d1f662137317789b9b5d74cfcc26dbcfc15038a7faf676c844d8638e8"
   }
 }
