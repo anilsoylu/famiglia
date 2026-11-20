@@ -127,7 +127,14 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 
 | Skill | What it does | From |
 |---|---|---|
+| [start-anil-session](skills/start-anil-session/) | Start a work session in a project with Anil's rules (Turkish chat, English repo, anilsoylu commits, subagents write code, local Docker tests, gate →… | famiglia |
 | [dev-flow](skills/dev-flow/) | Stage-aware delivery flow for a feature or project: plan with the guardian risk review, build, review, commit gate, merge through /cpr, and the… | famiglia |
+| [grill-with-docs](skills/grill-with-docs/) | A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [grilling](skills/grilling/) | Grill the user relentlessly about a plan, decision, or idea. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [domain-modeling](skills/domain-modeling/) | Build and sharpen a project's domain model. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [to-spec](skills/to-spec/) | Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [to-tickets](skills/to-tickets/) | Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured… | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/) | Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | [review](skills/review/) | Review a finished diff: tier check, one reviewer, findings routed. | famiglia |
 | [commit-gate](skills/commit-gate/) | Pre-commit gate: /perf, /optimize, then /security-audit on the current diff, one go/no-go report. | famiglia |
 | [perf](skills/perf/) | The general profile-driven perf loop for any language or runtime: baseline, profile, fix the real hot path, re-measure. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
@@ -143,6 +150,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [list-open-work](skills/list-open-work/) | List my open MRs/PRs in the current repo/worktree, each with its tracker ticket. | [OutThisLife/brooklyn-skills](https://github.com/OutThisLife/brooklyn-skills) |
 | [suck-codebase](skills/suck-codebase/) | Untangle a whole codebase in one pass, so agents working in it read less per change, break less without noticing, and debug faster. | famiglia |
 | [find-state-machines](skills/find-state-machines/) | Find implicit state machines, where one lifecycle's state, transitions, and ownership are scattered across flags, effects, callbacks, and async… | famiglia |
+| [retro](skills/retro/) | Conduct a retrospective on a coding session. | [mattpocock/skills](https://github.com/mattpocock/skills) |
 
 ### UI and frontend
 
@@ -177,6 +185,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [humanizer](skills/humanizer/) | Rewrite AI-sounding text so it reads like the writer without changing what it says. | [blader/humanizer](https://github.com/blader/humanizer) |
 | [copywriting](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages,… | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |
 | [stop-slop](skills/stop-slop/) | Rewrite any English text so it stops sounding machine-written. | [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) |
+| [writing-for-agents](skills/writing-for-agents/) | Writing documents for agents. | [mattpocock/skills](https://github.com/mattpocock/skills) |
 
 ### Growth and analytics
 
@@ -215,6 +224,7 @@ The bundled skills are byte-for-byte copies from their authors, pinned in `vendo
 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `ui-ux-pro-max` | MIT | `28b3b8d` |
 | [blader/humanizer](https://github.com/blader/humanizer) | `humanizer` | MIT | `0ef9fe5` |
 | [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) | `almost-paid`, `stop-slop` | none (shared publicly by the author) | `d200ba5` |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | `domain-modeling`, `grill-with-docs`, `grilling`, `retro`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `writing-for-agents` | MIT | `abeeaf9` |
 <!-- CREDITS:END -->
 
 `review` started from Matt Pocock's [`code-review`](https://github.com/mattpocock/skills) skill (MIT) and has since

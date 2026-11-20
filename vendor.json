@@ -114,6 +114,24 @@
         "almost-paid": "skills/almost-paid",
         "stop-slop": "skills/stop-slop"
       }
+    },
+    {
+      "repo": "https://github.com/mattpocock/skills",
+      "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "skills": {
+        "domain-modeling": "skills/engineering/domain-modeling",
+        "grill-with-docs": "skills/engineering/grill-with-docs",
+        "grilling": "skills/productivity/grilling",
+        "retro": "skills/engineering/retro",
+        "setup-matt-pocock-skills": "skills/engineering/setup-matt-pocock-skills",
+        "to-spec": "skills/engineering/to-spec",
+        "to-tickets": "skills/engineering/to-tickets",
+        "writing-for-agents": "skills/productivity/writing-for-agents"
+      }
     }
   ]
 }

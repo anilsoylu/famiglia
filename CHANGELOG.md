@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.0 — 2026-11-20
+- Added `start-anil-session`: a user-invoked skill that wires Anil's working rules (Turkish chat, English repo,
+  `anilsoylu` commits, subagents write code, local Docker tests, gate → cpr → merge) into the project's `CLAUDE.md` so
+  they survive `/clear`, and reports the environment.
+- Vendored `grill-with-docs`, `grilling`, `domain-modeling`, `to-spec`, `to-tickets`, `setup-matt-pocock-skills`,
+  `retro` and `writing-for-agents` from mattpocock/skills. `grill-with-docs` runs a grilling interview and records ADRs
+  and a glossary as it goes. `to-spec` and `to-tickets` turn a conversation into a spec, or into tickets linked by what
+  blocks them, in the issue tracker that `setup-matt-pocock-skills` sets up. `retro` runs a retrospective on a session.
+  `writing-for-agents` is a guide for writing skills and `AGENTS.md`/`CLAUDE.md`. Their license is in
+  `LICENSES/mattpocock-skills/`, because `LICENSES/skills/` already holds the anthropics/skills one.
+
 ## 0.5.0 — 2026-11-15
 - Added `ci-speed`: makes a repo's CI fast without letting it lie. It audits real runs into waiting, setup and running
   (`scripts/ci-audit.py`), works to per-stage budgets (PR result under 2 min at p50), keeps the full suite in a merge
