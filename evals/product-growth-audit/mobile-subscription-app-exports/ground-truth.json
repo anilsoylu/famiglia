@@ -1,0 +1,322 @@
+{
+  "case": "mobile-subscription-app-exports",
+  "data_window": "2026-08-23T00:00:00Z to 2026-11-20T23:59:59Z (90 days)",
+  "internal_users": {
+    "total": 6,
+    "flagged_is_internal_true": 4,
+    "only_found_by_email_domain_stepwise_app": 2,
+    "rule": "email ends with @stepwise.app OR is_internal=true",
+    "internal_revenue_usd_to_exclude": 14.97
+  },
+  "real_signups": 694,
+  "app_store_first_time_downloads_from_readme": 880,
+  "data_quality": {
+    "exact_duplicate_event_rows": 14,
+    "users_missing_country": 9,
+    "paywall_event_rename": "paywall_viewed until 2026-10-14, paywall_view from 2026-10-15 (app 2.5.0); same meaning and same source property",
+    "naive_paywall_viewed_real_users": {
+      "before_rename": 453
+    },
+    "paywall_events_by_week_all_users_[old_name,new_name]": {
+      "2026-08-17": [
+        7,
+        0
+      ],
+      "2026-08-24": [
+        68,
+        0
+      ],
+      "2026-08-31": [
+        65,
+        0
+      ],
+      "2026-09-07": [
+        79,
+        0
+      ],
+      "2026-09-14": [
+        62,
+        0
+      ],
+      "2026-09-21": [
+        83,
+        0
+      ],
+      "2026-09-28": [
+        82,
+        0
+      ],
+      "2026-10-05": [
+        73,
+        0
+      ],
+      "2026-10-12": [
+        33,
+        45
+      ],
+      "2026-10-19": [
+        0,
+        80
+      ],
+      "2026-10-26": [
+        0,
+        88
+      ],
+      "2026-11-02": [
+        0,
+        69
+      ],
+      "2026-11-09": [
+        0,
+        86
+      ],
+      "2026-11-16": [
+        0,
+        54
+      ]
+    }
+  },
+  "funnel_real_users": {
+    "downloads_readme": 880,
+    "signups": 694,
+    "onboarding_complete": {
+      "numerator": 596,
+      "denominator": 694,
+      "value": 0.8588
+    },
+    "ever_created_habit": {
+      "numerator": 272,
+      "denominator": 694,
+      "value": 0.3919
+    }
+  },
+  "never_return_after_day0": {
+    "definition": "real users with signup <= END-24h and no app_open at or after signup_at+24h",
+    "numerator": 411,
+    "denominator": 688,
+    "value": 0.5974
+  },
+  "activation_7d": {
+    "definition": ">=1 habit_created within 7 days of signup_at; real users with signup <= END-7d",
+    "numerator": 254,
+    "denominator": 651,
+    "value": 0.3902
+  },
+  "d30_return_by_early_habits": {
+    "definition": "D30 return = any app_open at or after signup_at+30d; cohort = real users with signup <= END-30d; early habits = habit_created within 72h of signup",
+    "cohort": 471,
+    "3plus_habits_first_3_days": {
+      "numerator": 33,
+      "denominator": 78,
+      "value": 0.4231
+    },
+    "fewer_than_3_habits": {
+      "numerator": 34,
+      "denominator": 393,
+      "value": 0.0865
+    },
+    "1_or_2_habits_only": {
+      "numerator": 30,
+      "denominator": 98,
+      "value": 0.3061
+    },
+    "all": {
+      "numerator": 67,
+      "denominator": 471,
+      "value": 0.1423
+    }
+  },
+  "stats_screen": {
+    "ever_viewed_stats_all_real": {
+      "numerator": 66,
+      "denominator": 694,
+      "value": 0.0951
+    },
+    "d30_return_stats_viewers": {
+      "numerator": 31,
+      "denominator": 43,
+      "value": 0.7209
+    },
+    "d30_return_non_viewers": {
+      "numerator": 36,
+      "denominator": 428,
+      "value": 0.0841
+    },
+    "note": "correlation; stats screen is under Settings > More"
+  },
+  "paywall_by_source_real_users": {
+    "onboarding": {
+      "views": 596,
+      "purchase_started": 13,
+      "paid_purchases_initial_or_trial_converted": 0,
+      "trials_started": 6,
+      "paid_per_view": {
+        "numerator": 0,
+        "denominator": 596,
+        "value": 0.0
+      }
+    },
+    "limit": {
+      "views": 137,
+      "purchase_started": 15,
+      "paid_purchases_initial_or_trial_converted": 9,
+      "trials_started": 2,
+      "paid_per_view": {
+        "numerator": 9,
+        "denominator": 137,
+        "value": 0.0657
+      }
+    },
+    "settings": {
+      "views": 25,
+      "purchase_started": 7,
+      "paid_purchases_initial_or_trial_converted": 4,
+      "trials_started": 1,
+      "paid_per_view": {
+        "numerator": 4,
+        "denominator": 25,
+        "value": 0.16
+      }
+    },
+    "stats": {
+      "views": 54,
+      "purchase_started": 6,
+      "paid_purchases_initial_or_trial_converted": 4,
+      "trials_started": 0,
+      "paid_per_view": {
+        "numerator": 4,
+        "denominator": 54,
+        "value": 0.0741
+      }
+    }
+  },
+  "paywall_attribution": "purchase_started (source property) within 10 minutes before the INITIAL_PURCHASE/TRIAL_STARTED",
+  "trials": {
+    "started": 9,
+    "cancelled_within_48h": {
+      "numerator": 6,
+      "denominator": 9,
+      "value": 0.6667
+    },
+    "billing_issue": 1,
+    "cancelled_after_48h": 1,
+    "trial_converted": 1
+  },
+  "revenue": {
+    "lifetime_gross_usd_real_users": 219.63,
+    "paying_users": 17,
+    "still_active_paid_at_end": 12,
+    "approx_mrr_usd_at_end": 58.22,
+    "revenue_per_signup_usd": 0.316,
+    "revenue_per_download_usd": 0.25,
+    "note": "gross before store fee; internal test purchase excluded"
+  },
+  "push": {
+    "total_sends_real_users": 13496,
+    "to_users_with_no_app_open_prior_14d": {
+      "numerator": 5182,
+      "denominator": 13496,
+      "value": 0.384
+    },
+    "by_type": {
+      "daily_reminder": {
+        "sends": 12033,
+        "to_users_with_no_app_open_prior_14d": {
+          "numerator": 4663,
+          "denominator": 12033,
+          "value": 0.3875
+        },
+        "app_open_same_utc_date_as_send": {
+          "numerator": 1063,
+          "denominator": 12033,
+          "value": 0.0883
+        },
+        "app_open_within_60m_after_send": {
+          "numerator": 48,
+          "denominator": 12033,
+          "value": 0.004
+        },
+        "base_rate_mean_daily_active_share_prior_14d_same_recipients": 0.1049
+      },
+      "streak_risk": {
+        "sends": 245,
+        "to_users_with_no_app_open_prior_14d": {
+          "numerator": 0,
+          "denominator": 245,
+          "value": 0.0
+        },
+        "app_open_same_utc_date_as_send": {
+          "numerator": 136,
+          "denominator": 245,
+          "value": 0.5551
+        },
+        "app_open_within_60m_after_send": {
+          "numerator": 3,
+          "denominator": 245,
+          "value": 0.0122
+        },
+        "base_rate_mean_daily_active_share_prior_14d_same_recipients": 0.3405
+      },
+      "weekly_report": {
+        "sends": 988,
+        "to_users_with_no_app_open_prior_14d": {
+          "numerator": 330,
+          "denominator": 988,
+          "value": 0.334
+        },
+        "app_open_same_utc_date_as_send": {
+          "numerator": 140,
+          "denominator": 988,
+          "value": 0.1417
+        },
+        "app_open_within_60m_after_send": {
+          "numerator": 9,
+          "denominator": 988,
+          "value": 0.0091
+        },
+        "base_rate_mean_daily_active_share_prior_14d_same_recipients": 0.1453
+      },
+      "winback": {
+        "sends": 230,
+        "to_users_with_no_app_open_prior_14d": {
+          "numerator": 189,
+          "denominator": 230,
+          "value": 0.8217
+        },
+        "app_open_same_utc_date_as_send": {
+          "numerator": 51,
+          "denominator": 230,
+          "value": 0.2217
+        },
+        "app_open_within_60m_after_send": {
+          "numerator": 37,
+          "denominator": 230,
+          "value": 0.1609
+        },
+        "base_rate_mean_daily_active_share_prior_14d_same_recipients": 0.0127
+      }
+    },
+    "reading": "daily_reminder same-day return is not above the recipients' prior-14-day daily active share; winback shows return vs a base of 0 (all winback recipients were dormant)"
+  },
+  "acquisition_fit": {
+    "influencer_budget_usd": 3000,
+    "quoted_cpi_usd": 2.0,
+    "category_cpi_range_usd": [
+      1.5,
+      3.0
+    ],
+    "installs_bought_at_2usd": 1500,
+    "expected_revenue_from_1500_installs_usd": 374.0,
+    "verdict": "revenue per install (~$0.2-0.3) is far below a $1.50-3.00 CPI; spend loses ~90% of the budget; fix day-0 loss and paywall first"
+  },
+  "expected_good_answer": [
+    "Excludes 6 internal users and notes 2 of them are only detectable by the @stepwise.app domain",
+    "Merges paywall_viewed and paywall_view (rename on 2026-10-15) instead of reporting a collapse",
+    "Day-0 loss is the main problem: forced account wall before value, 5 settings questions, automatic paywall",
+    "Automatic onboarding paywall sells nothing; limit/settings/stats paywalls do; flags fake countdown, tiny close button, reminder off by default, no price/date line as honesty issues (store release)",
+    "Stats screen correlates with retention but is buried; making it visible is a cheap lever (correlation caveat)",
+    "Pushes go largely to dormant users; daily reminders show no lift; winback works",
+    "Says no to the $3,000 TikTok spend now (revenue per install << CPI), or at most a tiny capped test after fixes",
+    "Report saved as audit-report.md, no emails or user IDs in it"
+  ]
+}

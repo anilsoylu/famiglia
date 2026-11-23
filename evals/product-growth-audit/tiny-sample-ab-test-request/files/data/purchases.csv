@@ -1,0 +1,6 @@
+user_id,event_type,product,price_usd,at
+u_020,TRIAL_STARTED,brewlog_yearly_2999,0.00,2026-10-23T14:40:10Z
+u_020,CANCELLATION,brewlog_yearly_2999,0.00,2026-10-24T20:40:10Z
+u_016,TRIAL_STARTED,brewlog_yearly_2999,0.00,2026-11-15T05:17:00Z
+u_016,TRIAL_CONVERTED,brewlog_yearly_2999,29.99,2026-11-22T05:17:00Z
+u_033,TRIAL_STARTED,brewlog_yearly_2999,0.00,2026-11-23T18:31:21Z

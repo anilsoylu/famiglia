@@ -1,0 +1,240 @@
+{
+  "case": "b2b-saas-stripe-exports",
+  "data_window": "2025-11-21 to 2026-11-20 (UTC)",
+  "internal_accounts": {
+    "total": 3,
+    "rule": "owner_email @ledgerly.io (pro plan, $0 invoices)"
+  },
+  "real_accounts": 400,
+  "data_quality": {
+    "duplicate_feature_usage_rows": 6,
+    "accounts_missing_country": 9,
+    "accounts_missing_source": 13,
+    "feature_usage_granularity": "weekly rollups, date = Monday of the week",
+    "open_invoices_at_export": 3
+  },
+  "mrr_usd_by_month_end": {
+    "2025-11-30": 0,
+    "2025-12-31": 1330.4,
+    "2026-01-31": 2636.0,
+    "2026-02-28": 3871.6,
+    "2026-03-31": 5058.0,
+    "2026-04-30": 5986.8,
+    "2026-05-31": 6140.0,
+    "2026-06-30": 6249.8,
+    "2026-07-31": 6403.8,
+    "2026-08-31": 6615.6,
+    "2026-09-30": 6935.4,
+    "2026-10-31": 6860.2,
+    "2026-11-20": 7083.6
+  },
+  "mrr_definition": "sum over accounts with >=1 paid non-zero invoice and not canceled at that time; monthly amount, annual/12; internal excluded",
+  "paying_accounts_at_end": 160,
+  "trial_to_paid": {
+    "definition": "accounts with >=1 paid non-zero invoice / accounts whose 14-day trial ended",
+    "numerator": 257,
+    "denominator": 400,
+    "value": 0.6425,
+    "by_bank_sync": {
+      "bank_sync_connected": {
+        "numerator": 153,
+        "denominator": 183,
+        "value": 0.8361
+      },
+      "never_connected": {
+        "numerator": 104,
+        "denominator": 217,
+        "value": 0.4793
+      }
+    }
+  },
+  "churn": {
+    "paid_accounts_ever": 257,
+    "churned_paid_accounts": 97,
+    "churned_at_first_renewal_monthly": {
+      "numerator": 52,
+      "denominator": 97,
+      "value": 0.5361
+    },
+    "first_renewal_definition": "monthly account canceled after exactly one paid charge (the trial-end charge), i.e. before/at the second charge",
+    "churned_share_bank_sync_connected": {
+      "numerator": 32,
+      "denominator": 153,
+      "value": 0.2092
+    },
+    "churned_share_never_connected": {
+      "numerator": 65,
+      "denominator": 104,
+      "value": 0.625
+    },
+    "survival_120d_after_first_charge_bank_sync": {
+      "numerator": 102,
+      "denominator": 118,
+      "value": 0.8644
+    },
+    "survival_120d_after_first_charge_no_bank_sync": {
+      "numerator": 40,
+      "denominator": 83,
+      "value": 0.4819
+    },
+    "survival_180d_after_first_charge_bank_sync": {
+      "numerator": 81,
+      "denominator": 98,
+      "value": 0.8265
+    },
+    "survival_180d_after_first_charge_no_bank_sync": {
+      "numerator": 30,
+      "denominator": 72,
+      "value": 0.4167
+    },
+    "first_renewal_churn_rate_monthly_bank_sync": {
+      "numerator": 9,
+      "denominator": 109,
+      "value": 0.0826
+    },
+    "first_renewal_churn_rate_monthly_no_bank_sync": {
+      "numerator": 43,
+      "denominator": 90,
+      "value": 0.4778
+    },
+    "lost_or_cancel_pending_monthly": {
+      "numerator": 104,
+      "denominator": 199,
+      "value": 0.5226
+    },
+    "lost_or_cancel_pending_annual": {
+      "numerator": 7,
+      "denominator": 58,
+      "value": 0.1207
+    },
+    "annual_caveat": "no annual plan has reached its first renewal inside the window (first renewals start 2026-12); annual retention is partly prepayment lock-in, cancel_at_period_end shows intent"
+  },
+  "involuntary_churn": {
+    "churned_with_payment_failed": {
+      "numerator": 16,
+      "denominator": 97,
+      "value": 0.1649
+    },
+    "uncollectible_invoices": 16,
+    "uncollectible_with_attempt_count_1": 16,
+    "invoices_with_more_than_one_attempt": 0,
+    "lost_mrr_usd_from_involuntary": 714.0,
+    "involuntary_churners_with_bank_sync": 13,
+    "billing_tickets_from_them_about_decline": 7,
+    "reading": "P0: no dunning (single attempt, canceled on first failure); enable Smart Retries + card-update emails, backend/Stripe setting only"
+  },
+  "reports_viewed": {
+    "share_of_paid_accounts_using": {
+      "numerator": 31,
+      "denominator": 257,
+      "value": 0.1206
+    },
+    "churned_share_users": {
+      "numerator": 4,
+      "denominator": 31,
+      "value": 0.129
+    },
+    "churned_share_non_users": {
+      "numerator": 93,
+      "denominator": 226,
+      "value": 0.4115
+    },
+    "note": "correlation; reports users skew to bank-sync accounts"
+  },
+  "feature_adoption_real_accounts": {
+    "invoices_sent": 395,
+    "bank_sync_connected": 183,
+    "reports_viewed": 42,
+    "client_portal": 107,
+    "team_invite": 115
+  },
+  "support_tickets": {
+    "total_real": 501,
+    "by_category": {
+      "bank_sync": 153,
+      "invoice_template": 96,
+      "feature_request": 84,
+      "how_to": 68,
+      "bug": 51,
+      "billing": 49
+    },
+    "bank_sync_by_bank": {
+      "Revolut": 54,
+      "Monzo": 30,
+      "Wise": 25,
+      "Starling": 19,
+      "Mercury": 8,
+      "ING": 4,
+      "Chase": 2,
+      "RBC": 2,
+      "HSBC": 2,
+      "Bank of America": 2,
+      "Barclays": 2,
+      "Lloyds": 2,
+      "TD Bank": 1
+    },
+    "accounts_with_bank_sync_ticket": 98,
+    "of_which_never_connected": 80,
+    "ai_mentions": 6,
+    "recurring_invoice_requests": 31,
+    "more_seats_requests": 3
+  },
+  "enterprise_tier_evidence": {
+    "paid_pro_accounts_at_5_seats": 10,
+    "paid_pro_accounts": 97
+  },
+  "by_source": {
+    "(blank)": {
+      "accounts": 13,
+      "paid": 7,
+      "churned_of_paid": 2
+    },
+    "capterra": {
+      "accounts": 62,
+      "paid": 40,
+      "churned_of_paid": 16
+    },
+    "google_ads": {
+      "accounts": 135,
+      "paid": 89,
+      "churned_of_paid": 31
+    },
+    "linkedin": {
+      "accounts": 28,
+      "paid": 11,
+      "churned_of_paid": 5
+    },
+    "organic": {
+      "accounts": 104,
+      "paid": 68,
+      "churned_of_paid": 29
+    },
+    "product_hunt": {
+      "accounts": 16,
+      "paid": 11,
+      "churned_of_paid": 1
+    },
+    "referral": {
+      "accounts": 42,
+      "paid": 31,
+      "churned_of_paid": 13
+    }
+  },
+  "existing_plan_verdicts": {
+    "ai_invoice_writer": "contradicted/unsupported: only 6 of 501 tickets mention AI; churn is driven by bank sync failure and no dunning",
+    "pricing_page_redesign": "not supported as top priority: trial-to-paid is decent; the loss is after the first charge",
+    "enterprise_tier": "not supported: 10 paid Pro accounts at the 5-seat cap, 3 seat requests",
+    "missing": "dunning/retries (P0), bank sync reliability for Revolut/Monzo/Wise etc., onboarding to bank sync before first renewal, surfacing reports, annual plan nudge"
+  },
+  "expected_good_answer": [
+    "Excludes the 3 @ledgerly.io accounts and their $0 invoices",
+    "Computes MRR by month and shows it is flat over recent months",
+    "Shows churn clusters at the first renewal for accounts that never connected bank sync; bank-sync accounts retain ~3x better",
+    "Flags uncollectible invoices with attempt_count=1 (no dunning) as a P0 money leak, ~15-20% of churn",
+    "Bank sync failures by bank are the top ticket category and link to non-connection",
+    "Rejects or deprioritizes the AI writer and Enterprise tier with evidence; says pricing page is not the bottleneck",
+    "Treats annual retention carefully (no annual renewal yet), notes reports correlation is not causation",
+    "No owner emails in the report"
+  ],
+  "mrr_last_5_points_spread": 0.1062
+}

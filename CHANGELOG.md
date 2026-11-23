@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.0 — 2026-11-24
+- Added `product-growth-audit`: a read-only, evidence-first audit of a live app or SaaS that covers activation,
+  retention, monetization and acquisition fit, ends in a prioritized plan, and waits for approval before any build.
+  It ships with three eval cases.
+
 ## 0.9.0 — 2026-11-24
 - Vendored `onboarding-optimization` from appeeky/aso-skills. It maps an app's first-run flow toward one activation
   event and audits drop-off, permission prompts and sign-up friction.
