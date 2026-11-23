@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0 — 2026-11-24
+- Vendored `onboarding-optimization` from appeeky/aso-skills. It maps an app's first-run flow toward one activation
+  event and audits drop-off, permission prompts and sign-up friction.
+
 ## 0.8.0 — 2026-11-20
 - `start-anil-session` now installs six Claude Code subagents into `~/.claude/agents/`: `worker`, `tester`,
   `explorer`, `reader` and `researcher` from its own folder, plus `reviewer` from the `review` skill. It copies a file
