@@ -196,6 +196,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |
 | [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |
 | [almost-paid](skills/almost-paid/) | Find the users who almost paid — saw the paywall, started checkout, ran out of free credits, let a trial lapse — size what they are worth, and turn… | [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) |
+| [onboarding-optimization](skills/onboarding-optimization/) | When the user wants to improve their app's onboarding experience, increase activation rate, reduce Day 1 drop-off, or optimize the first-run flow. | [appeeky/aso-skills](https://github.com/appeeky/aso-skills) |
 <!-- SKILLS:END -->
 
 ## Updating
@@ -226,6 +227,7 @@ The bundled skills are byte-for-byte copies from their authors, pinned in `vendo
 | [blader/humanizer](https://github.com/blader/humanizer) | `humanizer` | MIT | `0ef9fe5` |
 | [nestyme/awesome-prompts](https://github.com/nestyme/awesome-prompts) | `almost-paid`, `stop-slop` | none (shared publicly by the author) | `d200ba5` |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | `domain-modeling`, `grill-with-docs`, `grilling`, `retro`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `triage`, `writing-for-agents` | MIT | `abeeaf9` |
+| [appeeky/aso-skills](https://github.com/appeeky/aso-skills) | `onboarding-optimization` | MIT | `f46308d` |
 <!-- CREDITS:END -->
 
 `review` started from Matt Pocock's [`code-review`](https://github.com/mattpocock/skills) skill (MIT) and has since

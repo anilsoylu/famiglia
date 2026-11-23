@@ -21,7 +21,7 @@ GROUPS = {
     "SEO and AI search": ["seo-agency", "seo-audit", "ai-seo", "schema", "programmatic-seo", "site-architecture",
                           "link-building", "competitors", "content-strategy"],
     "Writing": ["no-tropes", "humanizer", "copywriting", "stop-slop", "writing-for-agents"],
-    "Growth and analytics": ["cro", "analytics", "lead-magnets", "almost-paid"],
+    "Growth and analytics": ["cro", "analytics", "lead-magnets", "almost-paid", "onboarding-optimization"],
 }
 MAX = 150
 

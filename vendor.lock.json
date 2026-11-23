@@ -283,5 +283,12 @@
     "path": "skills/productivity/writing-for-agents",
     "license": "MIT",
     "sha256": "dc53f07d1f662137317789b9b5d74cfcc26dbcfc15038a7faf676c844d8638e8"
+  },
+  "onboarding-optimization": {
+    "repo": "https://github.com/appeeky/aso-skills",
+    "ref": "f46308d300e24ad3988f7880d987d22e6bcda136",
+    "path": "plugin/skills/onboarding-optimization",
+    "license": "MIT",
+    "sha256": "8197f63363842c728e360c521a63f8e17a9d93c24d40a4609dd388904d0ed65c"
   }
 }
