@@ -1,0 +1,506 @@
+ticket_id,account_id,created_at,category,text
+T-3000,acc_1002,2025-11-22T07:16:51Z,bug,Dashboard total does not match the invoice list
+T-3001,acc_1009,2025-11-24T05:43:25Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3002,acc_1002,2025-11-24T12:16:51Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3003,acc_1002,2025-11-28T00:16:51Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3004,acc_1002,2025-12-01T12:16:51Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3005,acc_1015,2025-12-04T19:40:51Z,bank_sync,Bank sync failed for Mercury: connection timed out
+T-3006,acc_1004,2025-12-05T08:57:51Z,feature_request,Recurring invoices for retainer clients please
+T-3007,acc_1002,2025-12-05T09:16:51Z,bug,Invoice PDF cut off on the second page
+T-3008,acc_1013,2025-12-06T22:35:04Z,bank_sync,"Bank sync failed for Mercury again, transactions not importing"
+T-3009,acc_1027,2025-12-07T08:26:21Z,billing,Can I switch to annual billing?
+T-3010,acc_1025,2025-12-07T12:37:34Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3011,acc_1024,2025-12-07T17:16:02Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3012,acc_1026,2025-12-10T13:20:06Z,how_to,How do clients pay through the portal?
+T-3013,acc_1016,2025-12-11T03:30:21Z,billing,Downgrade from Pro to Starter?
+T-3014,acc_1035,2025-12-11T16:26:41Z,bank_sync,Bank sync failed for Starling. It says 'institution not supported'
+T-3015,acc_1021,2025-12-14T09:43:33Z,how_to,How do I mark an invoice as paid manually?
+T-3016,acc_1019,2025-12-14T19:19:38Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3017,acc_1046,2025-12-15T17:14:48Z,how_to,How do clients pay through the portal?
+T-3018,acc_1041,2025-12-17T11:48:29Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3019,acc_1055,2025-12-17T21:53:14Z,how_to,How do clients pay through the portal?
+T-3020,acc_1007,2025-12-18T03:34:02Z,bank_sync,"Bank sync failed for Chase after it worked for weeks, had to reconnect"
+T-3021,acc_1052,2025-12-18T11:24:06Z,how_to,How do I mark an invoice as paid manually?
+T-3022,acc_1027,2025-12-19T01:26:21Z,billing,Downgrade from Pro to Starter?
+T-3023,acc_1054,2025-12-19T12:37:25Z,invoice_template,Tax line shows twice on the PDF
+T-3024,acc_1035,2025-12-20T00:26:41Z,bank_sync,Bank sync failed for Starling. It says 'institution not supported'
+T-3025,acc_1028,2025-12-20T14:51:29Z,invoice_template,Tax line shows twice on the PDF
+T-3026,acc_1035,2025-12-21T00:26:41Z,billing,"Charged in USD, can we pay in GBP?"
+T-3027,acc_1049,2025-12-21T16:33:33Z,billing,Can I switch to annual billing?
+T-3028,acc_1050,2025-12-21T23:13:30Z,bank_sync,Bank sync failed for Monzo. It says 'institution not supported'
+T-3029,acc_1045,2025-12-22T16:00:49Z,billing,Downgrade from Pro to Starter?
+T-3030,acc_1035,2025-12-22T16:26:41Z,invoice_template,Tax line shows twice on the PDF
+T-3031,acc_1054,2025-12-23T06:37:25Z,how_to,Where do I see overdue invoices?
+T-3032,acc_1057,2025-12-24T14:43:56Z,feature_request,Recurring invoices for retainer clients please
+T-3033,acc_1052,2025-12-25T04:24:06Z,feature_request,Recurring invoices for retainer clients please
+T-3034,acc_1045,2025-12-26T01:00:49Z,invoice_template,Tax line shows twice on the PDF
+T-3035,acc_1051,2025-12-26T19:59:27Z,invoice_template,Need VAT number on invoices for EU clients
+T-3036,acc_1042,2025-12-27T19:41:31Z,bank_sync,"Bank sync failed for RBC after it worked for weeks, had to reconnect"
+T-3037,acc_1051,2025-12-28T20:59:27Z,billing,Downgrade from Pro to Starter?
+T-3038,acc_1056,2025-12-29T13:36:38Z,how_to,Can I import clients from a CSV?
+T-3039,acc_1030,2025-12-31T06:15:37Z,billing,Can I switch to annual billing?
+T-3040,acc_1069,2025-12-31T15:18:47Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3041,acc_1005,2026-01-01T01:04:59Z,invoice_template,Tax line shows twice on the PDF
+T-3042,acc_1021,2026-01-01T11:43:33Z,feature_request,Support Revolut business accounts for bank sync
+T-3043,acc_1067,2026-01-01T15:55:35Z,invoice_template,Tax line shows twice on the PDF
+T-3044,acc_1061,2026-01-02T07:46:04Z,invoice_template,Tax line shows twice on the PDF
+T-3045,acc_1068,2026-01-04T17:07:09Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3046,acc_1078,2026-01-08T01:49:40Z,feature_request,Recurring invoices for retainer clients please
+T-3047,acc_1089,2026-01-08T10:06:32Z,bank_sync,"Bank sync failed for Mercury again, transactions not importing"
+T-3048,acc_1089,2026-01-09T11:06:32Z,how_to,Where do I see overdue invoices?
+T-3049,acc_1098,2026-01-09T16:56:42Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3050,acc_1079,2026-01-09T17:05:00Z,how_to,Where do I see overdue invoices?
+T-3051,acc_1098,2026-01-10T09:56:42Z,how_to,Can I import clients from a CSV?
+T-3052,acc_1096,2026-01-10T15:56:59Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3053,acc_1079,2026-01-10T19:05:00Z,bank_sync,"Can't connect Monzo, the login window closes after MFA"
+T-3054,acc_1086,2026-01-11T09:40:33Z,bug,Invoice PDF cut off on the second page
+T-3055,acc_1024,2026-01-12T16:16:02Z,invoice_template,Need VAT number on invoices for EU clients
+T-3056,acc_1100,2026-01-13T17:04:00Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3057,acc_1105,2026-01-13T18:26:38Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3058,acc_1111,2026-01-14T04:35:06Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3059,acc_1098,2026-01-15T00:56:42Z,invoice_template,Can I change the invoice number format?
+T-3060,acc_1093,2026-01-15T09:09:18Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3061,acc_1112,2026-01-15T10:00:26Z,how_to,How do clients pay through the portal?
+T-3062,acc_1093,2026-01-15T10:09:18Z,bug,Invoice PDF cut off on the second page
+T-3063,acc_1006,2026-01-17T21:00:00Z,how_to,How do clients pay through the portal?
+T-3064,acc_1110,2026-01-18T19:36:09Z,feature_request,QuickBooks sync
+T-3065,acc_1105,2026-01-18T22:26:38Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3066,acc_1100,2026-01-19T00:04:00Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3067,acc_1113,2026-01-19T13:33:12Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3068,acc_1113,2026-01-19T16:33:12Z,billing,"Charged in USD, can we pay in GBP?"
+T-3069,acc_1105,2026-01-21T03:26:38Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3070,acc_1117,2026-01-21T03:34:14Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3071,acc_1106,2026-01-21T11:10:12Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3072,acc_1117,2026-01-23T01:34:14Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3073,acc_1057,2026-01-23T11:43:56Z,billing,Need a receipt with our company address
+T-3074,acc_1119,2026-01-23T22:09:05Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3075,acc_1112,2026-01-24T10:00:26Z,invoice_template,Can I change the invoice number format?
+T-3076,acc_1070,2026-01-26T00:33:14Z,invoice_template,Can I change the invoice number format?
+T-3077,acc_1123,2026-01-26T07:08:11Z,how_to,How do I mark an invoice as paid manually?
+T-3078,acc_1006,2026-01-26T17:00:00Z,billing,Can I switch to annual billing?
+T-3079,acc_1087,2026-01-28T02:00:25Z,billing,Can I switch to annual billing?
+T-3080,acc_1131,2026-01-29T13:59:19Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3081,acc_1119,2026-01-30T08:09:05Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3082,acc_1117,2026-01-30T10:34:14Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3083,acc_1119,2026-01-31T01:09:05Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3084,acc_1132,2026-01-31T11:10:00Z,bank_sync,"Can't connect Starling, the login window closes after MFA"
+T-3085,acc_1022,2026-01-31T14:53:53Z,bank_sync,"Bank sync failed for HSBC after it worked for weeks, had to reconnect"
+T-3086,acc_1123,2026-02-02T00:08:11Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3087,acc_1094,2026-02-02T05:13:19Z,bug,Client portal link expired too fast
+T-3088,acc_1123,2026-02-02T12:08:11Z,bank_sync,"Can't connect Wise, the login window closes after MFA"
+T-3089,acc_1005,2026-02-02T19:04:59Z,invoice_template,Tax line shows twice on the PDF
+T-3090,acc_1126,2026-02-05T04:56:13Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3091,acc_1008,2026-02-05T16:54:43Z,bug,Duplicate reminder email sent to a client
+T-3092,acc_1126,2026-02-05T23:56:13Z,bank_sync,"Can't connect Monzo, the login window closes after MFA"
+T-3093,acc_1139,2026-02-11T23:21:27Z,invoice_template,Need VAT number on invoices for EU clients
+T-3094,acc_1145,2026-02-12T02:34:19Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3095,acc_1150,2026-02-12T05:53:42Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3096,acc_1007,2026-02-13T08:34:02Z,feature_request,Recurring invoices for retainer clients please
+T-3097,acc_1149,2026-02-13T09:02:22Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3098,acc_1150,2026-02-13T12:53:42Z,how_to,Can I import clients from a CSV?
+T-3099,acc_1136,2026-02-14T02:35:04Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3100,acc_1145,2026-02-14T10:34:19Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3101,acc_1017,2026-02-15T04:08:13Z,billing,Downgrade from Pro to Starter?
+T-3102,acc_1131,2026-02-15T07:59:19Z,billing,Can I switch to annual billing?
+T-3103,acc_1151,2026-02-15T10:21:16Z,bug,Invoice PDF cut off on the second page
+T-3104,acc_1153,2026-02-15T14:15:48Z,bank_sync,"Can't connect Wise, the login window closes after MFA"
+T-3105,acc_1111,2026-02-15T21:35:06Z,feature_request,Support Revolut business accounts for bank sync
+T-3106,acc_1141,2026-02-16T09:21:00Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3107,acc_1010,2026-02-17T00:39:01Z,feature_request,Recurring invoices for retainer clients please
+T-3108,acc_1141,2026-02-17T13:21:00Z,bank_sync,"Can't connect Monzo, the login window closes after MFA"
+T-3109,acc_1149,2026-02-18T03:02:22Z,how_to,How do clients pay through the portal?
+T-3110,acc_1147,2026-02-18T18:12:22Z,invoice_template,Need VAT number on invoices for EU clients
+T-3111,acc_1076,2026-02-19T16:21:13Z,feature_request,Would be nice if AI could write the line item descriptions
+T-3112,acc_1150,2026-02-20T18:53:42Z,feature_request,Recurring invoices for retainer clients please
+T-3113,acc_1145,2026-02-20T19:34:19Z,feature_request,Would be nice if AI could write the line item descriptions
+T-3114,acc_1122,2026-02-20T20:55:18Z,how_to,How do I mark an invoice as paid manually?
+T-3115,acc_1141,2026-02-21T01:21:00Z,bank_sync,"Can't connect Monzo, the login window closes after MFA"
+T-3116,acc_1163,2026-02-21T03:48:27Z,bug,Duplicate reminder email sent to a client
+T-3117,acc_1167,2026-02-23T11:29:55Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3118,acc_1160,2026-02-23T13:58:18Z,bank_sync,"Can't connect Starling, the login window closes after MFA"
+T-3119,acc_1158,2026-02-24T10:50:16Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3120,acc_1158,2026-02-24T11:50:16Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3121,acc_1163,2026-02-25T04:48:27Z,feature_request,Recurring invoices for retainer clients please
+T-3122,acc_1149,2026-02-25T08:02:22Z,billing,Can I switch to annual billing?
+T-3123,acc_1168,2026-02-25T14:30:10Z,how_to,Where do I see overdue invoices?
+T-3124,acc_1167,2026-02-26T06:29:55Z,feature_request,Support Revolut business accounts for bank sync
+T-3125,acc_1153,2026-02-26T08:15:48Z,feature_request,QuickBooks sync
+T-3126,acc_1178,2026-02-27T15:03:55Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3127,acc_1160,2026-02-27T20:58:18Z,bank_sync,Bank sync failed for Starling. It says 'institution not supported'
+T-3128,acc_1169,2026-02-27T22:37:49Z,billing,"Charged in USD, can we pay in GBP?"
+T-3129,acc_1102,2026-03-02T14:26:20Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3130,acc_1101,2026-03-02T17:37:02Z,billing,Downgrade from Pro to Starter?
+T-3131,acc_1131,2026-03-02T20:59:19Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3132,acc_1180,2026-03-02T22:35:44Z,bank_sync,"Bank sync failed for Mercury again, transactions not importing"
+T-3133,acc_1181,2026-03-04T07:28:53Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3134,acc_1184,2026-03-04T22:47:27Z,invoice_template,Can I change the invoice number format?
+T-3135,acc_1189,2026-03-05T08:31:26Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3136,acc_1121,2026-03-05T16:08:53Z,how_to,Where do I see overdue invoices?
+T-3137,acc_1180,2026-03-05T16:35:44Z,bank_sync,Bank sync failed for Mercury: connection timed out
+T-3138,acc_1192,2026-03-07T03:36:53Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3139,acc_1192,2026-03-07T20:36:53Z,bug,Duplicate reminder email sent to a client
+T-3140,acc_1120,2026-03-08T03:17:51Z,bank_sync,"Bank sync failed for Bank of America after it worked for weeks, had to reconnect"
+T-3141,acc_1188,2026-03-08T04:11:39Z,how_to,How do I mark an invoice as paid manually?
+T-3142,acc_1188,2026-03-08T14:11:39Z,bank_sync,Bank sync failed for Mercury: connection timed out
+T-3143,acc_1180,2026-03-08T17:35:44Z,bank_sync,"Can't connect Mercury, the login window closes after MFA"
+T-3144,acc_1177,2026-03-09T13:02:12Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3145,acc_1116,2026-03-09T19:04:05Z,feature_request,Would be nice if AI could write the line item descriptions
+T-3146,acc_1071,2026-03-10T08:33:22Z,invoice_template,Tax line shows twice on the PDF
+T-3147,acc_1189,2026-03-11T01:31:26Z,bug,Invoice PDF cut off on the second page
+T-3148,acc_1192,2026-03-11T11:36:53Z,billing,"Charged in USD, can we pay in GBP?"
+T-3149,acc_1157,2026-03-12T10:24:08Z,feature_request,Would be nice if AI could write the line item descriptions
+T-3150,acc_1189,2026-03-13T08:31:26Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3151,acc_1076,2026-03-13T13:21:13Z,how_to,How do I mark an invoice as paid manually?
+T-3152,acc_1196,2026-03-13T19:23:39Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3153,acc_1164,2026-03-14T21:35:33Z,feature_request,Recurring invoices for retainer clients please
+T-3154,acc_1198,2026-03-15T22:34:38Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3155,acc_1196,2026-03-16T00:23:39Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3156,acc_1078,2026-03-16T01:49:40Z,bank_sync,"Bank sync failed for ING after it worked for weeks, had to reconnect"
+T-3157,acc_1196,2026-03-16T08:23:39Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3158,acc_1205,2026-03-16T16:13:38Z,billing,"Charged in USD, can we pay in GBP?"
+T-3159,acc_1006,2026-03-16T17:00:00Z,invoice_template,Need VAT number on invoices for EU clients
+T-3160,acc_1205,2026-03-17T01:13:38Z,invoice_template,Can I change the invoice number format?
+T-3161,acc_1191,2026-03-17T14:47:02Z,feature_request,Xero export
+T-3162,acc_1195,2026-03-18T13:25:59Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3163,acc_1191,2026-03-19T19:47:02Z,feature_request,QuickBooks sync
+T-3164,acc_1115,2026-03-20T12:52:38Z,bank_sync,"Bank sync failed for ING after it worked for weeks, had to reconnect"
+T-3165,acc_1210,2026-03-21T04:42:13Z,how_to,How do clients pay through the portal?
+T-3166,acc_1212,2026-03-21T10:13:39Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3167,acc_1186,2026-03-21T15:59:28Z,billing,Can I switch to annual billing?
+T-3168,acc_1202,2026-03-24T07:23:52Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3169,acc_1029,2026-03-24T17:08:34Z,bank_sync,"Bank sync failed for Barclays after it worked for weeks, had to reconnect"
+T-3170,acc_1021,2026-03-25T13:43:33Z,billing,My card was declined once and the account got canceled right away? We want to keep using it
+T-3171,acc_1202,2026-03-26T01:23:52Z,how_to,Where do I see overdue invoices?
+T-3172,acc_1202,2026-03-26T02:23:52Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3173,acc_1214,2026-03-26T03:22:14Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3174,acc_1127,2026-03-27T06:42:37Z,bank_sync,"Bank sync failed for Lloyds after it worked for weeks, had to reconnect"
+T-3175,acc_1161,2026-03-27T08:47:33Z,bug,Dashboard total does not match the invoice list
+T-3176,acc_1130,2026-03-27T09:06:24Z,bank_sync,"Bank sync failed for TD Bank after it worked for weeks, had to reconnect"
+T-3177,acc_1125,2026-03-28T17:03:14Z,feature_request,Recurring invoices for retainer clients please
+T-3178,acc_1214,2026-03-29T02:22:14Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3179,acc_1082,2026-03-29T08:26:42Z,how_to,Where do I see overdue invoices?
+T-3180,acc_1210,2026-03-30T19:42:13Z,feature_request,Support Revolut business accounts for bank sync
+T-3181,acc_1210,2026-03-31T03:42:13Z,bank_sync,"Can't connect Wise, the login window closes after MFA"
+T-3182,acc_1219,2026-04-01T00:35:01Z,how_to,Where do I see overdue invoices?
+T-3183,acc_1190,2026-04-02T06:14:25Z,how_to,Can I import clients from a CSV?
+T-3184,acc_1218,2026-04-02T18:19:39Z,feature_request,Recurring invoices for retainer clients please
+T-3185,acc_1196,2026-04-05T03:23:39Z,billing,Downgrade from Pro to Starter?
+T-3186,acc_1214,2026-04-05T06:22:14Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3187,acc_1203,2026-04-05T07:51:13Z,feature_request,Support Revolut business accounts for bank sync
+T-3188,acc_1219,2026-04-06T08:35:01Z,invoice_template,Need VAT number on invoices for EU clients
+T-3189,acc_1217,2026-04-07T05:43:06Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3190,acc_1228,2026-04-08T20:35:24Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3191,acc_1218,2026-04-09T10:19:39Z,feature_request,Recurring invoices for retainer clients please
+T-3192,acc_1229,2026-04-09T21:41:21Z,how_to,Where do I see overdue invoices?
+T-3193,acc_1180,2026-04-10T06:35:44Z,feature_request,Recurring invoices for retainer clients please
+T-3194,acc_1117,2026-04-11T13:34:14Z,how_to,How do clients pay through the portal?
+T-3195,acc_1194,2026-04-11T18:11:30Z,invoice_template,Can I change the invoice number format?
+T-3196,acc_1212,2026-04-12T01:13:39Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3197,acc_1206,2026-04-12T03:31:04Z,how_to,How do clients pay through the portal?
+T-3198,acc_1237,2026-04-12T13:33:16Z,invoice_template,Need VAT number on invoices for EU clients
+T-3199,acc_1020,2026-04-13T06:33:24Z,feature_request,Xero export
+T-3200,acc_1239,2026-04-13T11:17:47Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3201,acc_1227,2026-04-15T07:27:16Z,bug,Dashboard total does not match the invoice list
+T-3202,acc_1037,2026-04-15T09:11:23Z,how_to,How do clients pay through the portal?
+T-3203,acc_1227,2026-04-15T11:27:16Z,feature_request,More than 5 seats on Pro
+T-3204,acc_1230,2026-04-15T21:36:26Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3205,acc_1243,2026-04-16T05:15:56Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3206,acc_1237,2026-04-16T10:33:16Z,bank_sync,Bank sync failed for Monzo. It says 'institution not supported'
+T-3207,acc_1003,2026-04-16T13:00:00Z,feature_request,Recurring invoices for retainer clients please
+T-3208,acc_1221,2026-04-16T19:44:41Z,feature_request,Support Revolut business accounts for bank sync
+T-3209,acc_1160,2026-04-16T19:58:18Z,billing,Can I switch to annual billing?
+T-3210,acc_1243,2026-04-17T17:15:56Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3211,acc_1243,2026-04-18T04:15:56Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3212,acc_1068,2026-04-18T05:07:09Z,bug,Dashboard total does not match the invoice list
+T-3213,acc_1250,2026-04-19T14:27:22Z,bank_sync,Bank sync failed for Starling: connection timed out
+T-3214,acc_1250,2026-04-20T06:27:22Z,bank_sync,"Can't connect Starling, the login window closes after MFA"
+T-3215,acc_1127,2026-04-20T18:42:37Z,bug,Invoice PDF cut off on the second page
+T-3216,acc_1239,2026-04-21T03:17:47Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3217,acc_1251,2026-04-21T06:39:12Z,invoice_template,Tax line shows twice on the PDF
+T-3218,acc_1128,2026-04-21T12:10:21Z,feature_request,Support Revolut business accounts for bank sync
+T-3219,acc_1148,2026-04-21T13:53:40Z,how_to,Can I import clients from a CSV?
+T-3220,acc_1246,2026-04-22T10:18:53Z,billing,Can I switch to annual billing?
+T-3221,acc_1236,2026-04-22T14:11:42Z,how_to,Where do I see overdue invoices?
+T-3222,acc_1246,2026-04-22T19:18:53Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3223,acc_1237,2026-04-23T02:33:16Z,invoice_template,Can I change the invoice number format?
+T-3224,acc_1256,2026-04-25T02:03:48Z,feature_request,Recurring invoices for retainer clients please
+T-3225,acc_1029,2026-04-26T04:08:34Z,how_to,How do clients pay through the portal?
+T-3226,acc_1255,2026-04-26T10:17:59Z,invoice_template,Need VAT number on invoices for EU clients
+T-3227,acc_1247,2026-04-26T10:55:15Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3228,acc_1248,2026-04-27T04:23:08Z,invoice_template,Can I change the invoice number format?
+T-3229,acc_1256,2026-04-27T06:03:48Z,bank_sync,"Can't connect Wise, the login window closes after MFA"
+T-3230,acc_1238,2026-04-27T20:31:10Z,billing,Need a receipt with our company address
+T-3231,acc_1256,2026-04-28T13:03:48Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3232,acc_1256,2026-04-29T07:03:48Z,bank_sync,Bank sync failed for Wise: connection timed out
+T-3233,acc_1258,2026-04-29T16:12:39Z,bug,Client portal link expired too fast
+T-3234,acc_1252,2026-04-30T09:41:50Z,invoice_template,Tax line shows twice on the PDF
+T-3235,acc_1037,2026-05-02T00:11:23Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3236,acc_1264,2026-05-03T03:36:27Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3237,acc_1204,2026-05-03T18:11:44Z,feature_request,Support Revolut business accounts for bank sync
+T-3238,acc_1143,2026-05-04T00:50:33Z,how_to,Where do I see overdue invoices?
+T-3239,acc_1254,2026-05-04T05:07:15Z,bank_sync,Bank sync failed for Monzo. It says 'institution not supported'
+T-3240,acc_1078,2026-05-04T19:49:40Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3241,acc_1252,2026-05-04T20:41:50Z,invoice_template,Tax line shows twice on the PDF
+T-3242,acc_1261,2026-05-05T04:22:42Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3243,acc_1262,2026-05-06T04:33:47Z,how_to,Can I import clients from a CSV?
+T-3244,acc_1217,2026-05-06T06:43:06Z,bug,Client portal link expired too fast
+T-3245,acc_1088,2026-05-07T04:58:51Z,how_to,Where do I see overdue invoices?
+T-3246,acc_1261,2026-05-09T11:22:42Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3247,acc_1133,2026-05-09T23:45:50Z,bug,Duplicate reminder email sent to a client
+T-3248,acc_1265,2026-05-10T23:55:44Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3249,acc_1254,2026-05-11T01:07:15Z,how_to,How do I mark an invoice as paid manually?
+T-3250,acc_1261,2026-05-11T15:22:42Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3251,acc_1176,2026-05-11T21:50:57Z,invoice_template,Can I change the invoice number format?
+T-3252,acc_1273,2026-05-12T17:15:50Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3253,acc_1207,2026-05-13T11:19:10Z,how_to,Can I import clients from a CSV?
+T-3254,acc_1273,2026-05-15T03:15:50Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3255,acc_1076,2026-05-16T23:21:13Z,invoice_template,Tax line shows twice on the PDF
+T-3256,acc_1238,2026-05-17T13:31:10Z,invoice_template,Can I change the invoice number format?
+T-3257,acc_1274,2026-05-18T12:50:10Z,how_to,Can I import clients from a CSV?
+T-3258,acc_1254,2026-05-20T18:07:15Z,invoice_template,Need VAT number on invoices for EU clients
+T-3259,acc_1276,2026-05-21T00:32:59Z,bug,Client portal link expired too fast
+T-3260,acc_1101,2026-05-21T05:37:02Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3261,acc_1273,2026-05-21T07:15:50Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3262,acc_1243,2026-05-21T08:15:56Z,how_to,Where do I see overdue invoices?
+T-3263,acc_1222,2026-05-21T19:08:31Z,feature_request,More than 5 seats on Pro
+T-3264,acc_1094,2026-05-22T22:13:19Z,billing,"Lost access after a failed payment, nobody emailed us first"
+T-3265,acc_1271,2026-05-23T01:16:16Z,how_to,How do I mark an invoice as paid manually?
+T-3266,acc_1274,2026-05-23T10:50:10Z,bug,Duplicate reminder email sent to a client
+T-3267,acc_1229,2026-05-24T11:41:21Z,bank_sync,"Bank sync failed for Revolut after it worked for weeks, had to reconnect"
+T-3268,acc_1275,2026-05-25T23:54:40Z,bug,Client portal link expired too fast
+T-3269,acc_1276,2026-05-26T22:32:59Z,bank_sync,Bank sync failed for Monzo. It says 'institution not supported'
+T-3270,acc_1257,2026-05-27T03:05:13Z,invoice_template,Can I change the invoice number format?
+T-3271,acc_1200,2026-05-27T10:48:51Z,billing,My card was declined once and the account got canceled right away? We want to keep using it
+T-3272,acc_1281,2026-05-27T14:50:51Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3273,acc_1282,2026-05-28T15:44:20Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3274,acc_1276,2026-05-28T17:32:59Z,bank_sync,"Can't connect Monzo, the login window closes after MFA"
+T-3275,acc_1171,2026-05-28T18:00:49Z,how_to,Can I import clients from a CSV?
+T-3276,acc_1291,2026-05-29T10:43:50Z,feature_request,Xero export
+T-3277,acc_1275,2026-05-29T22:54:40Z,bug,Duplicate reminder email sent to a client
+T-3278,acc_1291,2026-05-30T09:43:50Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3279,acc_1291,2026-05-30T16:43:50Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3280,acc_1276,2026-05-30T18:32:59Z,bank_sync,Bank sync failed for Monzo. It says 'institution not supported'
+T-3281,acc_1288,2026-05-31T05:47:53Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3282,acc_1281,2026-05-31T20:50:51Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3283,acc_1278,2026-06-02T08:18:19Z,how_to,How do clients pay through the portal?
+T-3284,acc_1277,2026-06-02T09:07:55Z,billing,"Charged in USD, can we pay in GBP?"
+T-3285,acc_1291,2026-06-02T10:43:50Z,how_to,Where do I see overdue invoices?
+T-3286,acc_1275,2026-06-02T23:54:40Z,bank_sync,"Bank sync failed for ING after it worked for weeks, had to reconnect"
+T-3287,acc_1239,2026-06-03T11:17:47Z,feature_request,QuickBooks sync
+T-3288,acc_1204,2026-06-04T04:11:44Z,bug,Invoice PDF cut off on the second page
+T-3289,acc_1291,2026-06-07T00:43:50Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3290,acc_1228,2026-06-07T22:35:24Z,bank_sync,"Bank sync failed for RBC after it worked for weeks, had to reconnect"
+T-3291,acc_1179,2026-06-08T11:35:15Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3292,acc_1293,2026-06-08T13:08:28Z,bug,Invoice PDF cut off on the second page
+T-3293,acc_1267,2026-06-09T07:31:24Z,feature_request,Xero export
+T-3294,acc_1288,2026-06-09T09:47:53Z,feature_request,QuickBooks sync
+T-3295,acc_1142,2026-06-09T10:42:44Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3296,acc_1297,2026-06-10T10:01:43Z,bank_sync,"Can't connect Mercury, the login window closes after MFA"
+T-3297,acc_1294,2026-06-13T05:37:51Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3298,acc_1082,2026-06-13T09:26:42Z,feature_request,Xero export
+T-3299,acc_1063,2026-06-14T03:50:07Z,billing,Need a receipt with our company address
+T-3300,acc_1294,2026-06-15T02:37:51Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3301,acc_1201,2026-06-15T08:53:38Z,billing,Downgrade from Pro to Starter?
+T-3302,acc_1295,2026-06-17T12:21:53Z,billing,Downgrade from Pro to Starter?
+T-3303,acc_1308,2026-06-19T15:06:19Z,invoice_template,Tax line shows twice on the PDF
+T-3304,acc_1128,2026-06-21T14:10:21Z,feature_request,Xero export
+T-3305,acc_1282,2026-06-22T06:44:20Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3306,acc_1155,2026-06-22T15:10:34Z,how_to,Where do I see overdue invoices?
+T-3307,acc_1301,2026-06-23T14:07:43Z,invoice_template,Tax line shows twice on the PDF
+T-3308,acc_1301,2026-06-24T13:07:43Z,invoice_template,Need VAT number on invoices for EU clients
+T-3309,acc_1047,2026-06-25T06:21:36Z,invoice_template,Need VAT number on invoices for EU clients
+T-3310,acc_1172,2026-06-25T11:19:50Z,invoice_template,Need VAT number on invoices for EU clients
+T-3311,acc_1196,2026-06-28T22:23:39Z,invoice_template,Need VAT number on invoices for EU clients
+T-3312,acc_1260,2026-06-29T01:07:53Z,bank_sync,"Bank sync failed for HSBC after it worked for weeks, had to reconnect"
+T-3313,acc_1199,2026-06-29T10:28:12Z,bug,Client portal link expired too fast
+T-3314,acc_1303,2026-06-29T18:11:27Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3315,acc_1207,2026-06-29T19:19:10Z,invoice_template,Need VAT number on invoices for EU clients
+T-3316,acc_1295,2026-06-30T08:21:53Z,feature_request,Recurring invoices for retainer clients please
+T-3317,acc_1250,2026-07-04T16:27:22Z,bug,Duplicate reminder email sent to a client
+T-3318,acc_1314,2026-07-06T00:25:05Z,feature_request,Recurring invoices for retainer clients please
+T-3319,acc_1125,2026-07-06T03:03:14Z,bug,Duplicate reminder email sent to a client
+T-3320,acc_1309,2026-07-06T09:44:27Z,billing,Need a receipt with our company address
+T-3321,acc_1310,2026-07-07T09:30:19Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3322,acc_1199,2026-07-07T15:28:12Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3323,acc_1120,2026-07-08T07:17:51Z,feature_request,Recurring invoices for retainer clients please
+T-3324,acc_1312,2026-07-08T19:31:48Z,bug,Client portal link expired too fast
+T-3325,acc_1263,2026-07-09T01:10:28Z,feature_request,Recurring invoices for retainer clients please
+T-3326,acc_1104,2026-07-09T11:28:28Z,bug,Dashboard total does not match the invoice list
+T-3327,acc_1306,2026-07-09T23:43:07Z,invoice_template,Tax line shows twice on the PDF
+T-3328,acc_1273,2026-07-11T10:15:50Z,billing,Downgrade from Pro to Starter?
+T-3329,acc_1127,2026-07-12T21:42:37Z,bug,Client portal link expired too fast
+T-3330,acc_1317,2026-07-13T01:11:24Z,bug,Client portal link expired too fast
+T-3331,acc_1321,2026-07-14T06:45:19Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3332,acc_1326,2026-07-15T09:31:52Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3333,acc_1324,2026-07-15T20:10:13Z,how_to,How do clients pay through the portal?
+T-3334,acc_1315,2026-07-16T08:01:45Z,billing,Can I switch to annual billing?
+T-3335,acc_1114,2026-07-16T20:47:48Z,bug,Invoice PDF cut off on the second page
+T-3336,acc_1114,2026-07-17T08:47:48Z,how_to,Can I import clients from a CSV?
+T-3337,acc_1295,2026-07-17T10:21:53Z,invoice_template,Tax line shows twice on the PDF
+T-3338,acc_1290,2026-07-17T14:23:49Z,feature_request,Recurring invoices for retainer clients please
+T-3339,acc_1232,2026-07-18T22:20:44Z,billing,"Charged in USD, can we pay in GBP?"
+T-3340,acc_1190,2026-07-18T23:14:25Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3341,acc_1320,2026-07-19T03:30:21Z,bank_sync,Bank sync failed for Wise: connection timed out
+T-3342,acc_1058,2026-07-19T06:31:30Z,bug,Invoice PDF cut off on the second page
+T-3343,acc_1263,2026-07-19T16:10:28Z,billing,Need a receipt with our company address
+T-3344,acc_1272,2026-07-20T00:59:50Z,invoice_template,Can I change the invoice number format?
+T-3345,acc_1317,2026-07-20T23:11:24Z,bug,Client portal link expired too fast
+T-3346,acc_1287,2026-07-21T10:24:54Z,how_to,Where do I see overdue invoices?
+T-3347,acc_1326,2026-07-21T20:31:52Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3348,acc_1007,2026-07-22T07:34:02Z,feature_request,QuickBooks sync
+T-3349,acc_1320,2026-07-22T16:30:21Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3350,acc_1325,2026-07-23T14:04:08Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3351,acc_1206,2026-07-23T22:31:04Z,billing,Can I switch to annual billing?
+T-3352,acc_1326,2026-07-24T15:31:52Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3353,acc_1130,2026-07-25T02:06:24Z,invoice_template,Need VAT number on invoices for EU clients
+T-3354,acc_1323,2026-07-26T01:09:51Z,feature_request,Recurring invoices for retainer clients please
+T-3355,acc_1335,2026-07-26T08:23:43Z,bank_sync,"Bank sync failed for Starling again, transactions not importing"
+T-3356,acc_1325,2026-07-26T21:04:08Z,bug,Invoice PDF cut off on the second page
+T-3357,acc_1104,2026-07-27T14:28:28Z,how_to,How do clients pay through the portal?
+T-3358,acc_1307,2026-07-27T18:24:02Z,bug,Dashboard total does not match the invoice list
+T-3359,acc_1335,2026-07-27T22:23:43Z,bank_sync,"Bank sync failed for Starling again, transactions not importing"
+T-3360,acc_1176,2026-07-29T06:50:57Z,how_to,Can I import clients from a CSV?
+T-3361,acc_1300,2026-07-30T13:29:45Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3362,acc_1296,2026-07-31T02:25:24Z,feature_request,Recurring invoices for retainer clients please
+T-3363,acc_1331,2026-07-31T10:31:57Z,invoice_template,Can I change the invoice number format?
+T-3364,acc_1175,2026-08-01T09:44:48Z,bug,Invoice PDF cut off on the second page
+T-3365,acc_1341,2026-08-01T19:11:06Z,how_to,Where do I see overdue invoices?
+T-3366,acc_1160,2026-08-02T17:58:18Z,invoice_template,Can I change the invoice number format?
+T-3367,acc_1320,2026-08-03T16:30:21Z,feature_request,Would be nice if AI could write the line item descriptions
+T-3368,acc_1335,2026-08-04T08:23:43Z,bank_sync,Bank sync failed for Starling: connection timed out
+T-3369,acc_1156,2026-08-04T12:46:11Z,invoice_template,Can I change the invoice number format?
+T-3370,acc_1341,2026-08-05T00:11:06Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3371,acc_1267,2026-08-05T01:31:24Z,feature_request,More than 5 seats on Pro
+T-3372,acc_1074,2026-08-05T21:22:06Z,feature_request,Recurring invoices for retainer clients please
+T-3373,acc_1337,2026-08-06T03:44:38Z,bank_sync,Bank sync failed for Starling: connection timed out
+T-3374,acc_1336,2026-08-06T14:03:02Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3375,acc_1327,2026-08-06T21:28:23Z,bank_sync,"Bank sync failed for Lloyds after it worked for weeks, had to reconnect"
+T-3376,acc_1337,2026-08-07T00:44:38Z,bank_sync,"Bank sync failed for Starling again, transactions not importing"
+T-3377,acc_1203,2026-08-07T13:51:13Z,billing,"Lost access after a failed payment, nobody emailed us first"
+T-3378,acc_1344,2026-08-08T09:12:25Z,bank_sync,Bank sync failed for Starling: connection timed out
+T-3379,acc_1337,2026-08-08T17:44:38Z,bank_sync,"Can't connect Starling, the login window closes after MFA"
+T-3380,acc_1344,2026-08-09T08:12:25Z,bank_sync,Bank sync failed for Starling. It says 'institution not supported'
+T-3381,acc_1286,2026-08-09T19:31:15Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3382,acc_1341,2026-08-11T03:11:06Z,bank_sync,"Bank sync failed for Monzo again, transactions not importing"
+T-3383,acc_1311,2026-08-12T06:46:07Z,invoice_template,Can I change the invoice number format?
+T-3384,acc_1010,2026-08-13T09:39:01Z,billing,Can I switch to annual billing?
+T-3385,acc_1341,2026-08-13T12:11:06Z,invoice_template,Tax line shows twice on the PDF
+T-3386,acc_1341,2026-08-13T15:11:06Z,bank_sync,Bank sync failed for Monzo: connection timed out
+T-3387,acc_1194,2026-08-16T21:11:30Z,feature_request,Xero export
+T-3388,acc_1319,2026-08-17T19:01:17Z,invoice_template,Tax line shows twice on the PDF
+T-3389,acc_1120,2026-08-18T03:17:51Z,billing,Why was our subscription canceled? New card on file now
+T-3390,acc_1063,2026-08-18T07:50:07Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3391,acc_1162,2026-08-18T09:04:53Z,bug,Dashboard total does not match the invoice list
+T-3392,acc_1321,2026-08-20T08:45:19Z,feature_request,QuickBooks sync
+T-3393,acc_1344,2026-08-20T23:12:25Z,bank_sync,"Can't connect Starling, the login window closes after MFA"
+T-3394,acc_1331,2026-08-21T04:31:57Z,feature_request,Recurring invoices for retainer clients please
+T-3395,acc_1154,2026-08-21T05:07:49Z,invoice_template,Tax line shows twice on the PDF
+T-3396,acc_1298,2026-08-21T07:22:54Z,how_to,How do I mark an invoice as paid manually?
+T-3397,acc_1222,2026-08-21T15:08:31Z,bug,Invoice PDF cut off on the second page
+T-3398,acc_1347,2026-08-21T23:25:06Z,bug,Invoice PDF cut off on the second page
+T-3399,acc_1315,2026-08-22T02:01:45Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3400,acc_1321,2026-08-22T04:45:19Z,how_to,Where do I see overdue invoices?
+T-3401,acc_1312,2026-08-24T01:31:48Z,bank_sync,"Bank sync failed for ING after it worked for weeks, had to reconnect"
+T-3402,acc_1292,2026-08-26T09:16:53Z,billing,"Charged in USD, can we pay in GBP?"
+T-3403,acc_1180,2026-08-26T21:35:44Z,bug,Duplicate reminder email sent to a client
+T-3404,acc_1133,2026-08-27T05:45:50Z,bug,Client portal link expired too fast
+T-3405,acc_1195,2026-08-27T23:25:59Z,invoice_template,Need VAT number on invoices for EU clients
+T-3406,acc_1356,2026-08-30T11:10:26Z,invoice_template,Can I change the invoice number format?
+T-3407,acc_1352,2026-09-01T12:49:47Z,invoice_template,Need VAT number on invoices for EU clients
+T-3408,acc_1152,2026-09-01T19:37:04Z,bug,Duplicate reminder email sent to a client
+T-3409,acc_1129,2026-09-07T00:17:45Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3410,acc_1332,2026-09-08T00:10:08Z,bank_sync,"Bank sync failed for Chase after it worked for weeks, had to reconnect"
+T-3411,acc_1269,2026-09-09T21:45:29Z,billing,"Lost access after a failed payment, nobody emailed us first"
+T-3412,acc_1122,2026-09-10T01:55:18Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3413,acc_1347,2026-09-10T05:25:06Z,feature_request,QuickBooks sync
+T-3414,acc_1356,2026-09-10T12:10:26Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3415,acc_1359,2026-09-11T03:06:39Z,invoice_template,Need VAT number on invoices for EU clients
+T-3416,acc_1097,2026-09-12T16:14:34Z,how_to,How do I mark an invoice as paid manually?
+T-3417,acc_1344,2026-09-14T00:12:25Z,feature_request,QuickBooks sync
+T-3418,acc_1348,2026-09-15T17:06:45Z,feature_request,Xero export
+T-3419,acc_1328,2026-09-17T18:01:18Z,how_to,How do I mark an invoice as paid manually?
+T-3420,acc_1364,2026-09-20T02:35:24Z,how_to,Where do I see overdue invoices?
+T-3421,acc_1190,2026-09-20T06:14:25Z,feature_request,Recurring invoices for retainer clients please
+T-3422,acc_1362,2026-09-20T20:58:06Z,bug,Duplicate reminder email sent to a client
+T-3423,acc_1363,2026-09-21T16:08:59Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3424,acc_1241,2026-09-22T08:45:16Z,invoice_template,Can I change the invoice number format?
+T-3425,acc_1230,2026-09-24T16:36:26Z,bug,Duplicate reminder email sent to a client
+T-3426,acc_1179,2026-09-24T21:35:15Z,invoice_template,Can I change the invoice number format?
+T-3427,acc_1370,2026-09-25T12:29:04Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3428,acc_1366,2026-09-25T19:49:55Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3429,acc_1199,2026-09-26T13:28:12Z,how_to,Can I import clients from a CSV?
+T-3430,acc_1142,2026-09-26T15:42:44Z,bug,Duplicate reminder email sent to a client
+T-3431,acc_1292,2026-09-27T06:16:53Z,bank_sync,"Bank sync failed for Bank of America after it worked for weeks, had to reconnect"
+T-3432,acc_1372,2026-09-27T23:27:46Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3433,acc_1299,2026-09-29T02:34:17Z,feature_request,Recurring invoices for retainer clients please
+T-3434,acc_1323,2026-09-29T09:09:51Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3435,acc_1129,2026-09-29T14:17:45Z,invoice_template,Tax line shows twice on the PDF
+T-3436,acc_1031,2026-09-29T18:17:21Z,billing,My card was declined once and the account got canceled right away? We want to keep using it
+T-3437,acc_1296,2026-09-30T18:25:24Z,bank_sync,"Bank sync failed for Barclays after it worked for weeks, had to reconnect"
+T-3438,acc_1182,2026-10-01T01:40:45Z,how_to,How do clients pay through the portal?
+T-3439,acc_1370,2026-10-01T10:29:04Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3440,acc_1366,2026-10-01T22:49:55Z,how_to,Where do I see overdue invoices?
+T-3441,acc_1370,2026-10-02T09:29:04Z,billing,Can I switch to annual billing?
+T-3442,acc_1040,2026-10-02T12:47:49Z,feature_request,Recurring invoices for retainer clients please
+T-3443,acc_1309,2026-10-02T19:44:27Z,how_to,Where do I see overdue invoices?
+T-3444,acc_1302,2026-10-03T02:17:54Z,how_to,Can I import clients from a CSV?
+T-3445,acc_1263,2026-10-03T18:10:28Z,how_to,Where do I see overdue invoices?
+T-3446,acc_1372,2026-10-03T22:27:46Z,how_to,How do clients pay through the portal?
+T-3447,acc_1370,2026-10-04T05:29:04Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3448,acc_1241,2026-10-07T06:45:16Z,bug,Dashboard total does not match the invoice list
+T-3449,acc_1001,2026-10-07T09:43:28Z,billing,"Charged in USD, can we pay in GBP?"
+T-3450,acc_1343,2026-10-08T00:39:09Z,invoice_template,Need VAT number on invoices for EU clients
+T-3451,acc_1354,2026-10-10T02:05:31Z,feature_request,Recurring invoices for retainer clients please
+T-3452,acc_1362,2026-10-10T10:58:06Z,invoice_template,Need VAT number on invoices for EU clients
+T-3453,acc_1365,2026-10-11T05:33:07Z,how_to,Where do I see overdue invoices?
+T-3454,acc_1169,2026-10-11T20:37:49Z,feature_request,Would be nice if AI could write the line item descriptions
+T-3455,acc_1320,2026-10-13T17:30:21Z,feature_request,Support Revolut business accounts for bank sync
+T-3456,acc_1300,2026-10-14T06:29:45Z,how_to,How do clients pay through the portal?
+T-3457,acc_1186,2026-10-16T06:59:28Z,invoice_template,Tax line shows twice on the PDF
+T-3458,acc_1372,2026-10-16T08:27:46Z,how_to,Where do I see overdue invoices?
+T-3459,acc_1369,2026-10-17T13:12:37Z,how_to,How do I mark an invoice as paid manually?
+T-3460,acc_1377,2026-10-17T22:50:59Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3461,acc_1297,2026-10-19T08:01:43Z,bug,Invoice PDF cut off on the second page
+T-3462,acc_1380,2026-10-19T11:40:21Z,billing,Need a receipt with our company address
+T-3463,acc_1353,2026-10-19T19:34:30Z,billing,Need a receipt with our company address
+T-3464,acc_1348,2026-10-20T13:06:45Z,invoice_template,Can I change the invoice number format?
+T-3465,acc_1367,2026-10-22T02:45:30Z,bug,Dashboard total does not match the invoice list
+T-3466,acc_1306,2026-10-22T06:43:07Z,feature_request,QuickBooks sync
+T-3467,acc_1239,2026-10-22T23:17:47Z,invoice_template,Tax line shows twice on the PDF
+T-3468,acc_1020,2026-10-23T07:33:24Z,invoice_template,Tax line shows twice on the PDF
+T-3469,acc_1231,2026-10-24T10:52:44Z,invoice_template,Tax line shows twice on the PDF
+T-3470,acc_1249,2026-10-30T06:07:23Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3471,acc_1384,2026-10-30T06:31:25Z,billing,Need a receipt with our company address
+T-3472,acc_1377,2026-10-30T08:50:59Z,bug,Client portal link expired too fast
+T-3473,acc_1395,2026-11-01T06:18:58Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3474,acc_1375,2026-11-01T19:41:00Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3475,acc_1250,2026-11-02T04:27:22Z,billing,Need a receipt with our company address
+T-3476,acc_1393,2026-11-02T06:55:02Z,bank_sync,Bank sync failed for Revolut: connection timed out
+T-3477,acc_1394,2026-11-02T20:18:00Z,bank_sync,Bank sync failed for Wise. It says 'institution not supported'
+T-3478,acc_1393,2026-11-04T04:55:02Z,bank_sync,Bank sync failed for Revolut. It says 'institution not supported'
+T-3479,acc_1389,2026-11-04T05:42:45Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3480,acc_1400,2026-11-05T02:50:11Z,bank_sync,Bank sync failed for Starling. It says 'institution not supported'
+T-3481,acc_1292,2026-11-05T03:16:53Z,invoice_template,How do I add my logo to the invoice PDF?
+T-3482,acc_1077,2026-11-05T14:09:59Z,bug,Dashboard total does not match the invoice list
+T-3483,acc_1391,2026-11-06T11:21:01Z,how_to,How do I mark an invoice as paid manually?
+T-3484,acc_1290,2026-11-07T12:23:49Z,bug,Duplicate reminder email sent to a client
+T-3485,acc_1397,2026-11-07T19:49:14Z,invoice_template,Can I change the invoice number format?
+T-3486,acc_1391,2026-11-08T04:21:01Z,feature_request,Recurring invoices for retainer clients please
+T-3487,acc_1393,2026-11-08T04:55:02Z,bank_sync,"Can't connect Revolut, the login window closes after MFA"
+T-3488,acc_1159,2026-11-08T08:27:08Z,how_to,Where do I see overdue invoices?
+T-3489,acc_1283,2026-11-08T12:03:30Z,invoice_template,Can I change the invoice number format?
+T-3490,acc_1394,2026-11-09T03:18:00Z,bank_sync,"Bank sync failed for Wise again, transactions not importing"
+T-3491,acc_1393,2026-11-09T13:55:02Z,billing,Need a receipt with our company address
+T-3492,acc_1393,2026-11-10T10:55:02Z,invoice_template,Need VAT number on invoices for EU clients
+T-3493,acc_1395,2026-11-11T05:18:58Z,bank_sync,"Bank sync failed for Revolut again, transactions not importing"
+T-3494,acc_1400,2026-11-11T18:50:11Z,bank_sync,"Can't connect Starling, the login window closes after MFA"
+T-3495,acc_1207,2026-11-12T07:19:10Z,feature_request,Multi-currency invoices (we bill in EUR and GBP)
+T-3496,acc_1400,2026-11-12T10:50:11Z,invoice_template,Tax line shows twice on the PDF
+T-3497,acc_1385,2026-11-14T02:06:10Z,how_to,Where do I see overdue invoices?
+T-3498,acc_1400,2026-11-15T05:50:11Z,bank_sync,Bank sync failed for Starling. It says 'institution not supported'
+T-3499,acc_1386,2026-11-16T21:23:03Z,feature_request,Recurring invoices for retainer clients please
+T-3500,acc_1400,2026-11-17T07:50:11Z,invoice_template,Tax line shows twice on the PDF
+T-3501,acc_1260,2026-11-17T17:07:53Z,invoice_template,Need VAT number on invoices for EU clients
+T-3502,acc_1389,2026-11-18T07:42:45Z,feature_request,Recurring invoices for retainer clients please
+T-3503,acc_1204,2026-11-19T18:11:44Z,invoice_template,Can I change the invoice number format?
+T-3504,acc_1381,2026-11-20T19:04:43Z,invoice_template,Need VAT number on invoices for EU clients

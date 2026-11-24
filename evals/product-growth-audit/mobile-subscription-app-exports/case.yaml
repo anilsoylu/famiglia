@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: mobile-subscription-app-exports
+expected_outcome: |
+  A read-only audit saved as audit-report.md that excludes the 6 internal accounts (2 only detectable by the @stepwise.app domain), merges the
+  paywall_viewed -> paywall_view rename (2026-10-15) instead of reporting a collapse, and puts day-0 loss first (~60% of real signups never return
+  after day 0, 7-day activation ~39%), tied to the account-first onboarding and the automatic paywall. It shows the onboarding paywall sells nothing
+  while limit/settings/stats paywalls do, flags the fake countdown, tiny close button, reminder-off-by-default and missing price/date line, notes the
+  buried stats screen correlates with retention, finds ~38% of pushes go to dormant users with no reminder lift but winback works, and says no to the
+  $3,000 TikTok spend now because revenue per install (~$0.25) is far below a ~$2 CPI. No emails or user IDs in the report.
+context:
+  scaffold_script: place-files.sh

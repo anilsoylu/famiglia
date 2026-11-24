@@ -4,8 +4,8 @@ Agent skills for three jobs: shipping code from plan to production, running SEO 
 read as AI. Works with Claude Code, Codex, Cursor and any agent that supports the
 [Agent Skills spec](https://agentskills.io).
 
-famiglia is seven skills of its own (`dev-flow`, `review`, `commit-gate`, `optimize`, `suck-codebase`,
-`find-state-machines`, `seo-agency`) plus the best
+famiglia is ten skills of its own (`dev-flow`, `review`, `commit-gate`, `optimize`, `ci-speed`, `suck-codebase`,
+`find-state-machines`, `seo-agency`, `product-growth-audit`, `start-anil-session`) plus the best
 skills they hand work to, bundled unchanged from their authors. See [Credits](#credits) for those.
 
 ## Install
@@ -92,6 +92,7 @@ Two skills remove AI tells. Install both and pick per job, or keep the one you l
 
 | You say | What runs |
 |---|---|
+| "why aren't users staying or paying?" | `product-growth-audit`: read-only audit of activation, retention and paid conversion, ends in a prioritized plan |
 | "who almost paid?", "win back abandoned checkouts" | `almost-paid`: segments, value, an offer per segment, never sends |
 | "this landing page doesn't convert" | `cro` |
 
@@ -192,6 +193,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 
 | Skill | What it does | From |
 |---|---|---|
+| [product-growth-audit](skills/product-growth-audit/) | Read-only, evidence-first audit of a live app or SaaS that finds what holds back activation, retention, engagement and paid conversion, sizes how… | famiglia |
 | [cro](skills/cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages,… | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |
 | [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) |

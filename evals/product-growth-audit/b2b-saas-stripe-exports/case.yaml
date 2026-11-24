@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: b2b-saas-stripe-exports
+expected_outcome: |
+  A read-only audit saved as audit-report.md that excludes the 3 @ledgerly.io accounts, computes MRR by month and shows it flat (~$6.4k-7.1k
+  over the last five month-ends), and finds churn concentrated at the first renewal for accounts that never connected bank sync (bank-sync accounts
+  churn ~21% vs ~63%, about 3x better). It flags involuntary churn as a P0: every uncollectible invoice has attempt_count 1 (no dunning), ~16% of
+  churned accounts. It ties the top ticket category (bank sync failures, mostly Revolut/Monzo/Wise) to non-connection, notes annual plans and
+  reports_viewed correlate with retention (with caveats), and judges the Q1 plan with evidence: the AI writer and Enterprise tier are unsupported,
+  pricing page is not the bottleneck, and bank sync + dunning are missing. No owner emails in the report.
+context:
+  scaffold_script: place-files.sh
