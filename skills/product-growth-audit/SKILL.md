@@ -1,6 +1,13 @@
 ---
 name: product-growth-audit
-description: Read-only, evidence-first audit of a live app or SaaS that finds what holds back activation, retention, engagement and paid conversion, sizes how much the current user base can still give, checks whether paid acquisition can pay back, and ends in a prioritized opportunity list with the build each item needs. Use it whenever someone wants to understand why users don't stay or pay, asks "where should engineering effort go", "why aren't we growing", "how much can we improve without new users", wants a product/growth/data audit from analytics, the production database and billing data, or wants to judge a growth playbook (influencers, paywall redesign, SEO tools) against their own numbers, even if they never say "audit". Works on any product: it discovers the stack, data sources and business model first.
+description: >-
+  Read-only, evidence-first audit of a live app or SaaS that finds what holds back activation, retention, engagement and
+  paid conversion, sizes how much the current user base can still give, checks whether paid acquisition can pay back,
+  and ends in a prioritized opportunity list with the build each item needs. Use it whenever someone wants to understand
+  why users don't stay or pay, asks "where should engineering effort go", "why aren't we growing", "how much can we
+  improve without new users", wants a product/growth/data audit from analytics, the production database and billing
+  data, or wants to judge a growth playbook (influencers, paywall redesign, SEO tools) against their own numbers, even
+  if they never say "audit". Works on any product: it discovers the stack, data sources and business model first.
 ---
 
 # Product growth audit
