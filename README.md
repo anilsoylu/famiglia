@@ -4,8 +4,8 @@ Agent skills for three jobs: shipping code from plan to production, running SEO 
 read as AI. Works with Claude Code, Codex, Cursor and any agent that supports the
 [Agent Skills spec](https://agentskills.io).
 
-famiglia is ten skills of its own (`dev-flow`, `review`, `commit-gate`, `optimize`, `ci-speed`, `suck-codebase`,
-`find-state-machines`, `seo-agency`, `product-growth-audit`, `start-anil-session`) plus the best
+famiglia is eleven skills of its own (`dev-flow`, `review`, `commit-gate`, `optimize`, `ci-speed`, `suck-codebase`,
+`find-state-machines`, `papercut`, `seo-agency`, `product-growth-audit`, `start-anil-session`) plus the best
 skills they hand work to, bundled unchanged from their authors. See [Credits](#credits) for those.
 
 ## Install
@@ -153,6 +153,7 @@ Every hand-off has a fallback, so a skill still works when you install it alone.
 | [suck-codebase](skills/suck-codebase/) | Untangle a whole codebase in one pass, so agents working in it read less per change, break less without noticing, and debug faster. | famiglia |
 | [find-state-machines](skills/find-state-machines/) | Find implicit state machines, where one lifecycle's state, transitions, and ownership are scattered across flags, effects, callbacks, and async… | famiglia |
 | [retro](skills/retro/) | Conduct a retrospective on a coding session. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [papercut](skills/papercut/) | Log a record when a skill or tool gives you friction: a step that doesn't fit the repo, a retry loop, a missing fallback, a wrong assumption, a tool… | famiglia |
 
 ### UI and frontend
 

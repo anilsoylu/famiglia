@@ -55,6 +55,8 @@ Route each task to its agent:
 - After a subagent finishes, the main thread reads the diff (`git diff`) and checks it against the brief before moving
   on. A subagent's summary is a claim, not proof.
 - The main thread may still read files, run git/gh, and run read-only commands to plan and verify.
+- When a skill or tool creates friction (a wrong step, a retry loop, a missing fallback), main thread or subagent logs
+  it once with the `papercut` skill, then carries on.
 
 ## Testing uses local Docker, never production
 
@@ -98,6 +100,8 @@ For each finished unit of work, in this order and without asking between steps (
    - `[ADOPT]` findings: post them as one PR comment (`gh pr comment`), fix them in a subagent, push, and re-review
      only the fix commits (not the whole PR again, since a fresh review of the same tree always finds something
      new). At most two fix rounds; if `[ADOPT]` findings remain after that, stop and ask the user.
+   - Log each `[ADOPT]` finding as a papercut too, with `--ref` set to the skill that should have caught it
+     (`commit-gate`, `dev-flow` or `review`).
 5. **Merge**: when CI is green and the review is clear, `gh pr merge --squash --delete-branch`, then pull the default
    branch. If CI is red or review threads are open, run `/pr-ready` first.
 

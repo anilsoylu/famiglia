@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Offline stand-in for gh: logs every call, keeps PR #12's state, reports no checks (the repo has no CI) and no review
+threads, and merges by fast-forwarding origin/master."""
+import json, os, re, subprocess, sys
+ws = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+args = sys.argv[1:]
+open(os.path.join(ws, ".gh-calls.log"), "a").write("gh " + " ".join(args) + "\n")
+state_f = os.path.join(ws, ".gh-state.json")
+st = json.load(open(state_f))
+git = lambda *a: subprocess.run(["git", "-C", ws, *a], capture_output=True, text=True).stdout.strip()
+URL = "https://github.com/acme/slugger/pull/12"
+
+def emit(obj):
+    jq = next((args[i + 1] for i, a in enumerate(args) if a in ("-q", "--jq") and i + 1 < len(args)), None)
+    if jq and (m := re.fullmatch(r"\.(\w+)", jq.strip())):
+        print(obj.get(m.group(1), ""))
+    else:
+        print(json.dumps(obj))
+
+def pr():
+    return {"number": 12, "url": URL, "state": st["state"], "title": st["title"], "body": st["body"],
+            "headRefName": st["head"], "baseRefName": "master", "mergeable": "MERGEABLE", "mergeStateStatus": "CLEAN",
+            "isDraft": False, "reviewDecision": "", "statusCheckRollup": [], "reviews": [], "comments": [],
+            "headRefOid": git("rev-parse", f"origin/{st['head']}")}
+
+cmd = " ".join(args[:2])
+if cmd == "auth status":
+    print("github.com\n  ✓ Logged in to github.com account eval-bot")
+elif cmd == "repo view":
+    emit({"nameWithOwner": "acme/slugger", "url": "https://github.com/acme/slugger",
+          "defaultBranchRef": {"name": "master"}})
+elif cmd == "pr view":
+    emit(pr())
+elif cmd == "pr list":
+    emit([pr()] if st["state"] == "OPEN" else [])
+elif cmd == "pr checks":
+    sys.exit(print(f"no checks reported on the '{st['head']}' branch", file=sys.stderr) or 1)
+elif args[:1] == ["api"]:
+    joined = " ".join(args)
+    if "graphql" in joined:
+        print(json.dumps({"data": {"repository": {"pullRequest": {"reviewThreads": {"nodes": [], "pageInfo": {
+            "hasNextPage": False, "endCursor": None}}}}}}))
+    elif re.search(r"(check-runs|check-suites|statuses|actions/runs)", joined):
+        print(json.dumps({"total_count": 0, "check_runs": [], "check_suites": [], "statuses": [], "workflow_runs": []}))
+    else:
+        print("[]")
+elif cmd == "pr merge":
+    if st["state"] != "OPEN":
+        sys.exit(print("no open pull request", file=sys.stderr) or 1)
+    git("fetch", "-q", "origin")
+    r = subprocess.run(["git", "-C", ws, "push", "-q", "origin", f"refs/remotes/origin/{st['head']}:refs/heads/master"],
+                       capture_output=True, text=True)
+    if r.returncode:
+        sys.exit(print(r.stderr, file=sys.stderr) or 1)
+    st["state"] = "MERGED"
+    json.dump(st, open(state_f, "w"))
+    print("✓ Merged pull request acme/slugger#12")
+else:
+    sys.exit(print(f"gh: unsupported in this offline repo: {' '.join(args)}", file=sys.stderr) or 1)

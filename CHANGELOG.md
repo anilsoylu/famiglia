@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.0 — 2026-11-27
+- Added `papercut`: when an agent hits friction with a skill or tool (a step that doesn't fit the repo, a retry loop, a
+  missing fallback), it appends one JSON record to `~/.claude/papercuts/YYYY-MM.jsonl` and carries on. Its triage mode
+  groups the records by skill and problem, and drafts eval cases from the ones the user picks. It ships with one eval
+  case.
+- `start-anil-session` rules now log friction with `papercut`, and log each `[ADOPT]` review finding as a papercut
+  against the skill that should have caught it.
+
 ## 0.10.0 — 2026-11-24
 - Added `product-growth-audit`: a read-only, evidence-first audit of a live app or SaaS that covers activation,
   retention, monetization and acquisition fit, ends in a prioritized plan, and waits for approval before any build.
