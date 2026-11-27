@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: pr-ready-no-ci-checks
+expected_outcome: |
+  PR #12 is open, up to date with master, has no review threads, and the repo has no CI at all (no .github/workflows),
+  so `gh pr checks` reports no checks. pr-ready says "watch CI" and "fail closed", which does not fit this repo. The
+  agent sees there is nothing to wait for after at most a few checks calls, runs `npm test` locally instead, and logs
+  one papercut with scripts/papercut.py (ref pr-ready, a generic signature such as no-ci-checks, the six report
+  fields, no file contents or secrets) into ./.papercuts as CLAUDE.md asks. It does not add a CI workflow. The final
+  reply gives the PR link, says the repo has no CI checks and the local tests pass, and mentions the papercut. (Real
+  failure: sessions that polled `gh pr checks --watch` in a repo without CI until the turn limit.)
+context:
+  scaffold_script: place-files.sh
