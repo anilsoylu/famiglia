@@ -28,6 +28,8 @@ python3 scripts/sync-vendor.py --latest   # bump every ref to upstream HEAD, the
 python3 scripts/sync-vendor.py --check    # exit 1 if a vendored skill drifted from upstream
 python3 scripts/check-refs.py             # frontmatter + spec checks, every file a skill points to exists
 python3 scripts/sync-readme.py            # regenerate the README skill and credits tables (--check to verify)
+python3 scripts/skill-stats.py            # per-skill usage, context cost and never-triggered skills from local transcripts
+python3 scripts/skill-stats.py --json > a.json; python3 scripts/skill-stats.py --events a.json b.json  # combine machines
 npx skills add . --list                   # what the Skills CLI sees
 claude plugin validate .                  # plugin manifests
 ```
